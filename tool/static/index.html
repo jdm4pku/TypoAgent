@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TypoAgent - Requirement Elicitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">◇</span>
+          <span class="logo-text">TypoAgent</span>
+        </div>
+        <button class="sidebar-toggle" id="sidebarClose" title="Close sidebar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+      </div>
+      <button class="new-chat-btn" id="newChatBtn">
+        <span class="icon">✎</span>
+        <span class="btn-text" data-i18n="newChat">New Chat</span>
+      </button>
+      <div class="sidebar-search" id="sidebarSearch">
+        <span class="icon">🔍</span>
+        <span class="btn-text" data-i18n="searchChat">Search Chat</span>
+      </div>
+      <div class="chat-list-label" data-i18n="yourChats">Your chats</div>
+      <div class="chat-list" id="chatList"></div>
+    </aside>
+
+    <div class="sidebar-rail" id="sidebarRail">
+      <div class="rail-logo" id="sidebarOpen">◇</div>
+      <button class="rail-btn" id="railNewChatBtn" title="New Chat">✎</button>
+      <button class="rail-btn" id="railSearchBtn" title="Search Chat">🔍</button>
+    </div>
+
+    <button class="sidebar-toggle collapsed-only" id="sidebarOpenBtn" title="Open sidebar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+
+    <main class="main">
+      <div class="tab-panel active" id="chat-panel">
+        <div class="top-bar">
+          <div class="tree-selector-wrap">
+          <button class="tree-selector-btn" id="treeSelectorBtn">
+            <span class="icon">🌳</span>
+            <span id="selectedTreeName">Select tree</span>
+            <span class="arrow">▼</span>
+          </button>
+          <div class="tree-selector-dropdown" id="treeSelectorDropdown">
+            <input type="text" class="tree-search" id="treeSearch" data-i18n-placeholder="searchModels" placeholder="Search models" />
+            <div class="tree-list" id="treeList"></div>
+            <button class="construct-tree-btn" id="constructTreeBtn">
+              <span data-i18n="constructTree">Construct Tree</span>
+              <span class="arrow">›</span>
+            </button>
+          </div>
+        </div>
+        <button class="settings-btn" id="settingsBtn" title="Settings">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chat-container">
+          <div class="chat-messages" id="chatMessages">
+            <div class="welcome" id="welcome">
+              <h1 data-i18n="welcomeTitle">TypoAgent Requirement Elicitation</h1>
+              <p data-i18n="welcomeDesc">Describe your initial requirements. TypoAgent will help you supplement and clarify implicit requirements through questions.</p>
+            </div>
+          </div>
+          <div class="chat-input-wrap">
+            <div class="chat-input-inner chat-input-chatgpt">
+              <button class="chat-add-btn" type="button" title="Add" aria-label="Add">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <textarea id="chatInput" data-i18n-placeholder="inputPlaceholder" placeholder="Describe your requirements, or answer TypoAgent's questions..." rows="1"></textarea>
+              <button class="send-btn" id="sendBtn" title="Send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="build-panel">
+        <div class="top-bar build-top-bar">
+          <button type="button" class="back-btn" id="backToChatBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-i18n="back">Back</span>
+          </button>
+          <h2 data-i18n="buildTitle">Build Typo Tree</h2>
+          <div class="header-spacer"></div>
+          <button class="settings-btn" id="settingsBtnBuild" title="Settings">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="build-container">
+          <p class="build-desc" data-i18n="buildDesc">Upload JSONL or plain text (one instruction per line) to auto-build a requirement elicitation tree.</p>
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="fileInput" accept=".jsonl,.txt,.json" />
+            <div class="upload-content">
+              <span class="upload-icon">📤</span>
+              <p data-i18n="uploadPrompt">Drag file here or click to select</p>
+              <p class="upload-hint" data-i18n="uploadHint">Supports .jsonl</p>
+            </div>
+          </div>
+          <div class="form-group build-tree-name">
+              <label data-i18n="treeNameLabel">Tree name</label>
+              <input type="text" id="treeNameInput" data-i18n-placeholder="treeNamePlaceholder" placeholder="e.g. LLMTree.auto-p (default: Typo_Tree)" maxlength="64" />
+            </div>
+          <div class="build-options">
+            <label><input type="checkbox" id="useLayer2" /> <span data-i18n="useLayer2">Use Layer2 extraction</span></label>
+            <label><input type="checkbox" id="useLayer3" checked /> <span data-i18n="useLayer3">Use Layer3 extraction</span></label>
+            <label><input type="checkbox" id="enableSampling" /> <span data-i18n="enableSampling">Enable sampling</span></label>
+          </div>
+          <button class="btn-primary btn-build" id="buildBtn" disabled data-i18n="startBuild">Start Build</button>
+          <div class="build-log" id="buildLog"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal settings-modal" id="settingsModal">
+      <div class="modal-content settings-content">
+        <button class="modal-close" id="settingsClose">✕</button>
+        <div class="settings-sidebar">
+          <button class="settings-nav active" data-section="general">
+            <span class="icon">⚙</span>
+            <span data-i18n="settingsGeneral">General</span>
+          </button>
+          <button class="settings-nav" data-section="data">
+            <span class="icon">📁</span>
+            <span data-i18n="settingsData">Data Storage</span>
+          </button>
+          <button class="settings-nav" data-section="api">
+            <span class="icon">🔑</span>
+            <span data-i18n="settingsApi">API</span>
+          </button>
+        </div>
+        <div class="settings-main">
+          <div class="settings-section active" id="section-general">
+            <h3 data-i18n="settingsGeneral">General</h3>
+            <div class="form-group">
+              <label data-i18n="appearance">Appearance</label>
+              <div class="custom-select" data-select="appearanceSelect">
+                <button type="button" class="custom-select-trigger"></button>
+                <div class="custom-select-dropdown">
+                  <div class="custom-select-option" data-value="system" data-i18n="appearanceSystem">System</div>
+                  <div class="custom-select-option" data-value="light" data-i18n="appearanceLight">Light</div>
+                  <div class="custom-select-option" data-value="dark" data-i18n="appearanceDark">Dark</div>
+                </div>
+              </div>
+              <select id="appearanceSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+                <option value="system" data-i18n="appearanceSystem">System</option>
+                <option value="light" data-i18n="appearanceLight">Light</option>
+                <option value="dark" data-i18n="appearanceDark">Dark</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="accentColor">Accent Color</label>
+              <div class="custom-select" data-select="accentSelect">
+                <button type="button" class="custom-select-trigger"></button>
+                <div class="custom-select-dropdown">
+                  <div class="custom-select-option" data-value="default" data-i18n="accentDefault">Default</div>
+                  <div class="custom-select-option" data-value="blue">Blue</div>
+                  <div class="custom-select-option" data-value="green">Green</div>
+                  <div class="custom-select-option" data-value="orange">Orange</div>
+                </div>
+              </div>
+              <select id="accentSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+                <option value="default" data-i18n="accentDefault">Default</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="language">Language</label>
+              <div class="custom-select" data-select="languageSelect">
+                <button type="button" class="custom-select-trigger"></button>
+                <div class="custom-select-dropdown">
+                  <div class="custom-select-option" data-value="en">English</div>
+                  <div class="custom-select-option" data-value="zh">中文</div>
+                </div>
+              </div>
+              <select id="languageSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+              </select>
+            </div>
+            <div class="modal-actions">
+              <button class="btn-primary" id="saveGeneralBtn" data-i18n="save">Save</button>
+            </div>
+          </div>
+          <div class="settings-section" id="section-data">
+            <h3 data-i18n="settingsData">Data Storage</h3>
+            <div class="form-group">
+              <label data-i18n="dataStoragePath">Data storage path</label>
+              <div class="custom-select" data-select="dataStorageSelect">
+                <button type="button" class="custom-select-trigger"></button>
+                <div class="custom-select-dropdown">
+                  <div class="custom-select-option" data-value="default" data-i18n="dataStorageDefault">Default (output/save_tree)</div>
+                  <div class="custom-select-option" data-value="tool" data-i18n="dataStorageTool">Tool (output/save_tree/tool)</div>
+                </div>
+              </div>
+              <select id="dataStorageSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+                <option value="default" data-i18n="dataStorageDefault">Default</option>
+                <option value="tool" data-i18n="dataStorageTool">Tool</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="treeReadPath">Tree reading path</label>
+              <div class="custom-select" data-select="treeReadPathSelect">
+                <button type="button" class="custom-select-trigger"></button>
+                <div class="custom-select-dropdown">
+                  <div class="custom-select-option" data-value="default" data-i18n="treeReadDefault">Default (output/save_tree)</div>
+                  <div class="custom-select-option" data-value="tool" data-i18n="treeReadTool">Tool (output/save_tree/tool)</div>
+                </div>
+              </div>
+              <select id="treeReadPathSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+                <option value="default" data-i18n="treeReadDefault">Default</option>
+                <option value="tool" data-i18n="treeReadTool">Tool</option>
+              </select>
+            </div>
+            <div class="modal-actions">
+              <button class="btn-primary" id="saveDataBtn" data-i18n="save">Save</button>
+            </div>
+          </div>
+          <div class="settings-section" id="section-api">
+            <h3 data-i18n="settingsApi">API</h3>
+            <p class="section-desc" data-i18n="configDesc">Configure API for TypoAgent.</p>
+            <div class="form-group">
+              <label data-i18n="apiKeyLabel">API Key</label>
+              <input type="password" id="apiKey" placeholder="sk-..." />
+            </div>
+            <div class="form-group">
+              <label data-i18n="baseUrlLabel">Base URL (optional)</label>
+              <input type="text" id="baseUrl" placeholder="https://api.openai.com/v1" />
+            </div>
+            <div class="modal-actions">
+              <button class="btn-secondary" id="testApiBtn" data-i18n="test">Test</button>
+              <button class="btn-primary" id="saveSettingsBtn" data-i18n="save">Save</button>
+            </div>
+            <div class="test-result" id="testResult"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

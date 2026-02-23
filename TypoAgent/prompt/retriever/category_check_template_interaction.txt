@@ -1,0 +1,1 @@
+Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.

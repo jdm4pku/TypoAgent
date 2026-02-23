@@ -1,0 +1,166 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Stock Report Generation System",
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "user_stories": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "When you search for stocks, what kind of query and filtering experience do you want—for example, simple keyword search only, or more advanced filters (like market cap, sector, valuation ratios) that you can combine and save for reuse?",
+        "user": "Mostly I just want to search by stock code or name, and that should be really fast and forgiving of typos. Basic filters like sector, country, and maybe market cap would be nice, but I don’t need anything super complex as long as I can quickly get to the stock I have in mind.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "Besides stock code and name, are there any other specific fields you’d like to be directly searchable (for example, sector or country), or should the main search box only focus on code/name and leave everything else to filters?",
+        "user": "I don’t really care about that level of detail—code/name in the main search box is enough for me, and I’m fine with using basic filters for the rest.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "How would you like the search results for stocks to be laid out—primarily as a table with sortable columns, or more like individual cards for each stock, and do you want many results on one scrolling page or shorter pages with pagination?",
+        "user": "I don’t really have a strong preference on that—either table or cards is fine. As long as I can quickly see the key info and click into a stock’s detailed report easily, I’m good with whatever layout you think is more standard.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really have anything specific to add there—just that it should feel fast and not laggy, but beyond that I’m not picky about the details.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "What are the key data elements you want each stock’s record to include in your system (for example, which fields or sections must always be part of a stock’s stored profile and reports)?",
+        "user": "At a minimum I want the stock name, ticker, exchange, sector/industry, country, and basic price info (current price, % change, 52-week range, market cap). I’d also like key financials (revenue, net income, EPS, P/E, dividend yield if applicable) and a quick summary of recent performance or trend. Anything beyond that is nice-to-have, but those should always be there in the profile and reports.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 6,
+        "interviewer": "For each stock’s detailed report page, beyond the core fields you already listed (name, ticker, exchange, sector, country, price info, and key financials), are there any additional data points you definitely want displayed every time (for example, analyst ratings, target price, news headlines, or risk metrics), or is the current set sufficient as your required detail view?",
+        "user": "The current set is sufficient as my required view—I don’t really care about specifying extra mandatory fields like ratings or news, those are just nice-to-have if you decide to include them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "What are the main types of things you want the system to explicitly model as separate “objects” in its data (for example, individual stocks, user-created reports, watchlists, or portfolios), and how should they be related—for instance, can one report cover multiple stocks, or is each report tied to a single stock?",
+        "user": "I don’t really care how things are modeled under the hood. As long as I can search stocks, open a detailed report, and maybe have a simple watchlist later, the exact data structure and relationships don’t matter to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "What real-world data sources do you want this system to pull stock information from (for example, a specific market data provider, exchange feeds, or public APIs), or are you fine with me choosing any reliable standard provider?",
+        "user": "I don’t have any specific preference on data sources—as long as it’s a reliable, up-to-date provider that covers major markets, I’m fine with you choosing whatever standard option works best.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else from my side on content—that all sounds covered. We can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 10,
+        "interviewer": "What primary color would you like for key interactive components such as buttons and active tabs (for example, a specific blue, green, or another color you have in mind)?",
+        "user": "I’d prefer a navy blue as the primary color for buttons and active tabs—it feels professional and easy on the eyes.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "For other key UI components beyond buttons—like cards or information panels—would you prefer they use a light, neutral color (such as white or light gray) or have a subtle navy-tinted background that aligns with your chosen button color?",
+        "user": "I’d rather keep most panels and cards on a light, neutral background—white or very light gray—so the overall site feels clean and easy to read. Navy can be used more as an accent for borders, headers, or highlights instead of the main background.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 12,
+        "interviewer": "What color would you like for the main page background (behind all content)—for example, pure white, a very light gray, or something else—and should that same background be used consistently across all pages?",
+        "user": "I’m fine with a very light gray or white as the main background—whatever looks clean and doesn’t strain the eyes. Using the same background consistently across all pages is totally okay with me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 13,
+        "interviewer": "Do you have any specific readability or accessibility requirements for the colors used on key interactive components (like buttons and tabs)—for example, needing high-contrast text on them to meet standards such as WCAG?",
+        "user": "I don’t have any specific standards in mind—I just want everything to be easy to read with good contrast, but I’m not picky about formal WCAG levels or anything like that.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 14,
+        "interviewer": "What color would you like to use for accent highlights on interactive elements—such as link text and small badges—so they stand out from the navy primary color?",
+        "user": "I don’t really have a strong preference there—as long as it looks good with the navy and is easy to read, I’m happy for you to choose whatever accent color you think works best.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 15,
+        "interviewer": "For interactive components like buttons and tabs, do you want clearly defined state colors (for example, a specific hover and disabled color) that are just lighter/darker variations of your navy primary, or would you prefer we keep states very minimal and subtle without distinct extra colors?",
+        "user": "I don’t really care about that level of detail—using lighter/darker variations of the navy is fine, but I’m happy for you to decide how strong or subtle the states should be.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 16,
+        "interviewer": "For color consistency across the interface, is it important to you that the navy used for interactive components (like buttons and active tabs) always be exactly the same shade on every page and device, or are small variations acceptable as long as it looks roughly consistent?",
+        "user": "I don’t really care about that level of precision—small variations are fine as long as it looks roughly consistent and professional overall.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 17,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else from me on style—that all sounds fine. We can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 18,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to search for stocks by stock code or name so that I can quickly find a specific stock.\n\nFeature2: As a user, I want the search to be fast and forgiving of typos so that minor mistakes do not prevent me from finding the right stock.\n\nFeature3: As a user, I want to filter search results by basic attributes such as sector, country, and market cap so that I can narrow down the list of stocks.\n\nFeature4: As a user, I want search results presented in a standard, easy-to-scan layout (table or cards) so that I can quickly see key information and select a stock.\n\nFeature5: As a user, I want to click from a search result into a detailed stock report page so that I can view full information about that stock.\n\nFeature6: As a user, I want each stock profile to include name, ticker, exchange, sector/industry, and country so that I can identify the stock and its context.\n\nFeature7: As a user, I want each stock profile to include current price, percentage price change, 52-week range, and market cap so that I can quickly assess its basic market status.\n\nFeature8: As a user, I want each stock profile to include key financials such as revenue, net income, EPS, P/E, and dividend yield (if applicable) so that I can understand its fundamental performance.\n\nFeature9: As a user, I want each stock profile to include a brief summary of recent performance or trend so that I can quickly get a high-level view without deep analysis.\n\nFeature10: As a user, I want the detailed stock report page to always show the core fields I specified (identification, price info, key financials, and performance summary) so that I consistently get the information I care about.\n\nFeature11: As a user, I want the system to automatically generate stock analysis reports from the available data so that I don’t have to manually assemble or calculate key insights. (TBD – exact content and format of reports)\n\nFeature12: As a user, I want the site to feel fast and responsive so that searching and navigating between pages does not feel laggy.\n\nFeature13: As a user, I want the system to use a reliable, up-to-date market data provider covering major markets so that the information I see is trustworthy and current.\n\nFeature14: As a user, I want the option to have a simple watchlist in the future so that I can easily revisit selected stocks. (TBD – exact watchlist behavior)\n\nFeature15: As a user, I want the primary color for key interactive components (such as buttons and active tabs) to be navy blue so that the site looks professional and consistent with my preference.\n\nFeature16: As a user, I want panels and cards to use a light, neutral background (white or very light gray) with navy as an accent (for borders, headers, highlights) so that the interface feels clean and easy to read.\n\nFeature17: As a user, I want the main page background to be white or very light gray and used consistently across pages so that the overall experience is visually cohesive and not straining on the eyes.\n\nFeature18: As a user, I want text and interactive elements to have good visual contrast so that everything is easy to read, even if no formal accessibility standard is explicitly targeted.\n\nFeature19: As a user, I want link text and small badges to use an accent color that complements navy and remains readable so that important interactive highlights stand out without clashing. (TBD – exact accent color)\n\nFeature20: As a user, I want hover and disabled states for interactive components to be represented by lighter/darker variations of the navy primary color so that I can clearly understand component states without a complex color system.\n\nFeature21: As a user, I am comfortable with small variations in the navy shade across devices and pages as long as the interface looks roughly consistent and professional, so that implementation is not constrained by strict color precision.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      }
+    ],
+    "total_turns": 18
+  }
+]

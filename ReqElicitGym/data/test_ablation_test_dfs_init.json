@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Stock Report Generation System",
+    "application_type": "Analytics Platforms/Dashboards",
+    "Category": {
+      "primary_category": "Data Management",
+      "subcategories": [
+        "CRUD Operations",
+        "API Integration",
+        "Data Visualization"
+      ]
+    },
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "Implicit Requirements": [
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer to search for stocks by entering stock codes or stock names."
+      },
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer to select the report format and content scope before report generation, instead of using a default report template."
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the generated reports to include basic stock information, market trends, and financial data."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the website to use a white background."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the website components to use a navy color."
+      }
+    ],
+    "URL": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ]
+  }
+]

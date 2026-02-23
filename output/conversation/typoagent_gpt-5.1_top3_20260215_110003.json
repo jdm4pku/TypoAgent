@@ -1,0 +1,503 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Stock Report Generation System",
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "user_stories": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "When you search for a stock, what kind of search and filtering experience do you want—for example, do you prefer a simple ticker/search bar with basic filters, or a more advanced query system where you can filter by metrics (P/E, market cap, sector, date ranges) and sort results in different ways?",
+        "user": "I’d like a simple search bar where I can type a stock code or name, but I do want some basic filters too—like sector, market cap range, and maybe P/E range—and the ability to sort by things like price change or market cap. I don’t need anything super complex, just enough to quickly narrow down and compare candidates.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "Are there any other specific filters you’d like besides sector, market cap range, P/E range, and sorting by price change or market cap—such as dividend yield, country/region, or daily volume—or is that list sufficient for your needs?",
+        "user": "I don’t really care about adding more filters beyond those—sector, market cap, P/E, and basic sorting are enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "When someone wants to look up a stock, should the search box behave more like a simple keyword field (where they just type a ticker or company name), or would you prefer a smarter, natural-language style box where they can type something like “large-cap tech stocks with low P/E” in one sentence?",
+        "user": "I don’t really care about a natural-language style box—just a simple keyword search where I can type the ticker or company name is totally fine for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any extra interaction requirements in mind beyond what I already mentioned—simple, clear, and quick to use is good enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "What kinds of analytics and visualizations do you want in your automatically generated stock reports—for example, are you looking mainly for written summaries, or do you also want charts like price history graphs and key-metric comparisons on a dashboard?",
+        "user": "I don’t really care about specific analytics or visualizations—I just want whatever’s needed to give me a clear, useful picture of the stock without me having to tweak a lot of options.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 6,
+        "interviewer": "When the site generates a stock report, what specific types of data about each stock do you want to see by default—for example, just core fundamentals and recent price performance, or also things like analyst ratings, news headlines, and key financial statement figures?",
+        "user": "By default I’d like to see core fundamentals (price, market cap, P/E, dividend if any), recent price performance, and key financial figures like revenue, earnings, and maybe debt. Analyst ratings and a few recent news headlines would be nice to have too, but the main thing is a clear snapshot of fundamentals and recent performance.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "For each stock in your system, what specific fields do you want stored as part of its core data record (for example, unique ID, ticker, company name, sector, and any status or timestamp fields you’d like to keep)?",
+        "user": "I don’t really care about the exact data fields you store internally—as long as you can support the searches and reports I described, the technical details of the record structure are up to you.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "What are the main types of records you want the system to manage as distinct entities—for example, just stocks themselves, or also things like user watchlists, saved reports, and portfolios?",
+        "user": "I don’t really care about how you model the records internally—as long as I can search stocks and view/generate the reports I mentioned, whether you use entities like watchlists or portfolios is up to you.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One thing I’d like is the ability to pick the report format and how detailed it is before generating it—like a short summary vs a more in-depth report—rather than always using one default template. Otherwise, I don’t have any other content requirements, so we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 10,
+        "interviewer": "When you choose the report format (e.g., short summary vs in-depth), what specific settings would you like to be able to configure or save as a template—such as which sections are included, default level of detail, or preferred page background color?",
+        "user": "I’d mainly want to choose the level of detail (short vs in-depth) and which sections are included (e.g. fundamentals only vs fundamentals + news + analyst ratings). I’d also like to be able to set and save a white background as the default, but I don’t need any fancy styling beyond that.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 11,
+        "interviewer": "Beyond choosing report format and sections and setting a default white background, what other personal settings, if any, would you like to be able to adjust for your account—such as notification preferences or display options like default time range for price performance?",
+        "user": "I’d like to be able to set the default time range for price performance (like 6 months or 1 year) and choose a navy color theme for the interface. I don’t really need notification preferences or other settings beyond that.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 12,
+        "interviewer": "Besides choosing report length and which sections are included, do you want the system to provide any reusable text templates for reports (for example, a standard wording style for summaries that you can reuse or customize), or are you fine with it just generating each report on the fly without named templates you manage?",
+        "user": "I don’t really care about reusable text templates—generating each report on the fly is fine for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 13,
+        "interviewer": "For your stock reports and dashboards, do you want any reusable layout or visual style presets (for example, standard arrangements of sections or chart placements) that you can save and reapply, or are you fine with everything just using a single default layout?",
+        "user": "I don’t really care about reusable layout or visual style presets—a single clear default layout is fine for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 14,
+        "interviewer": "For the stock data in your reports and views, do you want it mostly at a high-level aggregated scope (like daily/weekly summary metrics and overall financial figures), or do you also want access to more granular record-level data (such as intraday price points or line-item financial details) when examining a stock?",
+        "user": "I don’t really care about super granular data like intraday points or line-item details—high-level daily/weekly summaries and overall financial figures are enough for what I need.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else comes to mind for content—I’m happy with what we’ve covered so far, so we can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "For the overall interface theme, what specific shade or style of navy would you like used as the primary color (for example, very dark almost-black navy vs brighter, more saturated navy), and should it stay consistent across the site or vary slightly between sections?",
+        "user": "I don’t really care about the exact shade or style of navy—any clean, professional-looking navy is fine, and it can be consistent across the site. I’m not picky beyond that.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "For the layout of pages and reports, what overall structure do you prefer—for example, a single main column with content stacked vertically, or a two‑panel layout with a sidebar (for filters/navigation) and a main content area—and how strictly should that layout stay consistent across the site?",
+        "user": "I don’t have a strong preference on the exact layout—single column or sidebar + main area are both fine. As long as it’s clear, easy to navigate, and feels consistent enough that I don’t have to re-learn the interface on each page, I’m happy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 18,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to search for a stock using a simple keyword search bar where I can type a ticker or company name.\n\nFeature2: As a user, I want to filter my stock search results by sector.\n\nFeature3: As a user, I want to filter my stock search results by market cap range.\n\nFeature4: As a user, I want to filter my stock search results by P/E ratio range.\n\nFeature5: As a user, I want to sort my stock search results by price change.\n\nFeature6: As a user, I want to sort my stock search results by market cap.\n\nFeature7: As a user, I want the search and filtering interface to be simple, clear, and quick to use, without complex query options.\n\nFeature8: As a user, I want the system to automatically generate a stock report that gives me a clear, useful picture of the stock without requiring me to tweak many options.\n\nFeature9: As a user, I want each stock report to include core fundamentals such as current price, market cap, P/E ratio, and dividend (if any).\n\nFeature10: As a user, I want each stock report to show recent price performance.\n\nFeature11: As a user, I want each stock report to include key financial figures such as revenue, earnings, and debt.\n\nFeature12: As a user, I want each stock report to optionally include analyst ratings.\n\nFeature13: As a user, I want each stock report to optionally include a few recent news headlines related to the stock.\n\nFeature14: As a user, I want the data in my reports to focus on high-level daily or weekly summaries and overall financial figures, rather than very granular intraday or line‑item details.\n\nFeature15: As a user, I want to choose the level of detail of the report (e.g., short summary vs in‑depth) before generating it.\n\nFeature16: As a user, I want to choose which sections are included in the report (e.g., fundamentals only vs fundamentals + news + analyst ratings) before generating it.\n\nFeature17: As a user, I want to set a default white background for reports and have the system remember this preference.\n\nFeature18: As a user, I want to set my default time range for viewing price performance (e.g., 6 months or 1 year).\n\nFeature19: As a user, I want to choose a navy color theme for the interface and have it applied consistently across the site.\n\nFeature20: As a user, I want the overall interface layout (whether single column or sidebar + main area) to be clear, easy to navigate, and reasonably consistent across pages so I don’t have to re‑learn it.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 18
+  },
+  {
+    "task_id": "task_1",
+    "task_name": "Neighborhood Data Comparison Dashboard",
+    "initial_requirements": "I need a web-based application that lets me explore and compare information across different neighborhoods, with built-in tools to help me view and understand the comparisons.",
+    "user_stories": [
+      "As a user, I want to use a web-based neighborhood mapping application for comparing data across different areas, so that I can analyze and understand differences between neighborhoods.",
+      "As a user, I want to compare demographic data across different areas, so that I can understand how population characteristics vary between neighborhoods.",
+      "As a user, I want to compare economic data across different areas, so that I can understand how economic conditions vary between neighborhoods.",
+      "As a user, I want to compare crime data across different areas, so that I can understand how crime levels and patterns vary between neighborhoods.",
+      "As a user, I want access to data dashboards with interactive charts, so that I can explore and visualize neighborhood data in a dynamic way.",
+      "As a user, I want data dashboards with customizable layouts, so that I can arrange and view the information in a way that suits my needs.",
+      "As a user, I want the application to use an ivory background, so that the visual appearance matches the specified color scheme.",
+      "As a user, I want the application’s components to use forest green, so that the interface elements match the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What kinds of search and filtering tools do you want for exploring neighborhoods—for example, would you prefer a simple keyword search with a few basic filters, or more advanced options like multi-criteria filters, range sliders, and sorting by different metrics?",
+        "user": "I don’t really care about the specific type of search or filters—whatever’s simplest to use is fine, as long as I can easily compare neighborhoods side by side.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "When you’re moving between different parts of the app (like going from the main neighborhood list to a specific neighborhood’s details and then to a comparison view), would you rather have a simple, linear flow with a clear “back” path, or a more dashboard-style layout with tabs or a side menu you can jump between directly?",
+        "user": "I think a dashboard-style layout with tabs or a side menu would work better for me, so I can jump quickly between the list, details, and comparisons. As long as it still feels clear where I am and how to get back, I’d prefer that over a strictly linear flow.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "Within each main page—like the neighborhood list, a neighborhood’s detail view, or a comparison view—what kinds of navigation controls do you want inside the page itself, for example tabs within the page, a sticky sub-menu, or next/previous controls to move between neighborhoods?",
+        "user": "I don’t have strong opinions about that level of navigation—whatever makes it easiest to see key info and compare things quickly is fine. I just want it to feel simple and not cluttered.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "How would you like the main tasks to be grouped into pages—would you rather browse neighborhoods, view a neighborhood’s detailed info, and compare neighborhoods all within a single, scrollable page that changes sections, or have these as clearly separated pages you switch between from the dashboard?",
+        "user": "I don’t really have a preference on that—it can be one scrollable page or separate pages, as long as it stays easy to understand and I can quickly compare neighborhoods without getting lost.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any specific interaction requirements beyond what I’ve already said—I just want it to feel straightforward and not confusing when I’m comparing neighborhoods.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific pieces of information about each neighborhood do you want the app to show—for example, things like safety, schools, housing prices, commute times, or something else that’s especially important to you?",
+        "user": "Safety and crime data are really important, along with housing prices and trends, school quality, and basic demographics like income levels and age. Commute times and access to public transit or major roads would also be useful. Anything that helps me get a feel for cost, safety, and day-to-day convenience would be ideal.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "What are the main types of records you want to manage separately in this app—for example, should it track neighborhoods only, or also things like individual listings/properties, schools, and transit options as their own record types?",
+        "user": "I don’t really care about managing separate record types—however you structure it under the hood is fine, as long as I can easily see and compare all that info at the neighborhood level.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "For each neighborhood, what are the absolutely must-have data fields you want to see every time (for example, a name and overall safety score), and are there any extra “nice to have” fields that can be hidden or shown only when you expand for more details?",
+        "user": "I don’t really have a strong opinion on which fields are always visible versus hidden. As long as the key stuff about cost, safety, schools, and convenience is easy to see at a glance, I’m fine with other details being tucked away and expandable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any more content-related requirements beyond what I’ve mentioned. I’m fine if we move on to other topics now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 10,
+        "interviewer": "What overall color style would you like for the page background—for example, a clean light background, a dark mode feel, or a particular color family you prefer?",
+        "user": "I’d prefer a clean, light style—something like an ivory or off‑white background that feels easy on the eyes and not too stark.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "What color accents would you like for key interactive elements such as buttons and links—for instance, a particular color family (like blue, green, or teal) that should stand out against the light background?",
+        "user": "A forest green accent would be ideal for buttons and links—something that stands out against the light background but still feels calm and natural.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 12,
+        "interviewer": "For the main views in your app (like browsing neighborhoods, seeing one neighborhood’s details, or comparing several), what overall page layout would you prefer—for example, a list on the left with details on the right, or separate full-page views for each task?",
+        "user": "A list on the left with details on the right sounds good to me, especially if the comparison view can also use a similar side‑by‑side style. As long as I can clearly see a list, pick something, and immediately see the details or comparisons without jumping around too much, I’m happy.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 13,
+        "interviewer": "Do you have any specific accessibility or contrast requirements for the text that appears on your light background—for example, should it be high-contrast and easy to read for people with low vision or color-vision deficiencies?",
+        "user": "I don’t have any specific accessibility or contrast requirements in mind—just make sure the text is comfortably readable on the light background and doesn’t strain the eyes.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 14,
+        "interviewer": "What standard interface elements do you definitely want on each main page—for example, a fixed left-hand neighborhood list, a central details/comparison area, and a top bar with search or filters—and how should these be arranged relative to one another?",
+        "user": "I don’t really care about the exact arrangement of the standard elements. As long as I can always see a neighborhood list, the main details/comparison area, and basic search/filter options in a way that feels clean and straightforward, I’m fine with whatever layout you think works best.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "How important is it to you that the layout structure (like where the neighborhood list, main details area, and navigation live) stays consistent across all views in the app, versus allowing some views to use noticeably different layouts if that makes a specific task easier?",
+        "user": "I don’t really care if the layout changes a bit between views, as long as it still feels simple and I can easily see the list and compare neighborhoods without getting confused.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "What color would you prefer for the page or body background? Please name any specific color you have in mind (e.g. white, light gray, blue, etc.), or say if you have no preference.",
+        "user": "I don’t have a preference beyond what I already mentioned—I’m fine with a light, off‑white style, but the exact color you choose doesn’t matter to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want a web-based application where I can explore information about different neighborhoods.\n\nFeature2: As a user, I want to be able to compare neighborhoods side by side so I can quickly see differences in key metrics.\n\nFeature3: As a user, I want simple, easy-to-use search and filtering tools so I can find neighborhoods of interest without complexity.\n\nFeature4: As a user, I want a dashboard-style layout (e.g., tabs or side menu) so I can quickly jump between the neighborhood list, neighborhood details, and comparison views.\n\nFeature5: As a user, I want the interface to clearly show where I am and how to get back when moving between list, detail, and comparison views.\n\nFeature6: As a user, I want the navigation within each page (e.g., tabs, sub-menus, or next/previous controls) to feel simple and uncluttered so I can focus on comparing neighborhoods.\n\nFeature7: As a user, I want to see essential information about cost, safety, schools, and day-to-day convenience at a glance for each neighborhood.\n\nFeature8: As a user, I want the app to show safety and crime data for each neighborhood.\n\nFeature9: As a user, I want the app to show housing prices and housing price trends for each neighborhood.\n\nFeature10: As a user, I want the app to show school quality information for each neighborhood.\n\nFeature11: As a user, I want the app to show basic demographic information such as income levels and age distribution for each neighborhood.\n\nFeature12: As a user, I want the app to show commute times and access to public transit or major roads for each neighborhood.\n\nFeature13: As a user, I want additional details that are less critical to be optionally expandable so the main view stays clean while more information is still available.\n\nFeature14: As a user, I want the app to present all relevant information at the neighborhood level so I don’t have to manage separate record types like individual properties, schools, or transit entries.\n\nFeature15: As a user, I want the visual design to use a clean, light, off-white/ivory background so the interface feels easy on the eyes.\n\nFeature16: As a user, I want important interactive elements like buttons and links to use a forest green accent color so they stand out but still feel calm and natural.\n\nFeature17: As a user, I want a layout where a list of neighborhoods appears on the left and the details or comparison view appears on the right so I can select items and immediately see more information.\n\nFeature18: As a user, I want the comparison view to support a side-by-side style similar to the main layout so it’s easy to compare neighborhoods visually.\n\nFeature19: As a user, I want text and visual elements to be comfortably readable on the light background so the app does not cause eye strain.\n\nFeature20: As a user, I want to always have access to a neighborhood list, a main details/comparison area, and basic search/filter options on the main views so I can navigate and explore efficiently.\n\nFeature21: As a user, I want the layout to remain generally simple and straightforward even if it changes slightly between views so I don’t feel confused or lost.\n\nFeature22: As a user, I want the interface to feel straightforward and not confusing when I am comparing neighborhoods.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 17
+  },
+  {
+    "task_id": "task_2",
+    "task_name": "Multi-Company Finance Dashboard",
+    "initial_requirements": "I need a dashboard that allows me to input and view financial data across multiple companies, and supports financial comparison and reporting.",
+    "user_stories": [
+      "As a user, I want to use a multi-company dashboard to manage and view financial data from multiple companies in one place.",
+      "As a user, I want the dashboard to allow me to input financial data for each company, so that I can manage financial information across multiple companies.",
+      "As a user, I want to view financial data for a specific company by specifying its name or identifier, so that I can review company-specific details.",
+      "As a user, I want the dashboard to present revenue data for each company, so that I can understand each company’s income level.",
+      "As a user, I want the dashboard to present expense data for each company, so that I can understand each company’s cost structure.",
+      "As a user, I want the dashboard to present profit data for each company, so that I can understand each company’s profitability.",
+      "As a user, I want the dashboard to provide consolidated reports and cross-company comparisons, so that I can analyze overall financial performance.",
+      "As a user, I want the dashboard to use mint cream as the background, so that the interface follows the specified color scheme.",
+      "As a user, I want all dashboard components to be styled with teal, so that the interface elements follow the specified component styling"
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How would you like to navigate between companies and reports in the dashboard—for example, do you prefer a left-hand sidebar with sections (Companies, Reports, Comparisons) or a top navigation bar with tabs for each area?",
+        "user": "I don’t really have a strong preference about the exact navigation layout. As long as it’s clear and quick to switch between companies and reports, I’m fine with whatever you think is most usable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "What kinds of search or filtering do you want for your financial data—for example, would you like to be able to type flexible queries (like “Q3 2024 revenue for Company A vs B”) or mainly use structured filters such as date ranges, company selection, and metric dropdowns?",
+        "user": "I don’t really care about fancy or flexible search queries. Simple, structured filters like date ranges, company selection, and choosing metrics from dropdowns would be enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any extra interaction requirements beyond what I’ve mentioned—just keep it straightforward and responsive enough that switching views and applying filters doesn’t feel slow.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "What kinds of financial visualizations do you specifically want on the dashboard—for example, are you mainly looking for time‑series charts of key metrics, side‑by‑side comparison charts between companies, or more tabular summary reports with totals and variances?",
+        "user": "I don’t really care about the exact visualization types. As long as I can clearly compare key financial metrics across companies and over time, I’m fine with whatever charts or tables you think work best.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "What specific financial data elements do you want to work with in this dashboard—for example, do you need just high‑level items like revenue, expenses, profit and cash balance by period, or also more detailed items such as line‑item categories, department or project tags, and currencies?",
+        "user": "I mainly need high-level items: revenue, expenses, profit, cash balance, and maybe a few key ratios like margin and growth rates by period. It would also be helpful to have basic breakdowns by category (like operating vs non-operating expenses) and support for multiple currencies, but I don’t need super granular line items or detailed project-level tagging right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "What level of detail do you want the financial data stored and shown at—for example, is it enough to see figures aggregated by month/quarter per company, or do you also need more detailed transaction-level or sub-entity breakdowns (like per business unit or location)?",
+        "user": "I don’t really care about that level of detail right now—monthly or quarterly per company is fine, and I don’t need transaction-level or detailed sub-entity breakdowns.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 7,
+        "interviewer": "What core business entities do you want to track as distinct records in this system—for example, should it manage separate records for companies, financial periods, and financial statements, or is there another primary entity structure you have in mind?",
+        "user": "I don’t really care about how the underlying entities are modeled. As long as I can easily select a company, a time period, and see the key financial metrics and comparisons, the internal structure is up to you.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 8,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One thing I do want to be sure of is that revenue is clearly shown for each company, ideally broken out over time so I can quickly see trends. Aside from that, I don’t have other content requirements right now, so we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "Which relationships between entities should be explicitly modeled and stored (e.g. orders linked to customers, tasks linked to assets, content linked to categories)?",
+        "user": "I don’t really care about how those relationships are modeled under the hood. As long as I can pick a company and time period and see the right financials and comparisons, you can structure the entities however you think is best.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific types of financial activity or documents do you want this dashboard to handle beyond the summary metrics you mentioned—for example, should it show any invoice or billing views, cash movement summaries, or is a high‑level account balance and P&L overview sufficient?",
+        "user": "I don’t really need invoice or billing views right now—just a high-level overview with P&L-type metrics, cash balances, and the comparisons we discussed is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 11,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more thing on content: I’d like expenses to be clearly shown for each company as well, ideally broken out over time and by basic categories like operating vs non‑operating. Aside from that, I’m good to move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 12,
+        "interviewer": "What kinds of time-based or historical records, if any, do you want this dashboard to keep—for example, should it store a history of changes to financial figures and comparisons over time, or is it enough to only see the latest values without any change-log or audit trail?",
+        "user": "I don’t care about keeping a detailed change history or audit trail. Just showing the latest monthly/quarterly figures and comparisons is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 13,
+        "interviewer": "What information, if any, do you want to store about users who access this dashboard (for example, per-user accounts with names and roles vs. a single shared access with no individual profiles)?",
+        "user": "I don’t really care about user profiles or roles for now. A simple shared access setup is fine as long as I can get to the dashboard and use all the features.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 14,
+        "interviewer": "What are your requirements, if any, for encrypting the stored financial records—for example, do you want all saved financial data to be encrypted at rest using a specific standard (like AES‑256) with managed keys, or are you fine leaving encryption details to the underlying infrastructure as long as data is reasonably secure?",
+        "user": "I don’t have strong requirements around encryption specifics. As long as the data is handled with standard, reasonably secure practices, I’m fine leaving those details to you or the underlying infrastructure.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 15,
+        "interviewer": "What kinds of configurable settings, if any, do you want available in the dashboard itself—for example, would you like an admin area where you can set default currency, default time period (monthly vs quarterly), and which metrics appear by default on the main view?",
+        "user": "I don’t really care about a lot of configurable settings. If you want to add a simple place to set default currency and default time period, that’s fine, but it’s not a big requirement for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 16,
+        "interviewer": "What specific rules or logic, if any, do you want the dashboard to enforce around when financial data can be edited or “closed” for a period (for example, preventing changes after you mark a month or quarter as final)?",
+        "user": "I don’t really care about having rules around closing periods or locking edits. You can just keep it simple so I can update numbers whenever, without a formal closing process.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 17,
+        "interviewer": "What kinds of media or file assets, if any, do you want this dashboard to handle—such as uploading/downloading things like CSV/Excel data files or exporting charts and tables as images or PDFs?",
+        "user": "I don’t really care about handling media or file assets in a fancy way. Basic import/export of data (like CSV or Excel) would be useful, but beyond that I’m not too concerned.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 18,
+        "interviewer": "Do you want any kind of ranking or leaderboard in this dashboard—for example, a view that orders companies by a key metric like revenue, profit, or growth rate—or are you fine without ranked lists at all?",
+        "user": "I don’t really care about rankings or leaderboards. If it’s easy to add, that’s fine, but it’s definitely not a requirement for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 19,
+        "interviewer": "What color scheme would you like for the page background—for example, a light/white background, a dark theme, or a specific color you prefer for the dashboard’s main canvas?",
+        "user": "I’d prefer a light theme with a mint cream–style background for the main canvas—it should feel clean and easy on the eyes, not too bright or high-contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 20,
+        "interviewer": "What color would you like for primary interactive elements such as buttons and selected tabs, given your preference for a light, mint‑cream background?",
+        "user": "Teal would be my preference for primary interactive elements like buttons and selected tabs—it should contrast well with the mint cream background but still feel calm and clean.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      }
+    ],
+    "total_turns": 20
+  }
+]

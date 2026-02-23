@@ -1,0 +1,14 @@
+Below is the FULL current conversation context:
+{history_str}
+
+{scope_intro}
+{candidates_block}
+
+Within this scope only, based on the current dialogue context, decide which candidates are more important or relevant. Assign an INTEGER score for every {id_field} listed above (higher = higher priority; scores only rank within this scope). Output JSON ONLY:
+{{
+  "scores": [
+    {{"{id_field}": "...", "score": 80}},
+    {{"{id_field}": "...", "score": 60}}
+  ]
+}}
+Make sure the scores array contains ALL {id_field} values listed above.

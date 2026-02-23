@@ -1,0 +1,10 @@
+Conversation so far:
+{history}
+
+Chosen dimension:
+- leaf_id: {leaf_id}
+- seed_question: {seed_question}
+
+Task: Generate exactly ONE question to clarify this dimension.
+If the conversation has already clearly answered it, output nothing (empty string).
+Output your question as plain text only (no quotes).

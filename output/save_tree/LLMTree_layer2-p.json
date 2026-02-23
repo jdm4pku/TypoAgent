@@ -1,0 +1,33 @@
+{
+  "Interaction": {
+    "AccountAndSelfService": {},
+    "AdminAndOperations": {},
+    "AuthAndPermissions": {},
+    "CommerceAndTransactions": {},
+    "CommunicationAndForms": {},
+    "DevelopmentAndOperations": {},
+    "ImportExportAndUpload": {},
+    "NavigationAndPages": {},
+    "ReviewsAndEngagement": {},
+    "RewardsAndEngagement": {},
+    "SchedulingAndAutomation": {},
+    "SearchAndQuery": {},
+    "SharingAndReferrals": {}
+  },
+  "Content": {
+    "AccountsAndProfiles": {},
+    "AnalyticsAndVisualization": {},
+    "DomainDataElements": {},
+    "EncryptedDataRecords": {},
+    "FinanceAndTransactions": {},
+    "MediaAndAssets": {},
+    "RankingAndLeaderboards": {},
+    "RulesAndLogic": {},
+    "SettingsAndTemplates": {}
+  },
+  "Style": {
+    "LayoutAndComponents": {},
+    "ThemeAndColors": {},
+    "VisualDesignSystem": {}
+  }
+}

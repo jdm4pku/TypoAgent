@@ -1,0 +1,206 @@
+{
+  "Interaction": {
+    "AccountAndSelfService": {
+      "account_security_self_service": "Which security-related actions should users manage themselves (e.g. change password, manage authentication methods, delete account)?",
+      "avatar_and_identity_media_management": "Should users be able to upload, update, and remove profile images or other identity-related media in their account?",
+      "login_and_authentication": "Do users need to log in and authenticate to access their account-related areas and self-service functions?",
+      "personal_center_scope": "What capabilities should the personal center or user portal include beyond basic profile management (e.g. balances, activity records, orders, quick actions)?",
+      "profile_and_account_information_management": "What profile and account information should users be able to view and manage themselves (e.g. personal details, contact info, preferences, security settings)?",
+      "user_activity_and_history_access": "What types of user activity or transaction history should be accessible in self-service (e.g. orders, service records, financial or subscription history, with options to filter, sort, or export)?",
+      "user_registration_and_verification": "Do you need a self-registration flow for users, and should it include any additional verification steps or document submission?"
+    },
+    "AdminAndOperations": {
+      "admin_interfaces_and_portals": "Which dedicated admin or back-office interfaces and portals do you need for different roles or domains (e.g. global admin, operations, merchants, institutions)?",
+      "admin_management_scope": "Which entities and data domains should be manageable from admin consoles (e.g. users, organizations, resources, inventory, finance, logistics, content)?",
+      "admin_user_and_access_management": "What capabilities should administrators have for managing users, roles, permissions, and organizational structure?",
+      "audit_trails_and_operation_logs": "What access should administrators have to audit trails and operation logs, and how should they be searchable or filterable?",
+      "monitoring_dashboards_and_system_overview": "Do you need admin dashboards or overview pages for monitoring key metrics, system status, and operational performance?",
+      "operational_workflows_and_statuses": "Which operational workflows and state transitions should be supported for requests, tickets, orders, tasks, and similar records?",
+      "system_configuration_and_parameters": "Do you need dedicated admin sections or workflows for configuring system-wide settings, parameters, and operational rules?"
+    },
+    "AuthAndPermissions": {
+      "account_isolation": "Should each user\u2019s data and activity history be strictly isolated from other non-privileged users?",
+      "admin_user_management": "Should administrators be able to create, update, deactivate, delete accounts, and manage other users\u2019 roles and permissions from an admin interface?",
+      "login_and_authentication": "Do you need a login and authentication flow, and which authentication methods should be supported (e.g. password, social login, third-party SSO)?",
+      "permission_assignment": "Should permissions be managed only through roles or also via direct per-user assignment and revocation?",
+      "role_based_access_control": "Do you need role-based access control to define and separate different permission levels for user groups?",
+      "user_registration": "Do you need a user registration flow for creating new accounts, and what basic information must be collected?"
+    },
+    "CommerceAndTransactions": {
+      "cart_and_checkout_flow": "What cart and checkout steps should the purchase flow include (e.g., cart editing, address and options selection, review, confirmation)?",
+      "catalog_browsing_and_selection": "How should users browse and select offerings (e.g., catalog structure, item detail pages, filtering, sorting, real\u2011time availability)?",
+      "fulfillment_shipping_and_after_sales": "How should fulfillment and after\u2011sales processes work (e.g., shipping and delivery tracking, service add\u2011ons, returns and refunds)?",
+      "order_and_transaction_lifecycle": "What lifecycle stages and history views are needed for orders and transactions (e.g., status tracking, full history, filtering, subscription management)?",
+      "payments_and_funds_handling": "Which payment and funds operations should be supported (e.g., one\u2011time payments, stored balance, virtual currency, transfers, authorization/capture, invoicing)?",
+      "pricing_discounts_and_fees": "How should prices, discounts, coupons, and fees be calculated and applied during ordering and payment?",
+      "specialized_transaction_flows": "Do you need guided flows for specific transaction types (e.g., subscriptions, installments, loans, investments, group or flash sales, redemptions)?"
+    },
+    "CommunicationAndForms": {
+      "communication_channels_and_modes": "Which communication modes should the system support (e.g. contact forms, message board, real-time chat, group/one-to-one messaging, offline communication records)?",
+      "form_flow_and_guidance": "For key submissions, do you need simple single-page forms or multi-step/guided flows with inline validation and clear status messages?",
+      "messaging_features_and_content": "What messaging capabilities are needed (e.g. rich content types, presence/status, delivery/read indicators, deletion and recovery rules, internal ticket/project threads)?",
+      "notifications_and_preferences": "Which notification channels and controls are required (e.g. in-app center, badges, timelines, email/SMS/push, user-configurable preferences)?",
+      "outbound_communications_configuration": "How should outbound system or admin communications be managed and sent (e.g. automated responses, campaign targeting/scheduling, email service integration)?",
+      "security_and_verification_in_forms": "Do forms and communication flows require additional security or verification steps (e.g. CAPTCHA handling, real-name or biometric checks)?",
+      "structured_forms_and_fields": "Which interactions require structured forms with defined fields and validation (e.g. applications, inquiries, reports, feedback, support)?"
+    },
+    "DevelopmentAndOperations": {
+      "application_lifecycle_management": "Should users manage the full application lifecycle from within the platform (e.g. creation, configuration, structure, build, deployment, runtime status)?",
+      "automation_and_operational_workflows": "Which automated operational workflows should the system support (e.g. installation/upgrade, deployment with hot reload, report analysis, optimization cycles, versioning/rollback)?",
+      "database_and_data_management": "What database and data management capabilities should be available (e.g. connection profiles, schema inspection, CRUD interfaces, supported data sources)?",
+      "debugging_and_testing_tools": "What debugging and rapid testing capabilities should be provided (e.g. breakpoints, step execution, log/console views, test harness integration)?",
+      "in_platform_development_tools": "What in-platform development tools do you need (e.g. code editors, visual designers, preprocessing, syntax validation, unified client/server structure)?"
+    },
+    "ImportExportAndUpload": {
+      "content_migration_scope": "To what extent should existing content be migrated into the new system versus referenced from the original source?",
+      "export_capabilities_and_formats": "What export and download capabilities are needed (e.g. single vs bulk downloads, packaging of files, supported export formats and structures)?",
+      "import_behavior": "How should import operations behave (e.g. bulk import options, merge vs replace existing data, duplicate handling, supported import formats)?",
+      "upload_capabilities": "What upload capabilities do you need (e.g. single vs multiple files, required uploads, drag-and-drop, supported content types)?",
+      "upload_process_feedback": "What feedback and controls should the upload process provide (e.g. progress indicators, per-item status, cancel, retry)?",
+      "upload_restrictions_and_validation": "What restrictions and validation rules should apply to uploads (e.g. allowed formats, maximum file size, number of items per upload, special handling for large files)?",
+      "upload_workflow_and_management": "How should users manage uploaded items within the system (e.g. organize, rename, view, preview, update, delete)?"
+    },
+    "NavigationAndPages": {
+      "entry_points_and_access_paths": "From which entry points, platforms, or URLs should users be able to access key pages or sections, and should navigation be consistent across platforms?",
+      "list_detail_and_multi_step_flows": "Do you need dedicated list and detail views and/or guided multi-step flows for key tasks (e.g. browse list \u2192 view detail \u2192 complete action)?",
+      "navigation_patterns_and_controls": "What specific navigation patterns and controls should be supported within pages (e.g. carousels, diagrams, maps, tabs, sticky menus, paging between views)?",
+      "page_and_section_layout": "Which functions or content types should be grouped on the same page versus separated into distinct pages or flows (e.g. browsing vs management, information vs commerce, single-page vs multi-page steps)?",
+      "primary_navigation_structure": "What main sections and hierarchy should the primary navigation include, and should different user roles or audiences have separate navigation areas?",
+      "specialized_pages_and_dashboards": "Which specialized pages or dashboards are required for domain-specific entities or workflows (e.g. history records, reports, cases, projects, campaigns, merchant or admin portals)?",
+      "url_routing_and_redirects": "How should URL routing, parameter passing, and redirects be handled for valid, legacy, and invalid URLs (e.g. canonical redirects, error pages, auto-correction)?"
+    },
+    "ReviewsAndEngagement": {
+      "comments_and_replies": "Do you need a commenting system where users can view, add, and reply to comments on content or cases?",
+      "discussion_threads": "Do you need threaded discussion topics with reply chains and lightweight reactions (e.g. likes)?",
+      "personal_list_interactions": "What actions should users be able to perform on their personal lists or watchlists (e.g. add/remove items, reorder, mark as completed)?",
+      "ratings_and_reviews": "Do you need a ratings and textual reviews system for evaluating entities (e.g. services, suppliers, users) after interactions?",
+      "review_interactions": "What interactions should be supported on ratings and reviews (e.g. rating scale input, edit/delete own reviews, mark as helpful)?",
+      "user_generated_posts": "Should users be able to create standalone rich posts to share experiences or content, including text and media?"
+    },
+    "RewardsAndEngagement": {
+      "discount_code_application_flow": "Do you need a dedicated step where users can select, enter, and validate discount codes or coupons during checkout or payment?",
+      "membership_and_benefit_rules": "Should membership levels or similar statuses influence points, discounts, coupons, or other benefits during transactions?",
+      "points_earning_logic": "Should users automatically earn points based on defined actions or behaviors, potentially with different values for different actions?",
+      "points_feedback_interaction": "Do you need immediate interactive feedback (e.g. notifications or animations) when users earn points?",
+      "points_management_and_redemption_flow": "Do you need a flow where users can view their points balance and history and redeem points for rewards directly in the system?"
+    },
+    "SchedulingAndAutomation": {
+      "automation_rules_and_workflows": "Do you need rule-based or time-based automation for tasks and workflows, such as routing, escalations, or recurring processes?",
+      "booking_and_appointment_flow": "How should users create, confirm, cancel, and modify bookings or appointments, including any approval steps and confirmation pages?",
+      "calendar_and_scheduling_integration": "Do you need integration or embedded widgets with external or third-party calendar and scheduling systems for syncing and booking?",
+      "notification_channels_and_subscriptions": "Which notification channels should be supported and how should users configure their subscription preferences and reminders?",
+      "notifications_triggers_and_scheduling": "Which events or schedules should trigger automated notifications or broadcasts, and how configurable should these rules be?",
+      "scheduling_and_time_slots": "What types of schedules and time slots should be supported, including availability definitions, capacities, and prevention of conflicts?",
+      "user_schedule_self_service": "To what extent should users manage their own schedules, such as viewing, rescheduling, and cancelling their bookings in a personal view?"
+    },
+    "SearchAndQuery": {
+      "advanced_query_capabilities": "Do you need advanced query capabilities such as executing custom queries, restricting certain operations, or applying spatial query tools?",
+      "results_presentation": "How should search or query results be presented to users (e.g. layout, key fields shown, pagination, export or copy options)?",
+      "search_filters": "What filtering or faceted criteria should be available to narrow search or list results (e.g. status, category, tags, time range, location)?",
+      "search_input_style": "How should users enter queries (e.g. basic keyword fields, structured criteria, or free-form natural language in a single box)?",
+      "search_interaction_behavior": "How should the search interaction behave (e.g. input triggers, suggestions, cross-module search by default, reusing past inputs like URLs or parameters)?",
+      "search_scope": "Which entities and fields should be searchable across the system (e.g. specific modules, metadata fields, or all content types)?",
+      "search_sorting": "Which sorting options should be available for search or list results (e.g. by date, relevance, name, popularity)?"
+    },
+    "SharingAndReferrals": {
+      "code_based_sharing": "Do you need code- or link-based mechanisms for accessing or promoting specific items or campaigns (e.g. referral codes, campaign links, QR codes)?",
+      "content_sharing_capabilities": "What types of items should users be able to share and in what ways (e.g. shareable links, internal sharing, social platforms, downloads)?",
+      "referral_program_rules": "What rules should govern any referral or invite program (e.g. reward type, calculation method, and eligibility conditions)?",
+      "sharing_channels": "Which external or internal channels should be available for sharing content (e.g. social media, messaging apps, email, organization spaces)?"
+    }
+  },
+  "Content": {
+    "AccountsAndProfiles": {
+      "account_core_fields": "Which core account and credential fields should be stored for each user (e.g. identifiers, contact details, authentication and security data)?",
+      "profile_activity_and_history": "What types of user-related activity, history, or progress records should be stored as part of the account or profile (e.g. usage history, learning progress, transaction records)?",
+      "profile_associated_assets": "Should accounts or profiles own and manage associated assets or resources (e.g. addresses, linked accounts, portfolios, user-generated items)?",
+      "profile_information_fields": "Which personal or organizational profile fields should be stored and optionally displayed (e.g. bio, roles, preferences, verification status, domain-specific attributes)?",
+      "profile_management_capabilities": "Which aspects of accounts and profiles should users and administrators be able to view, create, update, or deactivate?",
+      "role_specific_profiles": "Do different user or organization roles require distinct profile structures, fields, or capabilities?"
+    },
+    "AnalyticsAndVisualization": {
+      "automated_analytics_generation": "Should the system automatically generate analysis artifacts (e.g. queries, visualization parameters, chart types, API parameters) from user input?",
+      "dashboards_and_reports": "What consolidated dashboards and configurable reports do you need for different domains or data sets?",
+      "history_and_log_views": "What historical, audit, or alert-log views and summaries should be available (e.g. past runs, past alerts, log statistics)?",
+      "interactive_visualization_controls": "What kinds of interactive controls should visualizations provide (e.g. filtering, drill-down, zoom, view modes, parameter adjustments)?",
+      "metrics_and_kpis_scope": "Which key metrics, KPIs, and time dimensions should analytics, monitoring, and comparative views focus on?",
+      "visualization_content_configuration": "To what extent should users or the system configure what is shown in visualizations and grids (e.g. data series, fields, detail level, comparison views)?",
+      "visualization_types_and_formats": "Which visualization formats (e.g. charts, tables, maps, diagrams, time series, 2D/3D scenes) should be supported for presenting results?"
+    },
+    "DomainDataElements": {
+      "content_types_and_metadata": "What types of content items should exist and which metadata fields should each content type have (e.g. title, body, tags, media, read status)?",
+      "core_entity_types": "Which core business or domain entities should the system manage as separate records (e.g. customers, orders, assets, locations, cases, courses)?",
+      "data_granularity_and_scope": "At what granularity and scope should data be stored and presented (e.g. aggregated vs record-level, per entity vs per location vs per time interval)?",
+      "entity_field_structure": "What key fields and attributes should each entity type contain (e.g. identifiers, descriptive fields, classifications, status, timestamps)?",
+      "entity_relationship_model": "Which relationships between entities should be explicitly modeled and stored (e.g. orders linked to customers, tasks linked to assets, content linked to categories)?",
+      "event_and_history_records": "Which time-based or transactional events and histories should be stored as structured records (e.g. inspections, alerts, notifications, backups, issues, research activities)?"
+    },
+    "EncryptedDataRecords": {
+      "encryption_algorithm_options": "Which encryption algorithms should be available for securing data and records?",
+      "encryption_key_management": "How should encryption keys be generated, provided, and managed (e.g. user-supplied, system-generated, external key management)?",
+      "encryption_process_modes": "Should the system support both real-time encryption/decryption during operations and batch processing for stored or uploaded data?",
+      "immutable_record_storage": "Should key events and operations be stored as immutable records on a tamper-resistant ledger that users can inspect?",
+      "password_and_credential_protection": "How should user credentials be protected at rest (e.g. strong one-way hashing with salt, non-reversible storage)?",
+      "sensitive_data_retention_scope": "What categories of sensitive data, if any, should the system store versus relying on external identifiers or minimal metadata?",
+      "transport_and_rest_encryption": "Should all sensitive data be protected with encryption both in transit (e.g. HTTPS) and at rest?"
+    },
+    "FinanceAndTransactions": {
+      "account_balances_and_positions": "How many balances or portfolios should each user have (e.g. single vs multiple accounts, different asset types, conversion rules)?",
+      "financial_activity_overview": "What real-time balance summaries and recent activity overviews (e.g. by account or asset) should be available to users?",
+      "invoices_and_billing_documents": "Do you need invoices or similar billing documents, and what structured information should each include?",
+      "pricing_discounts_and_fees": "Which pricing, discount, and fee models (e.g. coupons, special prices, commissions, taxes, surcharges) need to be supported and displayed?",
+      "settlement_and_reconciliation_views": "Do you need settlement and reconciliation views summarizing financial flows for stakeholders (e.g. merchants, suppliers, creators) with exportable records?",
+      "transaction_record_fields": "Which fields must each transaction record include (e.g. amount, fees, method, related parties, timestamps, status, references)?",
+      "transaction_records_and_history": "Which financial transactions should be recorded and viewable in history (e.g. payments, recharges, withdrawals, points, deposits) and at what level of detail?"
+    },
+    "MediaAndAssets": {
+      "asset_infrastructure_and_optimization": "What infrastructure and optimization strategies should be used for storing and delivering assets (e.g. cloud storage choice, CDN, compression, lazy loading)?",
+      "media_display_and_download": "How should media and files be presented and accessed in the interface (e.g. galleries, playback controls, knowledge base views, direct downloads, preview vs restricted access)?",
+      "media_formats_and_sources": "Which media/file formats and external or internal sources should be supported for assets and content (e.g. specific file types, APIs, local libraries)?",
+      "media_management_capabilities": "What management capabilities are needed for media and files (e.g. upload, delete, edit, reorganize, versioning, access control)?",
+      "media_metadata_and_tagging": "What metadata and annotation model should media and files support (e.g. fields to store, segment-level annotations, tagging approach, differentiated metadata by content type)?",
+      "media_organization_structure": "How should media and files be organized within the system (e.g. folders, categories, hierarchical vs flat structures, associations with other records or scenes)?",
+      "media_storage_and_persistence": "Which media and file types should be stored persistently in the system versus generated or provided only for one-time use or external reference (e.g. avatars, generated outputs, associated records)?"
+    },
+    "RankingAndLeaderboards": {
+      "leaderboard_ranking_metrics": "Which metrics should be used to calculate and rank entries on leaderboards (e.g. counts, ratings, engagement)?",
+      "leaderboard_scopes_and_views": "Which leaderboard scopes or views should be available (e.g. global, subset-specific, friend-only) and how many top entries should be shown?",
+      "ranked_content_lists": "Should the system display additional ranked content lists such as top-rated, most-reviewed, or trending items?"
+    },
+    "RulesAndLogic": {
+      "access_and_permission_rules": "Should access, permissions, and role capabilities be governed by configurable rules per resource, operation, and user segment?",
+      "approval_and_submission_rules": "Do you need rule-based submission and approval flows that define when items enter review, required steps, and criteria for approval or rejection?",
+      "configurable_business_logic_engines": "Should there be configurable engines or editors for defining business logic such as formulas, scoring models, classification rules, or alert thresholds?",
+      "matching_and_recommendation_logic": "Should matching and recommendation behavior be driven by configurable rules and criteria (e.g. eligibility filters, risk bands, categories, or scoring models)?",
+      "pricing_and_benefit_rules": "Do you need configurable rules for pricing and financial or reward logic (e.g. fees, discounts, referral rewards, membership levels, points, or trading limits)?",
+      "status_and_lifecycle_workflows": "Do you need configurable status and lifecycle workflows with defined stages and allowed transitions for key entities (e.g. bids, products, tasks, content, transactions)?",
+      "validation_and_exception_handling_rules": "Do you need explicit rules for validation, abnormal or overdue case handling, and exception workflows across core processes?"
+    },
+    "SettingsAndTemplates": {
+      "admin_and_system_configuration": "Which system-wide parameters and categories of settings should administrators be able to configure through the interface?",
+      "configuration_audit_trail": "Do you need an audit trail to record and review changes made to configurations or settings, including who changed what and when?",
+      "configuration_information_architecture": "How should configuration options be organized and structured (e.g. grouped into logical sections, pages, or modules)?",
+      "content_and_communication_templates": "Which types of reusable content or communication templates should the system support and allow users or admins to manage?",
+      "layout_and_visual_templates": "Do you need reusable layout or style templates/presets for pages, dashboards, or visual presentations that can be applied and customized?",
+      "roles_and_permissions_configuration": "Which roles and permission sets should exist and how configurable should access rights be across different modules or features?",
+      "user_preferences_and_settings": "Which personal or account-level settings should end users be able to view and adjust (e.g. notifications, display options, credentials)?"
+    }
+  },
+  "Style": {
+    "LayoutAndComponents": {
+      "background_and_surface_styling": "How should background and surface styling be applied to the layout and components (e.g. page background vs. component surfaces vs. accents)?",
+      "component_set_and_arrangement": "Which UI components should be standard in the interface, and how should key components be arranged relative to each other on a page?",
+      "component_theming_and_consistency": "Should UI components share a unified visual system for color, shape, spacing, and hierarchy across the product?",
+      "layout_consistency_across_views": "How consistent should layout structures be across pages, roles, and modules (e.g. shared headers, navigation, and content patterns)?",
+      "layout_for_specific_functions": "Do specific flows or page types require dedicated layout structures (e.g. carts, confirmations, wizards, personal centers, specialized workflows)?",
+      "page_layout_patterns": "Which overall page layout patterns do you need for different views (e.g. single column, multi-column with sidebars, list-and-detail, dashboard-style)?",
+      "responsive_layout_and_breakpoints": "Which responsive behaviors and screen-size breakpoints should the layout support, and how should structures adapt across devices?"
+    },
+    "ThemeAndColors": {
+      "color_contrast_and_accessibility": "What contrast or accessibility requirements should guide the combination of background, text, and component colors?",
+      "global_theme_color_tokens": "Which global theme color tokens (e.g. brand primaries, neutrals, semantic colors) should be defined for reuse across all pages and components?",
+      "highlight_and_accent_colors": "Which colors should be used as highlights or accents for key elements and emphasis (e.g. links, selected items, key metrics)?",
+      "interactive_state_and_status_colors": "Which colors should represent interaction states and statuses (e.g. hover, active, disabled, success, warning, error, priority levels)?"
+    }
+  }
+}

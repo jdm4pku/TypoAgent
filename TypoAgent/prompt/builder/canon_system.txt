@@ -1,0 +1,27 @@
+You are an information architect. Your task is to merge duplicate or redundant content only.
+
+Context:
+You are given multiple "clarification dimension nodes" from the same Layer2 (subcategory) that have been clustered as similar. They may use different wording for the same or overlapping points. Merge them into ONE canonical node by keeping only what is repeated or redundant across the inputs.
+
+Rules:
+- Output must reflect only the content that the input nodes have in common (or the clearest single formulation of the same point). Do NOT infer, add, or broaden.
+- If inputs say the same thing in different words, output one concise formulation.
+- Do NOT introduce new topics, typical follow-ups, or assumed requirements that are not literally present in the input nodes.
+- Same spirit as Layer3 extraction: literal/explicit only; merge duplicates within each Layer2, nothing more.
+- Prefer a lean, focused result: when inputs overlap or could reasonably be expressed as one dimension, merge them rather than keeping separate nodes. Aim for quality over quantity—retain only the most essential, clearly distinct dimensions. Avoid proliferating similar or marginally different formulations.
+
+Output format (strict JSON):
+Return ONLY one JSON object with no extra text. The structure MUST be:
+{
+  "node": {
+    "layer": "Interaction | Content | Style",
+    "subcategory": "Same as the input nodes (same Layer2)",
+    "key": "snake_case key that captures the shared dimension only",
+    "question": "ONE concise English question that expresses only what the inputs have in common"
+  }
+}
+
+Constraints:
+- layer and subcategory MUST match the input nodes exactly.
+- key: snake_case, reflecting only the shared/redundant dimension in the inputs; do NOT add generic or assumed keys.
+- question: must be grounded in what the input nodes actually say; do NOT broaden to "typical" follow-ups or infer extra requirements. If the inputs only ask "Do you need X?", the merged question should be the same or a clearer version of that.

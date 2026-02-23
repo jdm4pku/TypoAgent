@@ -1,0 +1,174 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Stock Report Generation System",
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "user_stories": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "When you search for stocks, what kind of query and filtering options do you want—e.g., simple ticker search only, or more advanced filters like market cap, sector, P/E range, date range, and sorting by metrics?",
+        "user": "I want both. I definitely need a quick search by ticker or company name, but I’d also like filters like sector, market cap range, P/E range, dividend yield, and maybe sorting by things like daily change, volume, or 52-week performance.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "For the stock lists and search results, what specific sorting options do you want available by default (for example, by price change, volume, market cap, P/E ratio, 52‑week performance, alphabetical, etc.)?",
+        "user": "I don’t really care about the exact default sorting options as long as I can easily change the sort to whatever I need, like price change or volume, when I’m using it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "How would you like the main stock search box to work—just a simple text field where you type ticker/company, or a more natural-language style box where you can type things like “high-dividend tech stocks under $50”?",
+        "user": "I don’t care too much about natural-language stuff. A simple text field for ticker or company name is fine, as long as I can use the filters to narrow things down after.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have anything specific beyond what I’ve already mentioned. As long as it’s straightforward to use and doesn’t feel slow, I’m fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "What kinds of automatically generated stock analysis reports do you want—such as what metrics, charts, or insights should be included in a typical report for a single stock?",
+        "user": "For a single stock, I’d want the report to show basics (price, market cap, sector, 52‑week high/low), key financial metrics (P/E, EPS, dividend yield, revenue and earnings growth), and a few core charts like price over time and volume. I’d also like some simple insights or highlights, like recent trend (bullish/bearish), notable news or events, and maybe valuation vs sector averages. It doesn’t need to be super fancy, just a clear snapshot of how the stock is doing and whether it looks over/undervalued.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 6,
+        "interviewer": "For comparing and monitoring multiple stocks at once (like in a watchlist or sector view), what are the main metrics or KPIs you want to see side‑by‑side—for example, are you most interested in performance over different time periods, valuation ratios, or something else as the primary focus?",
+        "user": "I don’t have strong preferences there. As long as I can see the main stuff like recent performance, P/E, and market cap side by side, I’m okay—nothing super specific beyond that.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "When you view or request a stock analysis report, do you want the system to automatically choose the charts, metrics, and insights for you based on your query, or would you prefer to manually configure what appears in each report?",
+        "user": "I’d rather be able to configure what’s in the report—at least choose the main sections or metrics—before it’s generated. A sensible default is fine, but I want the option to customize the layout or contents instead of it always deciding everything for me automatically.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific visualization formats do you want the site to support for showing your stock data—such as time‑series price charts, tabular views, or any other particular chart types you consider essential?",
+        "user": "I mostly care about clear time-series price charts and simple tables; beyond that, I don’t have strong opinions on specific chart types as long as it’s easy to read and compare data.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 9,
+        "interviewer": "What consolidated dashboards or multi‑stock overview pages do you want (for example, a main portfolio dashboard, a watchlist dashboard, or a “today’s movers” view), and how would you like to configure what appears on each of those reports?",
+        "user": "I don’t really have strong opinions on dashboards. A simple watchlist view and maybe a basic portfolio-style overview would be enough for me, as long as I can see key metrics at a glance.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 10,
+        "interviewer": "When you’re looking at a stock chart or data table, what specific interactive controls do you want to use most—for example, zooming and panning the time range, toggling individual metrics on and off, or clicking a point/bar to see a detailed drill-down view?",
+        "user": "I don’t really have strong preferences there. Basic stuff like being able to change the time range on the chart is enough for me; I’m not picky about more advanced interactions.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else comes to mind for content right now—you’ve covered what I care about. I’m fine to move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "What overall page background style do you prefer for this site—such as a light, clean background, a dark theme, or something else specific?",
+        "user": "I prefer a light, clean look—basically a white or very light background. A dark mode would be a nice-to-have, but the default should definitely be light.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 13,
+        "interviewer": "What primary accent color would you like the site to use for key elements like links, highlights, and active states?",
+        "user": "A navy blue accent would be ideal—something clean and professional for links and highlights.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 14,
+        "interviewer": "For reusable theme colors across the site, could you specify the neutral grays you’d like (for things like card backgrounds, borders, and subtle text)—for example, how light or dark they should be relative to your white background and navy accent?",
+        "user": "I don’t really care about the exact gray shades. As long as they’re subtle, easy to read on a light background, and look good with the navy accent, that’s fine with me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "Do you have any specific accessibility or contrast requirements for how text appears on the light page background—for example, minimum contrast for readability or a preference for “high‑contrast” text styles?",
+        "user": "I don’t have any specific accessibility or contrast requirements in mind. As long as everything is clearly readable on the light background by default, that’s enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "What colors would you like to use for key status messages—specifically success, warning, and error states (for example, confirmations, alerts, and error notices)?",
+        "user": "I don’t really care about the exact colors for those, as long as they’re pretty standard (like green for success, yellow/orange for warnings, red for errors) and easy to notice without being too loud.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "What main UI components do you want on a typical stock search/analysis page (for example, search bar, filters, results list, detailed stock panel, charts), and how should these be arranged relative to each other on the screen (e.g., top, left side, right side, below)?",
+        "user": "I don’t have strong opinions about the exact layout. As long as the search bar and filters are easy to get to and the results and stock details are clear and not cluttered, I’m okay with whatever arrangement you think is standard.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 18,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else for style—I’m good with what we’ve covered. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 19,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to search for a stock quickly by typing its ticker or company name into a simple search box.\n\nFeature2: As a user, I want to filter stock search results by sector, market cap range, P/E ratio range, and dividend yield.\n\nFeature3: As a user, I want to sort stock search results by metrics such as daily price change, volume, market cap, P/E ratio, and 52‑week performance, and to be able to change the sort easily.\n\nFeature4: As a user, I want the search and filtering interface to be straightforward to use and feel responsive (not slow).\n\nFeature5: As a user, I want each single‑stock analysis report to show basic information such as current price, market cap, sector, and 52‑week high/low.\n\nFeature6: As a user, I want each single‑stock analysis report to show key financial metrics such as P/E ratio, EPS, dividend yield, and revenue and earnings growth.\n\nFeature7: As a user, I want each single‑stock analysis report to include core charts, such as time‑series price over time and trading volume.\n\nFeature8: As a user, I want each single‑stock analysis report to include simple insights such as recent trend (bullish/bearish), notable news or events, and valuation compared to sector averages.\n\nFeature9: As a user, I want to configure which main sections or metrics appear in a stock analysis report before it is generated, while still having a sensible default layout.\n\nFeature10: As a user, I want to view multiple stocks side by side (e.g., in a list or watchlist) with key metrics such as recent performance, P/E ratio, and market cap.\n\nFeature11: As a user, I want clear time‑series price charts to visualize stock performance over different time ranges.\n\nFeature12: As a user, I want tabular views to present stock data and comparisons in a simple, easy‑to‑read table format.\n\nFeature13: As a user, I want a simple watchlist view where I can see my selected stocks and their key metrics at a glance.\n\nFeature14: As a user, I want a basic portfolio‑style overview page where I can see an aggregated view of my holdings and key metrics at a glance. (TBD: exact portfolio metrics and calculations)\n\nFeature15: As a user, I want basic chart interactions such as changing the visible time range (e.g., 1D, 1W, 1M, 1Y, max).\n\nFeature16: As a user, I want the site to use a light, clean default theme with a white or very light background.\n\nFeature17: As a user, I want the site to offer a dark mode as an optional alternative theme. (TBD: how to switch and which elements change)\n\nFeature18: As a user, I want the site to use a navy blue accent color for key UI elements such as links, highlights, and active states.\n\nFeature19: As a user, I want neutral gray tones that are subtle, readable on a light background, and visually compatible with the navy accent color. (TBD: exact gray values)\n\nFeature20: As a user, I want text and UI elements to have sufficient contrast on the light background so that everything is clearly readable by default.\n\nFeature21: As a user, I want status messages to use standard colors (green for success, yellow/orange for warnings, red for errors) that are noticeable but not overly aggressive.\n\nFeature22: As a user, I want the search bar and filters on the stock search/analysis page to be easy to access so I can quickly refine my search.\n\nFeature23: As a user, I want the search results and detailed stock information on the stock search/analysis page to be clearly presented and not cluttered, following a standard, intuitive layout. (TBD: exact placement of panels and components)",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 19
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "Interaction": {
+    "SearchAndQuery": {},
+    "ConfigurationAndCustomization": {},
+    "NavigationAndPages": {},
+    "ControlsAndGameplay": {},
+    "CommunicationAndForms": {},
+    "AutomatedDisplay": {},
+    "AuthenticationAndRoles": {},
+    "NotificationsAndSubscriptions": {},
+    "MessagingAndChat": {},
+    "UserGeneratedContentAndCommunity": {},
+    "CommerceAndTransactions": {},
+    "DataEntryAndWorkflows": {},
+    "FileAndMediaHandling": {}
+  },
+  "Content": {
+    "InformationArchitecture": {},
+    "DomainDataElements": {},
+    "AnalyticsAndVisualization": {},
+    "RecordsAndOutcomes": {},
+    "DetailLevelAndDescriptions": {},
+    "TemplatesAndOptions": {},
+    "SupportingContent": {}
+  },
+  "Style": {
+    "ColorScheme": {}
+  }
+}

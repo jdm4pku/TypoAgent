@@ -1,0 +1,27 @@
+{
+  "Interaction": {
+    "AdminAndManagementFlows": {},
+    "AuthenticationAndRoles": {},
+    "CommunicationAndEmailMessaging": {},
+    "ConfigurationAndCustomization": {},
+    "DataEntryAndWorkflows": {},
+    "FileAndPlaybackHandling": {},
+    "MediaEditingAndPreview": {},
+    "NavigationAndPages": {},
+    "OrderingAndServiceAccess": {},
+    "SearchAndQuery": {},
+    "UserGeneratedContentAndCommunity": {}
+  },
+  "Content": {
+    "AnalyticsAndVisualization": {},
+    "DocumentationAndGuides": {},
+    "DomainDataElements": {},
+    "FileAndMediaContent": {},
+    "InformationArchitecture": {},
+    "RecordsAndOutcomes": {},
+    "TemplatesAndOptions": {}
+  },
+  "Style": {
+    "ColorSchemeAndComponents": {}
+  }
+}

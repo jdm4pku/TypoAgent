@@ -1,0 +1,7 @@
+Interviewer's question (this round): {interviewer_question}
+
+User's answer: {user_answer}
+
+Current leaf_id being judged: {leaf_id}
+
+Task: Based ONLY on the user's answer above, judge whether the user expressed a need for what was asked. Output the strict JSON specified in the system instructions.

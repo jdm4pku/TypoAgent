@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Stock Report Generation System",
+    "application_type": "Analytics Platforms/Dashboards",
+    "Category": {
+      "primary_category": "Data Management",
+      "subcategories": [
+        "CRUD Operations",
+        "API Integration",
+        "Data Visualization"
+      ]
+    },
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "Implicit Requirements": [
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer to search for stocks by entering stock codes or stock names."
+      },
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer to select the report format and content scope before report generation, instead of using a default report template."
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the generated reports to include basic stock information, market trends, and financial data."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the website to use a white background."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the website components to use a navy color."
+      }
+    ],
+    "URL": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ]
+  },
+  {
+    "name": "Neighborhood Data Comparison Dashboard",
+    "application_type": "Analytics Platforms/Dashboards",
+    "Category": {
+      "primary_category": "Content Presentation",
+      "subcategories": [
+        "Data Visualization",
+        "Static Page Generation"
+      ]
+    },
+    "initial_requirements": "I need a web-based application that lets me explore and compare information across different neighborhoods, with built-in tools to help me view and understand the comparisons.",
+    "Implicit Requirements": [
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer the application to provide built-in tools in the form of data dashboards with interactive charts"
+      },
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer the data dashboards to support customizable layouts"
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the application to support comparisons of neighborhood-level demographic, economic, and crime data across different areas."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the application to use an ivory background."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the application’s components to use a forest green color."
+      }
+    ],
+    "URL": [
+      "As a user, I want to use a web-based neighborhood mapping application for comparing data across different areas, so that I can analyze and understand differences between neighborhoods.",
+      "As a user, I want to compare demographic data across different areas, so that I can understand how population characteristics vary between neighborhoods.",
+      "As a user, I want to compare economic data across different areas, so that I can understand how economic conditions vary between neighborhoods.",
+      "As a user, I want to compare crime data across different areas, so that I can understand how crime levels and patterns vary between neighborhoods.",
+      "As a user, I want access to data dashboards with interactive charts, so that I can explore and visualize neighborhood data in a dynamic way.",
+      "As a user, I want data dashboards with customizable layouts, so that I can arrange and view the information in a way that suits my needs.",
+      "As a user, I want the application to use an ivory background, so that the visual appearance matches the specified color scheme.",
+      "As a user, I want the application’s components to use forest green, so that the interface elements match the specified color scheme."
+    ]
+  },
+  {
+    "name": "Multi-Company Finance Dashboard",
+    "application_type": "Analytics Platforms/Dashboards",
+    "Category": {
+      "primary_category": "Data Management",
+      "subcategories": [
+        "CRUD Operations",
+        "Big Data",
+        "Data Visualization"
+      ]
+    },
+    "initial_requirements": "I need a dashboard that allows me to input and view financial data across multiple companies, and supports financial comparison and reporting.",
+    "Implicit Requirements": [
+      {
+        "Aspect": "Interaction",
+        "RequirementText": "I prefer to access company-specific financial data by specifying a company name or identifier."
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the dashboard to present revenue data for each company."
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the dashboard to present expense data for each company."
+      },
+      {
+        "Aspect": "Content",
+        "RequirementText": "I expect the dashboard to present profit data for each company."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer the dashboard to use a mint cream background."
+      },
+      {
+        "Aspect": "Style",
+        "RequirementText": "I prefer all dashboard components to be styled with teal."
+      }
+    ],
+    "URL": [
+      "As a user, I want to use a multi-company dashboard to manage and view financial data from multiple companies in one place.",
+      "As a user, I want the dashboard to allow me to input financial data for each company, so that I can manage financial information across multiple companies.",
+      "As a user, I want to view financial data for a specific company by specifying its name or identifier, so that I can review company-specific details.",
+      "As a user, I want the dashboard to present revenue data for each company, so that I can understand each company’s income level.",
+      "As a user, I want the dashboard to present expense data for each company, so that I can understand each company’s cost structure.",
+      "As a user, I want the dashboard to present profit data for each company, so that I can understand each company’s profitability.",
+      "As a user, I want the dashboard to provide consolidated reports and cross-company comparisons, so that I can analyze overall financial performance.",
+      "As a user, I want the dashboard to use mint cream as the background, so that the interface follows the specified color scheme.",
+      "As a user, I want all dashboard components to be styled with teal, so that the interface elements follow the specified component styling"
+    ]
+  }
+]

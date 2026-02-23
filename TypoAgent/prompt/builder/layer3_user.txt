@@ -1,0 +1,11 @@
+Two-level taxonomy (Layer1: Layer2 nodes):
+{skeleton_text}
+
+New Instruction:
+{instruction}
+
+Task:
+1) Identify which Layer2 subcategories (from the taxonomy above) the instruction touches.
+2) For each: if instruction describes in detail → output clarifying key-question; if only mentions → output at most one "Do you need [X]?" question.
+3) Return the strict JSON (relevant_dimensions) specified in the system instructions.
+4) Omit topics the instruction does not mention.

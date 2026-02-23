@@ -1,0 +1,166 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Stock Report Generation System",
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "user_stories": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "When you search for a stock, what kind of search and filtering experience do you prefer—for example, do you want a simple ticker search box only, or more advanced filters (like market cap ranges, sectors, date ranges, fundamentals) and the ability to sort and refine results interactively?",
+        "user": "I’d like both: a simple search box where I can type a ticker or company name, plus an “advanced” option with filters like sector, market cap, volume, and basic fundamentals. It would be great if I can sort and refine results interactively without reloading the whole page.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "When the user starts typing in the stock search box, how should the interaction behave—should it immediately show live suggestions and results as they type, or wait for them to press Enter/click a search button before fetching and displaying results?",
+        "user": "I don’t really care about that level of detail—either live suggestions or pressing Enter is fine, as long as it feels fast and responsive.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "What sorting options would you like for your stock search results—for example, should users be able to sort by price change, market cap, trading volume, or alphabetical by ticker/company?",
+        "user": "I don’t really care about specific sorting options—any reasonable defaults like market cap, volume, or price change are fine, as long as I can sort by a few common fields if I need to.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any extra interaction requirements beyond what I already mentioned—just that the site feels fast and straightforward to use.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "What should the automatically generated stock analysis reports look like—do you prefer a text-style written summary, a dashboard with charts and key metrics, or a mix of both, and are there any specific visual elements (like price charts, trend lines, or tables of ratios) you definitely want included?",
+        "user": "A mix of both would be ideal: a clear written summary at the top, and then a dashboard-style layout underneath. I definitely want a price chart with basic trend lines, a few key metrics (P/E, market cap, volume, dividend yield), and a simple table of important ratios and recent performance data.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 6,
+        "interviewer": "When a user requests an analysis for a stock, should the website automatically choose what queries to run and what charts/tables to generate based on that request, or do you want the user to manually pick the specific analytics and visualizations each time?",
+        "user": "I’d like to be able to pick the general scope or sections before generating the report (for example, fundamentals, technicals, news), but after that the site should automatically decide the detailed queries and which specific charts/tables to show within those sections.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 7,
+        "interviewer": "For your automatically generated stock analysis, what dashboards or report configurations do you want to be able to save and reuse—for example, a default “overview” layout, a more detailed “fundamentals” layout, or other named report setups you’d regularly rely on?",
+        "user": "I don’t really care about saving specific dashboard configurations—just having a solid default overview layout is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 8,
+        "interviewer": "For your stock analytics and comparison views, what are the most important metrics and KPIs you want to consistently see (for example, are you mainly focused on valuation ratios, price performance over specific time frames, income/dividend metrics, or something else)?",
+        "user": "I don’t really have strong opinions on specific KPIs—just the usual basics are fine, like valuation ratios, recent price performance, and maybe dividend info if it’s available.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific visualization formats do you want the site to support for showing stock analysis results—for example, should it mainly use time‑series price charts and data tables, or are there any other particular visual formats you definitely want available?",
+        "user": "I don’t really care about specific visualization formats beyond the basics—time-series price charts and clear tables are enough for me. Anything standard and easy to read is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 10,
+        "interviewer": "When you’re looking at charts and tables in your stock reports, what kind of interactivity do you want most—for example, the ability to zoom and pan over time, filter which data series are shown, or click into a point or row to see more detailed information?",
+        "user": "I don’t really care about that level of interactivity—basic, readable charts and tables are enough for me. Simple zoom or hover details would be nice but not essential.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content-related requirements beyond what I’ve already mentioned—feel free to move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "What overall page layout do you prefer for the main analysis screen—for example, a single-column layout that scrolls vertically from summary to details, or a multi-column dashboard-style layout with key panels (summary, chart, metrics, table) visible side by side without much scrolling?",
+        "user": "I don’t really have a strong preference there—either single-column or multi-column is fine, as long as it’s clean and easy to read on a normal laptop screen.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 13,
+        "interviewer": "What overall page background style do you prefer for the site—such as a light, mostly white background, a dark theme, or a specific color family you’d like used as the main background?",
+        "user": "I prefer a light, mostly white background overall—it just feels cleaner and easier to read. A simple, minimal color accent is fine, but nothing too dark or flashy.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 14,
+        "interviewer": "For text placed on your light background, what level of contrast or accessibility do you want—for example, should all main text and key labels meet a clear, high-contrast standard that’s comfortable for long reading and suitable for users with mild visual impairments?",
+        "user": "I don’t really care about that level of detail—just use a normal, readable contrast that looks good on a light background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 15,
+        "interviewer": "For highlights and accents on your site (such as links or selected items), what single main color or color family would you like to use—for example, a particular shade of blue, green, or another color?",
+        "user": "Let’s go with a navy blue for highlights and accents—I like a clean, professional navy rather than anything too bright or neon.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "For interactive elements like primary buttons and links on your site, what color would you like them to change to on hover (for example, a lighter navy, a subtle gray, or something else) to indicate they’re interactive without feeling flashy?",
+        "user": "I don’t care much about the exact hover color—just something subtle like a slightly lighter navy or a soft gray that makes it clear it’s interactive without standing out too much.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "For your site’s reusable color tokens, what specific navy shade would you like to define as the primary brand color (for example, by giving a hex code or describing how dark/saturated it should be)?",
+        "user": "I don’t really care about a specific navy shade—any standard, professional-looking navy is fine as long as it matches the light, clean look I mentioned.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 18,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want a simple search box where I can type a ticker or company name to find a stock quickly.\n\nFeature2: As a user, I want an advanced search option with filters such as sector, market cap, trading volume, and basic fundamentals so I can narrow down stock results.\n\nFeature3: As a user, I want search results to support basic sorting by common fields (e.g., market cap, volume, price change, alphabetical) so I can reorder the list as needed.\n\nFeature4: As a user, I want search results and filter changes to update interactively without reloading the entire page so the experience feels fast and responsive.\n\nFeature5: As a user, I want the overall search interaction (whether live suggestions or press-Enter) to feel fast and responsive, regardless of the specific implementation.\n\nFeature6: As a user, I want automatically generated stock analysis reports that combine a clear written summary at the top with a dashboard-style layout underneath.\n\nFeature7: As a user, I want each stock report to include a time‑series price chart with basic trend lines so I can quickly see how the price has moved over time.\n\nFeature8: As a user, I want each stock report to show key metrics such as P/E ratio, market cap, trading volume, and dividend yield (when available).\n\nFeature9: As a user, I want each stock report to include a simple table of important ratios and recent performance data so I can review the numbers in a structured way.\n\nFeature10: As a user, I want to choose the general scope or sections of an analysis report (e.g., fundamentals, technicals, news) before generating it.\n\nFeature11: As a user, after I select the general sections, I want the site to automatically decide which specific queries, charts, and tables to run and display within those sections.\n\nFeature12: As a user, I want a solid default “overview” report layout so I can get a useful analysis without configuring dashboards.\n\nFeature13: As a user, I want the site to show standard, basic KPIs such as valuation ratios, recent price performance, and dividend information (if available) across my analysis views.\n\nFeature14: As a user, I want the site to use basic visualization formats like time‑series charts and clear tables for presenting analysis results.\n\nFeature15: As a user, I want charts and tables to be easy to read, with at least simple interactivity such as zoom or hover details being nice-to-have but not required.\n\nFeature16: As a user, I want the main analysis screen layout (single- or multi-column) to be clean and easy to read on a normal laptop screen, without clutter.\n\nFeature17: As a user, I want the site to use a light, mostly white background for pages so that content feels clean and is easy to read.\n\nFeature18: As a user, I want text and labels to have normal, readable contrast on the light background so I can comfortably read the content.\n\nFeature19: As a user, I want a professional navy blue color used for highlights and accents (e.g., links, selected items) to give the site a clean, professional look.\n\nFeature20: As a user, I want hover states for interactive elements (such as buttons and links) to change subtly (e.g., slightly lighter navy or soft gray) to indicate interactivity without being flashy.\n\nFeature21: As a user, I want the primary brand navy color to be a standard, professional-looking navy that fits with the light, clean overall design.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 18
+  }
+]

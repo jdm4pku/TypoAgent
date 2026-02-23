@@ -1,0 +1,14 @@
+gymnasium>=0.26.0
+numpy>=1.21.0
+pyyaml>=6.0
+
+openai
+together
+google-genai
+boto3
+
+pyarrow
+fastparquet
+
+flask>=2.0
+flask-cors>=3.0

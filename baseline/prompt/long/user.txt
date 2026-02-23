@@ -1,0 +1,4 @@
+Conversation history:
+{history_str}
+
+Ask your next question to better understand the user's requirements, or finish the dialogue and generate a comprehensive set of user stories based on all the requirements you have elicited.

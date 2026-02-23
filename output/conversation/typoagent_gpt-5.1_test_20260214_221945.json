@@ -1,0 +1,182 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Stock Report Generation System",
+    "initial_requirements": "I need a website that helps me search for stocks and automatically generate stock analysis reports.",
+    "user_stories": [
+      "As a user, I want to search for stock information by providing stock codes or names, so that I can find data about specific stocks.",
+      "As a user, I want the website to automatically generate stock analysis reports for my choosen, so that I can quickly understand key points.",
+      "As a user, I want to select report formats and report content, so that I can control the type of report generated.",
+      "As a user, I want the generated reports to include basic stock information, so that I can understand fundamental details.",
+      "As a user, I want the generated reports to include market trends, so that I can understand how the stock performs in the market.",
+      "As a user, I want the generated reports to include financial data, so that I can analyze the stock’s financial performance.",
+      "As a user, I want the website background color to be white, so that the interface follows the specified visual requirement.",
+      "As a user, I want the website components to use a navy color, so that the interface matches the specified component color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gpt-5.1",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "When you search for a stock, what kind of search and filtering experience do you want—for example, do you prefer a simple ticker search box only, or do you want advanced filters (like market cap ranges, sectors, valuation metrics) and sortable, multi-column result lists?",
+        "user": "I’d like both: a simple search box where I can type a ticker or company name, and then an option to open advanced filters. For filters, I definitely want basics like sector, market cap range, and maybe valuation metrics like P/E and dividend yield, with a sortable table of results.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "What sorting options do you want for your stock results table—for example, should users be able to sort by price change, market cap, P/E ratio, dividend yield, or something else you consider important?",
+        "user": "I don’t have strong opinions on specific sorting options—I’m fine with the usual ones like price change, market cap, P/E, and dividend yield, but it’s not a big priority for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "When someone wants an automatically generated stock analysis report, how should they enter their request—by typing a natural-language prompt in one box (e.g., “analyze AAPL for long-term investment”), or by filling out more structured fields (e.g., selecting ticker plus time horizon, risk level, and metrics)?",
+        "user": "I don’t really care how they enter it—as long as it’s quick and obvious what to do, I’m fine with either a simple prompt box or some structured fields.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any strong additional interaction requirements—just that it feels fast and straightforward to use without a lot of clicks or confusion.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "What kinds of analytics and visualizations do you want in the automatically generated stock reports—for example, do you prefer mainly written summaries with a few key charts, or a more dashboard-style layout with multiple graphs and metric cards that can be reviewed at a glance?",
+        "user": "I don’t really care about the specific layout there—as long as it clearly explains the stock with some key numbers and maybe a couple of simple charts, I’m fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific stock data do you want the site to show for each company—such as prices, fundamentals, or news—and are there any must-have data points you rely on when analyzing a stock?",
+        "user": "I mainly care about current price, recent price performance, market cap, P/E, dividend yield, and basic financials like revenue and earnings trends. A quick snapshot of recent news or major events is also important to me. Those are the must-haves I usually look at when analyzing a stock.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "For each stock on the site, what additional fields or attributes (beyond price, performance, market cap, P/E, dividend yield, revenue, earnings trends, and recent news) do you want to always see in its detailed view?",
+        "user": "I don’t really have any extra must-have fields beyond what I already mentioned. As long as those core metrics and a bit of news are there, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "What are the main types of things you want this system to treat as separate records—for example, individual stocks only, or also entities like portfolios, watchlists, and maybe user-defined stock screens?",
+        "user": "I don’t really care about how records are structured at that level—as long as I can search individual stocks easily and maybe save or revisit them somehow, the exact record types aren’t important to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "When you view stock information and reports, do you want the data mainly summarized at a high level (e.g., current metrics and overall recent performance), or do you also want more granular, time-based details like daily or intraday price and financial history that you can drill into?",
+        "user": "I don’t really care about super granular, drill-down history—high-level summaries with recent performance are enough for me. If there’s a simple way to see a basic price chart over time, that’s nice, but I don’t need detailed intraday data.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 10,
+        "interviewer": "For the stock analysis reports themselves, what distinct content pieces do you want each report to include (for example, sections like “Overview,” “Key Metrics,” “Recent News Summary”) and what basic metadata should every report have (such as a title and date range covered)?",
+        "user": "I’d like each report to have at least an Overview, Key Metrics, Recent Performance, and a brief Recent News/Events Summary. Ideally I could pick whether to include extra sections like Risks or Valuation before generating. For metadata, a clear title, the ticker, the date/time generated, and the date range the data covers are important to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "When a stock analysis report is generated, what specific relationships between items do you want the system to keep track of—for example, should each report be explicitly linked to the stock ticker it analyzes, the user who generated it, and the particular search or filter settings that produced it?",
+        "user": "I don’t really care about tracking that level of detail. As long as the report is clearly tied to the ticker, when it was generated, and I can find it again if I save it, that’s enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "For your stock site, what kinds of time-based events or histories do you specifically want the system to store as structured records—for example, things like generated reports, saved stock views, or notable news/event snapshots tied to a date?",
+        "user": "I don’t really care about how that kind of history is stored. As long as I can easily see recent news/events and find any reports I’ve saved, the underlying structure doesn’t matter to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 13,
+        "interviewer": "For your stock site, what do you want user accounts and profiles to include—specifically, should signed-in users have a personal profile area where they can see and manage things like their saved stocks and generated reports, or would you rather keep it minimal with just a basic account for login and nothing more?",
+        "user": "I don’t really care about detailed profiles—just a basic account so I can log in and see any saved stocks or reports is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 14,
+        "interviewer": "For your basic account where you can log in and see saved stocks and reports, do you want the account to formally “own” and manage those saved items (so they’re clearly tied to your profile and only visible there), or are you fine with a lighter setup where the account just lets you access generic saved views without strong ownership or organization?",
+        "user": "I don’t really care about that level of detail. As long as I can log in and see my saved stocks and reports easily, the exact ownership or organization model isn’t important to me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 15,
+        "interviewer": "Do you have any specific requirements for how your saved stocks, reports, and account data should be encrypted—for example, insisting on strong, modern encryption for data at rest and in transit, or are you comfortable leaving the exact encryption algorithms and key management details up to the implementation as long as it’s industry-standard and secure?",
+        "user": "I don’t really care about the specific encryption details. As long as it follows normal industry-standard security and is generally considered secure, that’s fine with me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 16,
+        "interviewer": "For each user account on your site, what specific core fields do you want to store—such as a username versus email as the main login identifier, and whether you also want a display name visible in the interface?",
+        "user": "I don’t really care about the specific account fields. Using email to log in is fine, and a simple display name is nice but not essential for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 17,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements in mind right now, so we can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 18,
+        "interviewer": "What overall layout and component arrangement do you want for the main stock search and report page—for example, should the search and filters be in a narrow left sidebar with results on the right, or do you prefer everything stacked vertically in a single central column?",
+        "user": "I don’t really have a strong preference there. Either a left sidebar or a single central column is fine, as long as it’s clean and easy to understand at a glance.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 19,
+        "interviewer": "What overall page background style do you prefer for this stock site—for example, a light background (like white or very light gray), a dark background, or something else you have in mind?",
+        "user": "I’d prefer a light background—mostly white or very light gray. It just feels cleaner and easier to read for this kind of site.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 20,
+        "interviewer": "What accessibility or contrast requirements should guide your text color on the light background—for example, do you want high-contrast text that clearly exceeds standard accessibility guidelines so everything is easy to read?",
+        "user": "I don’t really have specific accessibility or contrast requirements. As long as the text is clearly readable on the light background and follows normal accessibility standards, that’s fine with me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      }
+    ],
+    "total_turns": 20
+  }
+]

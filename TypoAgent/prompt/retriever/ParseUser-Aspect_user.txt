@@ -1,0 +1,5 @@
+Interviewer asked: {interviewer_question}
+
+User replied: {user_reply}
+
+Output JSON: {{"decision": "move_on" | "continue", "reason": "brief"}}

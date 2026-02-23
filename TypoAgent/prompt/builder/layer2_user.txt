@@ -1,0 +1,10 @@
+Current Tree (Layer 1 fixed, Layer 2 mutable):
+{current_file_content}
+
+New Instruction:
+{instruction}
+
+Task:
+1) Extract requirement points from the instruction into Interaction / Content / Style. Remember: data, records, reports, analytics, documentation, templates → Content; user actions/flows → Interaction.
+2) Integrate them into the current tree using the policy (merge > expand > add). Prefer merging into existing; avoid adding new Interaction dimensions if the tree already has many.
+3) Output the strict JSON specified in the system instructions.

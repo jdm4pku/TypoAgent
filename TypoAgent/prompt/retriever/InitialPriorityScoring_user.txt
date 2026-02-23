@@ -1,0 +1,9 @@
+User's initial requirement description:
+{initial}
+
+Below are the requirement "layer2 units" in the "{category}" category only. Each unit is a dimension (layer2_id) with its sub-aspects (layer3 leaves) listed beneath it for context. Assign ONE priority score per layer2_id (for the whole unit):
+{units_block}
+
+Task:
+Within this category only, decide which units are more important, more urgent, or more strongly related to the user's needs.
+Output JSON ONLY (no explanations or extra text). Make sure the scores array contains ALL of the layer2_id values listed above.

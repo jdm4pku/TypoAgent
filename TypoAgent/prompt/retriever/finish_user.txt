@@ -1,0 +1,11 @@
+Conversation history:
+{history}
+
+Write the final user requirements list (URL) in this exact format:
+I have gathered enough information. The user requirements list is as follows:
+
+Feature1: As a user, I want to ...
+Feature2: As a user, I want to ...
+...
+
+Rules: Use concise, concrete user stories. Avoid duplicates. If uncertain, mark with "(TBD)".

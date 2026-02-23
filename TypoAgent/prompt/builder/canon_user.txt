@@ -1,0 +1,6 @@
+Below are dimension nodes from the same Layer2 (subcategory), clustered as similar:
+{items}
+
+Task: Merge only the duplicate/redundant content into ONE canonical node. Output the strict JSON specified in the system instructions.
+
+{allowed_subcategories_constraint}
