@@ -35,7 +35,7 @@ class DynamicShuffleAgent(StaticShuffleAgent):
     def ask_question(self, conversation_history):
         self._maybe_reset_episode(conversation_history)
         self._update_state_from_history(conversation_history)
-        self._reorder_leaf_order_by_context(conversation_history)
+        # 先判断结束和大类确认，避免不必要的上下文重排 LLM 调用
         if self.tree.all_determined() and len(self._categories_asked) >= 3:
             return self._finish(conversation_history)
         if self.state.turns_asked >= self.max_turns:
@@ -78,6 +78,8 @@ class DynamicShuffleAgent(StaticShuffleAgent):
                 self._category_check_asked.add(current_cat)
             self.state.turns_asked += 1
             return self._format_category_check_question(current_cat, is_followup=followup_check)
+        # 需要选下一个 leaf 时，再按上下文动态重排
+        self._reorder_leaf_order_by_context(conversation_history)
         leaf_id = self.tree.next_leaf()
         if leaf_id is None and len(self._categories_asked) < 3:
             missing = {"Interaction", "Content", "Style"} - self._categories_asked
