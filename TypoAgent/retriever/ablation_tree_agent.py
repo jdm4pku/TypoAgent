@@ -25,6 +25,8 @@ class AblationTreeAgent(DynamicShuffleAgent):
         use_context_priority: bool = True,
         use_category_gating: bool = True,
         max_turns_per_category_no_gate: int | None = None,
+        cat_check_threshold: int = 2,
+        followup_threshold: int = 4,
         enable_llm_parsing: bool = True,
         enable_llm_question: bool = True,
         max_ask_per_leaf: int = 2,
@@ -39,6 +41,8 @@ class AblationTreeAgent(DynamicShuffleAgent):
             model_config=model_config,
             model_call_fn=model_call_fn,
             build_history_fn=build_history_fn,
+            cat_check_threshold=cat_check_threshold,
+            followup_threshold=followup_threshold,
             enable_llm_parsing=enable_llm_parsing,
             enable_llm_question=enable_llm_question,
             max_ask_per_leaf=max_ask_per_leaf,
@@ -90,8 +94,8 @@ class AblationTreeAgent(DynamicShuffleAgent):
             return self._finish(conversation_history)
 
         current_cat = getattr(self, "_current_category", None)
-        cat_check_threshold = 3 if current_cat == "Content" else 2
-        followup_threshold = 5 if current_cat == "Content" else 4
+        cat_check_threshold = getattr(self, "_cat_check_threshold", 2)
+        followup_threshold = getattr(self, "_followup_threshold", 4)
         first_check = (
             current_cat
             and current_cat not in getattr(self, "_categories_done", set())

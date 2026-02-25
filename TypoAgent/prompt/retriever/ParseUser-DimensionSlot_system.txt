@@ -21,8 +21,11 @@ Strict no_need triggers (user says ANY of these → no_need):
 - "I'm fine with whatever", "I'm not too concerned", "I don't have any specific"
 - "Nothing else comes to mind", "no specific requirements"
 
+MINIMUM-ACCEPTABLE = no_need (user rejects advanced/complex, accepts basics only):
+- When user REJECTS the advanced/complex option (e.g. "I don't need advanced X", "I don't care about X", "I don't really need X") AND accepts a minimal/basic fallback (e.g. "basic Y is fine", "just the essentials", "simple X would be enough", "Basic stats per game would be fine"), treat as no_need. The user is NOT requesting new specifics; they are stating the default minimum is acceptable.
+
 status="need":
-User ACTIVELY expresses they WANT/HAVE a NEW or SPECIFIC need. Must have clear desire: "I'd like", "I want", "I'd prefer", "I need", specific concrete preferences. The user is actively REQUESTING something beyond defaults. Do NOT treat "just default/basics" as need when the dominant sentiment is "I don't need to specify more".
+User ACTIVELY expresses they WANT/HAVE a NEW or SPECIFIC need. Must have clear desire: "I'd like", "I want", "I'd prefer", "I need", specific concrete preferences. The user is actively REQUESTING something beyond defaults. Do NOT treat "just default/basics" as need when the dominant sentiment is "I don't need to specify more". If user says "I don't need [advanced X]" or "I don't care about [X]" and only mentions a minimal acceptable fallback, use no_need.
 
 status="no_need":
 User defers, has no preference, says "don't care", "enough", "basics/defaults are fine", or does not add new requirements. When in doubt (e.g., user mentions something but overall says "that's enough" or "I don't care"), use no_need. Do NOT extract minor positive phrases (e.g. "clearly readable", "looks good", "professional") as need when the user's MAIN message is deferral.

@@ -16,6 +16,8 @@ class TypoAgentInterviewer:
         base_url: str = None,
         fixed_tree_path: str = "output/save_tree/LLMTree.auto-p.json",
         tree_percentage: float = 100.0,
+        cat_check_threshold: int = 2,
+        followup_threshold: int = 2,
     ):
         self.api_key = api_key
         self.model_name = model_name
@@ -54,6 +56,8 @@ class TypoAgentInterviewer:
             enable_llm_question=True,
             max_ask_per_leaf=2,
             tree_percentage=self.tree_percentage,
+            cat_check_threshold=cat_check_threshold,
+            followup_threshold=followup_threshold,
         )
 
     def ask_question(

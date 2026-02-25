@@ -22,6 +22,8 @@ class AblationInterviewer:
         use_context_priority: bool = True,
         use_category_gating: bool = True,
         max_turns_per_category_no_gate: int | None = None,
+        cat_check_threshold: int = 2,
+        followup_threshold: int = 4,
     ):
         self.api_key = api_key
         self.model_name = model_name
@@ -35,6 +37,8 @@ class AblationInterviewer:
         self.use_context_priority = use_context_priority
         self.use_category_gating = use_category_gating
         self.max_turns_per_category_no_gate = max_turns_per_category_no_gate
+        self.cat_check_threshold = cat_check_threshold
+        self.followup_threshold = followup_threshold
 
         self.model_config = {
             "api_key": self.api_key,
@@ -64,6 +68,8 @@ class AblationInterviewer:
             use_context_priority=self.use_context_priority,
             use_category_gating=self.use_category_gating,
             max_turns_per_category_no_gate=self.max_turns_per_category_no_gate,
+            cat_check_threshold=self.cat_check_threshold,
+            followup_threshold=self.followup_threshold,
             enable_llm_parsing=True,
             enable_llm_question=True,
             max_ask_per_leaf=2,

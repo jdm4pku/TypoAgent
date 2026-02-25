@@ -149,6 +149,18 @@ def build_parser():
         help="关闭大类门控时，每个大类最多提问次数",
     )
     parser.add_argument(
+        "--cat-check-threshold",
+        type=int,
+        default=None,
+        help="大类确认阈值：连续多少轮无新增后触发第一次大类确认，默认 2",
+    )
+    parser.add_argument(
+        "--followup-threshold",
+        type=int,
+        default=None,
+        help="大类追问阈值：第一次确认后连续多少轮无新增再触发追问，默认 4",
+    )
+    parser.add_argument(
         "--tree-percentage",
         type=float,
         default=None,
@@ -186,6 +198,8 @@ def main():
         "data_path": str(_REPO_ROOT / "ReqElicitGym" / "data" / "test.json"),
         "max_steps": 20,
         "max_turns_per_category_no_gate": 3,
+        "cat_check_threshold": 2,
+        "followup_threshold": 2,
         "tree_percentage": 100.0,
         "timeout": 60.0,
         "verbose": True,
@@ -214,6 +228,8 @@ def main():
     data_path = DEFAULTS["data_path"]
     max_steps = args.max_steps if args.max_steps is not None else DEFAULTS["max_steps"]
     max_turns_per_category_no_gate = args.max_turns_per_category_no_gate if args.max_turns_per_category_no_gate is not None else DEFAULTS["max_turns_per_category_no_gate"]
+    cat_check_threshold = args.cat_check_threshold if args.cat_check_threshold is not None else DEFAULTS["cat_check_threshold"]
+    followup_threshold = args.followup_threshold if args.followup_threshold is not None else DEFAULTS["followup_threshold"]
     tree_percentage = args.tree_percentage if args.tree_percentage is not None else DEFAULTS["tree_percentage"]
     verbose = DEFAULTS["verbose"] if not args.no_verbose else (args.verbose or False)
 
@@ -310,6 +326,7 @@ def main():
     print(f"    初始优先度: {use_initial_priority}")
     print(f"    上下文优先度: {use_context_priority}")
     print(f"    大类门控: {use_category_gating}")
+    print(f"    大类确认阈值: cat_check={cat_check_threshold}, followup={followup_threshold}")
     print(f"  数据文件: {temp_data_path}")
     print(f"  树路径: {tree_path}")
     print(f"  模式: {mode} (任务数: {len(selected_tasks)})")
@@ -335,6 +352,8 @@ def main():
         use_context_priority=use_context_priority,
         use_category_gating=use_category_gating,
         max_turns_per_category_no_gate=max_turns_per_category_no_gate if not use_category_gating else None,
+        cat_check_threshold=cat_check_threshold,
+        followup_threshold=followup_threshold,
     )
 
     print(f"Interviewer: {interviewer}\n")

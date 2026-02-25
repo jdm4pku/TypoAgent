@@ -10,9 +10,11 @@ from .static_shuffle_agent import StaticShuffleAgent
 class DynamicShuffleAgent(StaticShuffleAgent):
     """在 StaticShuffle 基础上增加：每次提问前按上下文动态重排 + 大类级确认。"""
 
-    def __init__(self, *args, use_judge_for_need: bool = True, **kwargs):
+    def __init__(self, *args, use_judge_for_need: bool = True, cat_check_threshold: int = 2, followup_threshold: int = 2, **kwargs):
         super().__init__(*args, **kwargs)
         self.use_judge_for_need = use_judge_for_need
+        self._cat_check_threshold = cat_check_threshold
+        self._followup_threshold = followup_threshold
         self._last_was_category_check = False
         self._pending_category_check_category = None
         self._category_check_asked = set()
@@ -41,8 +43,8 @@ class DynamicShuffleAgent(StaticShuffleAgent):
         if self.state.turns_asked >= self.max_turns:
             return self._finish(conversation_history)
         current_cat = getattr(self, "_current_category", None)
-        cat_check_threshold = 2 if current_cat == "Content" else 2
-        followup_threshold = 3 if current_cat == "Content" else 3
+        cat_check_threshold = getattr(self, "_cat_check_threshold", 2)
+        followup_threshold = getattr(self, "_followup_threshold", 3)
         first_check = (
             current_cat
             and current_cat not in getattr(self, "_categories_done", set())

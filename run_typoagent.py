@@ -28,6 +28,8 @@ def build_parser():
     parser.add_argument("--output-conversation-dir", type=str, default=None, help="对话输出目录")
     parser.add_argument("--output-metrics-dir", type=str, default=None, help="指标输出目录")
     parser.add_argument("--verbose", action="store_true", help="详细输出")
+    parser.add_argument("--cat-check-threshold", type=int, default=None, help="大类确认阈值：连续多少轮无新增后触发第一次大类确认，默认2")
+    parser.add_argument("--followup-threshold", type=int, default=None, help="大类追问阈值：第一次确认后连续多少轮无新增再触发追问，默认3")
     return parser
 
 
@@ -41,6 +43,8 @@ def main():
         "base_url": os.environ.get("OPENAI_BASE_URL") or "https://api.chatanywhere.tech/v1",
         "judge_model": "gpt-5.1", "user_model": "gpt-5.1",
         "output_conversation_dir": None, "output_metrics_dir": None, "verbose": True,
+        "cat_check_threshold": 2,
+        "followup_threshold": 2,
     }
     # ============================================================
     tree_path = args.tree_path or DEFAULTS["tree_path"] or str(_REPO_ROOT / "output" / "save_tree" / "LLMTree.auto-p.json")
@@ -55,6 +59,8 @@ def main():
     conversation_dir = args.output_conversation_dir or DEFAULTS["output_conversation_dir"] or str(_REPO_ROOT / "output" / "conversation")
     metrics_dir = args.output_metrics_dir or DEFAULTS["output_metrics_dir"] or str(_REPO_ROOT / "output" / "metrics")
     verbose = args.verbose or DEFAULTS["verbose"]
+    cat_check_threshold = args.cat_check_threshold if args.cat_check_threshold is not None else DEFAULTS["cat_check_threshold"]
+    followup_threshold = args.followup_threshold if args.followup_threshold is not None else DEFAULTS["followup_threshold"]
     if not api_key:
         print("错误: 请设置 OPENAI_API_KEY 或 --api-key"); sys.exit(1)
     data_dir = _REPO_ROOT / "ReqElicitGym" / "data"
@@ -145,10 +151,11 @@ def main():
     print(f"  temperature: {temperature}")
     print(f"  对话: {conversation_result_path}")
     print(f"  指标: {evaluation_result_path}")
+    print(f"  大类确认阈值: cat_check={cat_check_threshold}, followup={followup_threshold}")
     print("=" * 60)
     env = ReqElicitGym(config)
     env.current_task_index = 0  # __init__ 中 reset() 已消耗 task_0，需重置以便 run_all_tasks 从 task_0 开始
-    interviewer = TypoAgentInterviewer(api_key=api_key, model_name=model, temperature=temperature, max_tokens=2048, timeout=30.0, base_url=base_url, fixed_tree_path=tree_path, tree_percentage=100.0)
+    interviewer = TypoAgentInterviewer(api_key=api_key, model_name=model, temperature=temperature, max_tokens=2048, timeout=30.0, base_url=base_url, fixed_tree_path=tree_path, tree_percentage=100.0, cat_check_threshold=cat_check_threshold, followup_threshold=followup_threshold)
     print(f"Interviewer: {interviewer}\n")
     results = env.run_all_tasks(interviewer)
     try:
