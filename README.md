@@ -171,10 +171,10 @@ bash run_exp/run_exp5.sh
 
 Outputs are saved to:
 
-- Sampled data: `TypoAgent/data/train_new_exp5_k{5,10,15,20,25}.jsonl`
-- Tree directory: `output/save_tree_exp5_k{5,10,15,20,25}/`
-- Conversations: `output/conversation_exp5_k{5,10,15,20,25}/`
-- Metrics: `output/metrics_exp5_k{5,10,15,20,25}/`
+- Sampled data: `TypoAgent/data/train_new_exp5_k{5,10,15,20}.jsonl`
+- Tree directory: `output/save_tree_exp5_k{5,10,15,20}/`
+- Conversations: `output/conversation_exp5_k{5,10,15,20}/`
+- Metrics: `output/metrics_exp5_k{5,10,15,20}/`
 
 ### Running Scripts Individually
 
