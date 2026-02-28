@@ -19,38 +19,48 @@ This repository provides scripts and configurations to run OntoAgent, its baseli
 ## 📁 Project Structure
 
 ```text
-TreeRec/
-├── TreeRec/                      # Core modules
-│   ├── tree_builder.py          # Semantic tree builder
-│   ├── tree_retriever.py        # Tree retriever
-│   ├── cluster_tree_builder.py  # Cluster-based tree builder
-│   ├── RetrievalAugmentation.py # Main retrieval augmentation class
-│   ├── EmbeddingModels.py       # Embedding model wrappers
-│   ├── RerankModels.py          # Reranking model wrappers
-│   ├── SummarizationModels.py   # Summarization model wrappers
-│   ├── Retrievers.py            # Retriever base classes
-│   └── utils.py                 # Utility functions
-├── IntentRecBench/              # Benchmark datasets and evaluation
-│   ├── data/                    # Datasets
-│   │   ├── js/                  # JavaScript ecosystem data
-│   │   ├── hf/                  # HuggingFace ecosystem data
-│   │   └── linux/               # Linux ecosystem data
-│   ├── src/                     # Source code
-│   │   ├── baselines/           # Baseline method implementations
-│   │   └── data_construction/   # Data construction scripts
-│   └── script/                  # Execution scripts
-├── prompt/                      # Prompt templates
-│   ├── summarization_system.txt # Summarization system prompt
-│   ├── summarization_user.txt   # Summarization user prompt
-│   ├── rerank_system.txt        # Reranking system prompt
-│   └── rerank_user.txt          # Reranking user prompt
-├── output/                      # Output results directory
-├── exp_figure/                  # Experiment figure generation scripts
-├── run_treerec.py              # Main execution script
-├── run_treerec.sh              # Shell execution script
-├── case_study.py               # Case study script
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+TypoAgent/
+├── TypoAgent/                  # Core OntoAgent logic & data
+│   ├── __init__.py
+│   ├── classification_sample.py
+│   ├── data/                  # Training / induction data
+│   ├── prompt/                # Prompt templates (builder / retriever)
+│   ├── retriever/             # Retrieval-related components
+│   └── typo_builder.py        # Ontology tree (Onto) builder
+├── ReqElicitGym/              # Requirements elicitation environment
+│   ├── __init__.py
+│   ├── config.py              # Environment / experiment configs
+│   ├── data/                  # Environment data
+│   ├── env/                   # Gym-style environments
+│   └── interviewer.py         # Interviewer agent interface
+├── baseline/                  # Baseline interviewers
+│   ├── __init__.py
+│   ├── long_interviewer.py    # Long baseline
+│   ├── short_interviewer.py   # Short baseline
+│   ├── mistakeguided_interviewer.py  # Mistake-guided baseline
+│   └── prompt/                # Baseline-specific prompts (long / short / mistakeguided)
+├── run_exp/                   # Shell scripts to reproduce experiments
+│   ├── run_exp1.sh
+│   ├── run_exp2.sh
+│   ├── run_exp3.sh
+│   └── run_exp5.sh
+├── output/                    # Experiment outputs
+│   ├── conversation/          # Conversation logs
+│   ├── metrics/               # Evaluation metrics (JSON)
+│   └── save_tree/             # Saved ontology trees
+├── tool/                      # Auxiliary tools & demo app
+│   ├── app.py
+│   ├── run_comp3.py
+│   ├── run.sh
+│   └── static/                # Static resources for the tool
+├── run_typobuilder.py         # Entry script for building Onto trees
+├── run_ablation.py            # Ablation study runner
+├── run_baselinelong.py        # Long baseline runner
+├── run_baselineshort.py       # Short baseline runner
+├── run_baselinemistakeguided.py # Mistake-guided baseline runner
+├── test_parser.py             # Utility / test script
+├── requirements.txt           # Python dependencies
+└── README.md                  # This file
 ```
 
 ## 🚀 Quick Start
