@@ -71,11 +71,11 @@ Run 5 ablation combinations sequentially to validate each module's contribution:
 
 | Order | Combination Name | Description |
 |-------|------------------|-------------|
-| 1/5 | dfs | DFS traverses full static tree (all disabled) |
-| 2/5 | dfs_init | DFS + initial requirement priority scoring |
-| 3/5 | dfs_init_gate | DFS + initial requirement priority + category gate pruning |
-| 4/5 | dfs_init_ctx | DFS + initial requirement priority + context scoring during process |
-| 5/5 | dfs_init_ctx_gate | Full method (all modules) |
+| 1/5 | dfs | Only Ontology  |
+| 2/5 | dfs_init | Ontology + ScoreOnto |
+| 3/5 | dfs_init_gate | Ontology + ScoreOnto + GatePrune |
+| 4/5 | dfs_init_ctx | Ontology + ScoreOnto + ReRankOnto |
+| 5/5 | dfs_init_ctx_gate | Full method  |
 
 ```bash
 export OPENAI_API_KEY=sk-xxx
@@ -84,7 +84,7 @@ bash run_exp/run_exp2.sh
 
 ### Exp4: Multi-Model Testing
 
-Run TypoAgent on multiple models (qwen, gpt, gemini):
+Run OntoAgent on multiple models (qwen, gpt, gemini):
 
 ```bash
 export OPENAI_API_KEY=sk-xxx
@@ -93,7 +93,7 @@ bash run_exp/run_exp4.sh
 
 ### Exp5: Scalability Experiment (RQ5)
 
-Study the impact of induction data scale (sampling_k) on OntoAgent performance. Runs the full pipeline (TypoBuilder + OntoAgent) sequentially for `k=5, 10, 15, 20`:
+Study the impact of induction data scale (sampling_k) on OntoAgent performance. Runs the full pipeline (OntoBuilder + OntoAgent) sequentially for `k=5, 10, 15, 20`:
 
 ```bash
 export OPENAI_API_KEY=sk-xxx
@@ -114,7 +114,7 @@ Outputs are saved to:
 If not using the scripts in `run_exp/`, you can invoke them manually:
 
 ```bash
-# TypoAgent (requires existing Typo tree)
+# OntoAgent (requires existing Onto tree)
 python run_typoagent.py --mode top3   # top3 | sample | full | test
 
 # Ablation study
@@ -124,7 +124,7 @@ python run_ablation.py --exp dfs_init_ctx_gate --mode top3
 python run_baselinelong.py --mode top3
 python run_baselineshort.py --mode top3
 
-# TypoBuilder (build Typo tree)
+# OntoBuilder (build Onto tree)
 python run_typobuilder.py --input TypoAgent/data/train.jsonl --save-dir output/save_tree
 ```
 
@@ -134,4 +134,4 @@ python run_typobuilder.py --input TypoAgent/data/train.jsonl --save-dir output/s
 
 - `output/conversation/`: Conversation records
 - `output/metrics/`: Evaluation metrics
-- `output/save_tree/`: Typo tree files
+- `output/save_tree/`: Ontology tree files
