@@ -1,32 +1,36 @@
 #!/bin/bash
-# 实验 exp1：依次运行 long baseline、short baseline、TypoAgent
-# 使用前请设置：export OPENAI_API_KEY=sk-xxx
+# Experiment exp1: sequentially run the long baseline, short baseline, and TypoAgent
+# Before running, please set: export OPENAI_API_KEY=sk-xxx
 
 set -e
 cd "$(dirname "$0")/.."
 
 if [ -z "$OPENAI_API_KEY" ]; then
-  echo "错误: 请设置 OPENAI_API_KEY 环境变量，例如: export OPENAI_API_KEY=sk-xxx"
+  echo "Error: please set the OPENAI_API_KEY environment variable, e.g.: export OPENAI_API_KEY=sk-xxx"
   exit 1
 fi
 
 echo "=============================================="
-echo "Exp1：依次运行 long、short、TypoAgent"
+echo "Exp1: sequentially run long, short, Mistake-Guided, and TypoAgent"
 echo "=============================================="
 
 echo ""
-echo "[1/3] Baseline Long (LLMREI-Long)"
-python run_baselinelong.py --mode top3
+echo "[1/4] Baseline Long (LLMREI-Long)"
+python run_baselinelong.py --mode full
 
 echo ""
-echo "[2/3] Baseline Short (LLMREI-Short)"
-python run_baselineshort.py --mode top3
+echo "[2/4] Baseline Short (LLMREI-Short)"
+python run_baselineshort.py --mode full
 
 echo ""
-echo "[3/3] TypoAgent"
-python run_typoagent.py --mode top3
+echo "[3/4] Baseline Mistake-Guided (Mistake-Guided)"
+python run_mistakeguided.py --mode full
+
+echo ""
+echo "[4/4] TypoAgent"
+python run_typoagent.py --mode full
 
 echo ""
 echo "=============================================="
-echo "Exp1 全部完成"
+echo "Exp1 Finished"
 echo "=============================================="

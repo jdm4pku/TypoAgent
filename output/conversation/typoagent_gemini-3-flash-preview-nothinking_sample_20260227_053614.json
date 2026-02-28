@@ -1,0 +1,1700 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Poetry Sharing and Discussion Platform",
+    "initial_requirements": "I want a personal website that showcases my work, introduces who I am, and makes it easy for others to contact me.",
+    "user_stories": [
+      "As a user, I want to browse a personal portfolio website that showcases design works, so that I can view the designer’s creations.",
+      "As a user, I want the website to provide information about the designer, so that I can learn about the designer’s background and experience.",
+      "As a user, I want the website to display contact information, so that I can get in touch with the designer.",
+      "As a user, I want the website’s theme to use peach puff as the background color, so that the site’s background follows the specified style.",
+      "As a user, I want the website’s theme to use indian red as the component color, so that the site’s components follow the specified style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific pages or sections, such as a portfolio or an about page, would you like to include in your website's main navigation menu?",
+        "user": "In the main menu I’d like Home, About, Portfolio/Work, and Contact. The About page should cover my background and professional experience, and the Portfolio should show a few featured projects with details.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 2,
+        "interviewer": "Within your Portfolio section, would you prefer your projects to be displayed as a simple list or as a visual grid gallery?",
+        "user": "I don’t really care—either a simple list or a grid is fine as long as it looks clean and is easy to browse.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 3,
+        "interviewer": "When a user clicks on a specific project in your portfolio, should it open a dedicated page with more details, or would you prefer the information to appear in a pop-up window on the same screen?",
+        "user": "I don’t really care either way—dedicated page or a pop-up is fine. Just make it feel smooth and easy to read.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific interaction details right now—just make the site feel fast and responsive, especially on mobile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 5,
+        "interviewer": "How would you like to group or categorize your featured projects within the Portfolio section?",
+        "user": "I don’t really care about grouping or categories—just show a handful of featured projects and make them easy to scan and click into.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific pieces of information, such as a title, description, or date, should be displayed for each project in your portfolio?",
+        "user": "I don’t really care about a strict set of fields—just show the project title, a short description, and maybe the tech used. If there’s room, a link to the live site or repo is nice.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 7,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any other content requirements right now. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific color would you like to use for the page background?",
+        "user": "I’d like the page background to be a peach puff color.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific color would you like to use for the buttons?",
+        "user": "For the buttons, I’d like an indian red color.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific color would you like to use for links and active states to serve as an accent color?",
+        "user": "I don’t really care too much—just pick an accent color that looks good with peach puff and indian red and has good contrast for accessibility.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 11,
+        "interviewer": "Do you have a specific accessibility standard, such as WCAG 2.1 Level AA, that the color contrast between your text and background must meet?",
+        "user": "I don’t really care about a specific standard like WCAG levels—just make sure the text is easy to read and the contrast is solid, especially on mobile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific color should be used to indicate an error, such as a failed form submission?",
+        "user": "I don’t really care about a specific error color—just use something clearly noticeable (like a standard red) with good contrast so it’s easy to spot and read.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 13,
+        "interviewer": "Which specific visual element, such as typography or spacing, should be standardized to ensure a consistent look across all your pages?",
+        "user": "I don’t really care about standardizing a specific visual element right now—just keep typography and spacing consistent so everything feels cohesive across pages.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 14,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any other style requirements right now. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to navigate between Home, About, Portfolio/Work, and Contact pages via a main menu.\nFeature2: As a user, I want to read about the owner's background and professional experience on a dedicated About page.\nFeature3: As a user, I want to view a list or grid of featured projects that are easy to scan and click.\nFeature4: As a user, I want to see the title, short description, and technologies used for each project in the portfolio.\nFeature5: As a user, I want to access links to live sites or repositories for portfolio projects where applicable.\nFeature6: As a user, I want to view detailed project information via a dedicated page or pop-up (TBD) that feels smooth and easy to read.\nFeature7: As a user, I want to contact the owner through a dedicated Contact page.\nFeature8: As a user, I want the website to be fast and fully responsive for mobile devices.\nFeature9: As a user, I want to experience a cohesive visual design with a peach puff background and indian red buttons.\nFeature10: As a user, I want an accent color for links and active states that provides high contrast against the peach puff background.\nFeature11: As a user, I want to see clearly noticeable error messages (e.g., standard red) with high legibility during form failures.\nFeature12: As a user, I want consistent typography and spacing across all pages to ensure a professional and readable interface.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 15
+  },
+  {
+    "task_id": "task_1",
+    "task_name": "Medical Journal Publishing and Access System",
+    "initial_requirements": "I want a website where I can explore and read medical research articles, and manage my involvement with the journal.",
+    "user_stories": [
+      "As a user, I want to use a medical journal website for publishing medical articles and information, so that I can access medical content online.",
+      "As a user, I want the website to have a responsive design, so that I can use it easily on different devices and screen sizes.",
+      "As a user, I want to be able to search on the website, so that I can quickly find relevant articles and information.",
+      "As a user, I want to be able to open articles, so that I can read the full content.",
+      "As a user, I want to be able to download article PDFs, so that I can access and keep copies of the articles offline.",
+      "As an author user, I want to manage my account by updating my profile information, so that my author account details remain accurate and current.",
+      "As a user, I want the website background color to be seashell, so that the site appearance matches the specified color scheme.",
+      "As a user, I want the website components to use crimson, so that the site appearance matches the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific pages or sections should be included in the main navigation menu to help users find research articles and manage their journal involvement?",
+        "user": "Main nav should have: Browse/Discover Articles, Journals/Issues, Search, and a My Account area. Under My Account I want Profile (edit info), My Submissions/Manuscripts, Reviews/Assignments, Saved Articles/Bookmarks, and Notifications/Settings.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the specific fields and steps required for a user to submit a new medical manuscript through the My Submissions area?",
+        "user": "I don’t really care about the exact submission form fields or step-by-step workflow right now—I just need a My Submissions area to track what I’ve submitted and its status.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 3,
+        "interviewer": "How should the Browse and Discover section be structured to help users find articles, such as through categories, a chronological feed, or a gallery view?",
+        "user": "I don’t really care about the exact Browse/Discover structure right now. As long as I can quickly find articles via search and some basic filtering, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 4,
+        "interviewer": "When a user selects a specific article from the search results or browse list, what related information or linked pages should be accessible directly from that article's detail view?",
+        "user": "From the article detail page I want the full text (HTML) front and center, plus PDF download, abstract, figures/tables, references, and citation info (BibTeX/EndNote). It should also link to author profiles, the journal issue it’s in, related/similar articles, and have actions like save/bookmark, share, and alerts for updates or corrections.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 5,
+        "interviewer": "How should users switch between the major sections like Browse, Search, and My Account, for example through a top navigation bar or a persistent sidebar?",
+        "user": "I don’t really care whether it’s a top nav or a sidebar. Just make it obvious and consistent on every page, and it should work well on mobile too.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific sub-pages or sections should be included within the Journals/Issues area?",
+        "user": "I don’t really care about the exact sub-pages in Journals/Issues right now. Just let me browse issues and open an issue to see its table of contents and articles.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 7,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—search should feel instant: as I type, show autosuggestions and update results quickly (with filters), and remember my last filters/sort when I come back.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 8,
+        "interviewer": "Which specific metadata fields, such as author name, publication date, or medical specialty, should be available as filters in the search results?",
+        "user": "I don’t really care about the exact metadata filter list right now. Just give me a handful of common ones like date, author, journal, and maybe specialty/keywords, and I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 9,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I think we already covered the main interaction thing I care about—fast, responsive search with suggestions and remembered filters. Other than that, I don’t have any extra interaction requirements right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific file formats should be supported for the figures and tables included in the medical research articles?",
+        "user": "I don’t really care about the specific file formats for figures and tables right now. As long as they display well in the article page and can be downloaded in a common format, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 11,
+        "interviewer": "How should the content within the My Account area be grouped or categorized to distinguish between personal profile management and professional tasks like manuscript reviews?",
+        "user": "I don’t really care about how it’s grouped as long as it’s easy to find. If you need a default, split it into “Profile & Settings” vs “Work” (Submissions, Reviews/Assignments) and maybe “Library” for Saved Articles.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 12,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific color should be used for the page background?",
+        "user": "I’d like the page background to be a seashell color (CSS “seashell”, #FFF5EE).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5714285714285714
+      },
+      {
+        "turn": 14,
+        "interviewer": "What specific color should be used for the primary action buttons?",
+        "user": "For primary action buttons, use a crimson color scheme—something like CSS “crimson” (#DC143C) works well against the seashell background.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.7142857142857143
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific color should be used for hyperlinks throughout the website?",
+        "user": "I don’t really care about a specific hyperlink color. Just make sure it’s clearly distinguishable and accessible against the seashell background and matches the overall theme.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.7142857142857143
+      },
+      {
+        "turn": 16,
+        "interviewer": "What specific color should be used to indicate an error or invalid state, such as a failed login or a missing form field?",
+        "user": "I don’t really care about a specific error color. Just use something standard and accessible (high contrast on the seashell background) and make sure it’s clearly recognizable as an error.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.7142857142857143
+      },
+      {
+        "turn": 17,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG 2.1 Level AA compliance, that the color contrast between text and the seashell background must meet?",
+        "user": "I don’t really care about naming a specific standard like WCAG. Just make sure the site is generally accessible with good contrast and readable text on the seashell background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.7142857142857143
+      },
+      {
+        "turn": 18,
+        "interviewer": "Which specific UI components, such as headers or buttons, should follow a standardized visual style to ensure the website looks consistent across both desktop and mobile views?",
+        "user": "I’d standardize the header/nav, primary & secondary buttons, form inputs (including search + filters), cards/list items for article results, and the article detail layout components (tabs/sections like abstract, figures, references). Also keep typography and spacing rules consistent so it feels the same on mobile and desktop.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8571428571428571
+      },
+      {
+        "turn": 19,
+        "interviewer": "Should any specific secondary colors or decorative visual elements be added to further align the website with a medical or professional journal theme?",
+        "user": "I don’t really care about specific secondary colors or decorative elements. Just keep it clean and professional, with subtle accents that don’t hurt readability or distract from the articles.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8571428571428571
+      },
+      {
+        "turn": 20,
+        "interviewer": "Should the seashell background color be applied globally to all pages, or should specific sections like the article reader or dashboard use a different background?",
+        "user": "I don’t really care either way. If you need a default, use seashell globally for consistency, but it’s fine to use a slightly more neutral/lighter background in the article reader if it improves readability.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8571428571428571
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_2",
+    "task_name": "Global Institute of Information Security Course Enrollment Portal",
+    "initial_requirements": "I want a website for the Global Institute of Information Security where I can learn about its courses, take part in learning activities, and get in touch with the institute.",
+    "user_stories": [
+      "As a user, I want to access a website for the Global Institute of Information Security, so that I can interact with its courses and enrollment services online.",
+      "As a user, I want to view a course catalog on the website, so that I can see all available courses from the institute.",
+      "As a user, I want to browse courses on the website, so that I can explore the different learning options offered.",
+      "As a user, I want to view detailed information for each course, so that I can understand what each course covers before deciding to enroll.",
+      "As a user, I want to enroll in courses online through the website, so that I can register for courses without needing to visit the institute physically.",
+      "As a user, I want to use a contact form on the website, so that I can contact the institute directly through the site.",
+      "As a user, I want to view certification pathways on the website, so that I can understand how different courses lead to specific certifications.",
+      "As a user, I want all pages of the website to use a lavender background, so that the visual style is consistent across the site.",
+      "As a user, I want all UI components to be styled in indigo, so that the website maintains a unified and coherent visual appearance."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific pages or sections would you like to see in the main navigation menu of the website?",
+        "user": "I don’t really care about the exact nav structure right now—just make it easy to find Courses, Activities/Events, About the Institute, and Contact.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Will users need to create an account to participate in the learning activities, or should they be accessible anonymously?",
+        "user": "I don’t really care about accounts for now—keep the learning activities accessible without requiring sign-up. If there’s something that needs tracking later, we can add accounts then.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—I'd like a simple course catalog experience: a Courses page with filters (topic, level, format) and a search box, and results should update quickly without reloading the whole page.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 4,
+        "interviewer": "Could you specify which specific levels (such as Beginner or Advanced) and formats (such as Online or In-person) should be available as options in the course filters?",
+        "user": "I don’t really care about the exact filter options right now. Just include a few common ones like Beginner/Intermediate/Advanced and Online/In-person/Hybrid, and we can refine later.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—on the course details page, I want a clear “Enroll/Request Info” button that opens a short modal form without leaving the page, and it should confirm submission immediately.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific fields should be included in the short modal form for enrolling or requesting information?",
+        "user": "Keep it short: Full name, email, phone (optional), course selected (auto-filled), and a dropdown for “Enroll” vs “Request info,” plus a comments/questions box. Also a consent checkbox to be contacted.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 7,
+        "interviewer": "Since you mentioned a consent checkbox, should it be a required field that users must check before they can submit the form?",
+        "user": "I don’t really care about that level of detail right now. Default it to required so we’re safer from a compliance standpoint.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 8,
+        "interviewer": "After a user submits the enrollment form and receives the immediate confirmation, what specific follow-up action or button should be presented to them next?",
+        "user": "I don’t really care about the exact follow-up button. A simple “Close” (and maybe “Back to Courses”) is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific rules or conditions should determine whether a user is allowed to select the Enroll option versus the Request Info option in the form?",
+        "user": "I don’t really care about special rules there right now—just let users pick either Enroll or Request Info for any course. If some courses have prerequisites later, we can add restrictions then.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific email notification should be sent to the user after they submit the enrollment or request info form?",
+        "user": "I don’t really care about the exact email content right now. Just send a basic confirmation email with the course name, what they selected (Enroll vs Request Info), and a note that someone will follow up soon.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 11,
+        "interviewer": "Beyond the enrollment form, will administrators need the ability to perform bulk actions on course listings, such as deleting or updating multiple courses at once?",
+        "user": "I don’t really care about bulk admin actions right now. Just make it easy to add/edit individual courses, and we can revisit bulk updates later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify if the course enrollment process should follow a multi-step workflow, such as moving from a pending submission to an approved or completed status?",
+        "user": "I don’t really care about a multi-step enrollment workflow right now. For now, just treat it as a simple submitted request and we’ll handle follow-up manually; we can add statuses like pending/approved later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific information or metrics should be displayed on the administrator's dashboard when they first log in to manage the site?",
+        "user": "I don’t really care about an admin dashboard metrics view right now. As long as admins can add/edit courses and see the incoming enroll/request-info submissions, that’s enough for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 14,
+        "interviewer": "Should the confirmation email be sent automatically the moment the user submits the form, or should it be triggered manually by an administrator after reviewing the request?",
+        "user": "I don’t really care too much, but default to sending it automatically right after submission. Admins can still follow up manually afterward.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 15,
+        "interviewer": "Could you specify if changes to site settings or course configurations should take effect immediately upon saving, or should they require a separate review and approval step before going live?",
+        "user": "I don’t really care about an approval workflow for settings right now—just have changes go live immediately when an admin saves them. If we need reviews later, we can add that then.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 16,
+        "interviewer": "Will users be able to post comments or reviews on the course pages?",
+        "user": "I don’t really care about comments or reviews right now. Let’s skip that for the first version and maybe add it later if we see a need.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 17,
+        "interviewer": "What specific language or localization settings should be available for the website's content?",
+        "user": "I don’t really care about localization settings right now. Let’s just do English for the first version and we can add other languages later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 18,
+        "interviewer": "Could you specify if users should be able to download course materials or brochures as PDF files directly from the course pages?",
+        "user": "I don’t really care about PDF downloads for the first version. If it’s easy, we can add an optional brochure PDF link per course later, but it’s not a priority.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 19,
+        "interviewer": "When administrators upload images or videos for course descriptions, should they have the ability to crop or resize that media directly within the website's editor before publishing?",
+        "user": "I don’t really care about built-in crop/resize tools in the editor right now. It’s fine if admins upload properly sized media, and we can add simple editing later if it becomes a pain.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 20,
+        "interviewer": "How should the learning activities be categorized or grouped on the main Activities page?",
+        "user": "I don’t really care about a detailed categorization scheme right now. Just group activities by type (workshops, webinars, challenges) and maybe by month/upcoming vs past so it’s easy to browse.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_3",
+    "task_name": "Children’s Recycling Education Game System",
+    "initial_requirements": "I want a website that helps children learn about recycling and waste sorting in a fun and engaging way.",
+    "user_stories": [
+      "As a user, I want a children’s recycling game website to educate kids on proper waste recycling, so that they can learn how to recycle correctly.",
+      "As a user, I want the game to include competitive elements such as a leaderboard, so that kids stay engaged and motivated.",
+      "As a user, I want the game to use a cartoon-style visual design, so that it is visually appealing to children.",
+      "As a user, I want kids to receive feedback while playing the game, so that they understand their actions and learn from them.",
+      "As a user, I want kids to learn how to correctly sort waste into the corresponding containers, so that they understand proper waste sorting.",
+      "As a user, I want kids to receive rewards and recognition through the game, so that their achievements are acknowledged and reinforced.",
+      "As a user, I want seashell to be used for container backgrounds, so that the container visuals follow the specified style.",
+      "As a user, I want crimson to be used for component visuals, so that the visual components follow the specified color scheme.",
+      "As a user, I want kids to be able to play the game, so that they can interact with the recycling activities."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What are the core pages or sections you would like to include in the website's main navigation menu?",
+        "user": "I don’t really care about the exact navigation structure right now. As long as kids can easily find the games/activities, a quick “learn” section, and maybe a parent/teacher info area, I’m happy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Will children need to create an account to save their progress in the games, or should the website be accessible without a login?",
+        "user": "I don’t really care either way, but I’d prefer it works without a login by default. If saving progress is possible, maybe make accounts optional and super simple with parent/teacher involvement.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Make everything feel super responsive and “tap-friendly” on tablets—big buttons, immediate feedback (sound/animation) when kids sort an item, and no long loading between rounds.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 4,
+        "interviewer": "Could you describe the specific steps or fields a child would need to complete when they are sorting a piece of waste in one of the games?",
+        "user": "Keep it super simple: the game shows one item (e.g., banana peel) and the kid drags it or taps the correct bin (recycle/compost/trash). Optional: a quick “why?” pop-up after each choice with a short explanation, then next item—no form fields or typing.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "If a child sorts an item into the wrong bin, what specific feedback or retry option should they be given before moving on to the next item?",
+        "user": "If they get it wrong, give an immediate gentle “oops” animation/sound and briefly highlight the correct bin with a one-sentence explanation. Then let them try again once (or tap “show me” to auto-place it) before moving to the next item—no penalties, just encouragement.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 6,
+        "interviewer": "When should the \"why?\" explanation pop up—automatically after every choice, or only when the child manually taps a button to see it?",
+        "user": "I don’t really care too much—either works. If you need a preference, maybe show it automatically for wrong answers, and for correct answers make it optional with a “Why?” button so it doesn’t slow the pace.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 7,
+        "interviewer": "Beyond the sorting game itself, should there be a multi-step \"mission\" or \"challenge\" workflow where children must complete a specific sequence of activities to earn a badge or certificate?",
+        "user": "Yeah, I’d like simple missions—like “Sort 10 items,” “Finish the compost lesson,” then a quick mini-quiz—and then they earn a badge. Keep it short (2–4 steps max) and let them play normally too without being forced into missions.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific information, if any, should a parent or teacher be required to enter when creating an optional account for a child?",
+        "user": "I don’t really care about the exact fields, as long as it’s minimal. Maybe just an adult email for consent/recovery and a simple child nickname—no addresses or anything.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "Should a teacher or parent be able to change the game's difficulty settings immediately through an inline toggle, or should those changes require a saved confirmation before they take effect?",
+        "user": "I don’t really care about that detail. Whatever’s simplest—as long as it doesn’t confuse kids or interrupt gameplay.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 10,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about adding another interaction requirement right now. The main thing is keeping it responsive and tap-friendly on tablets like we discussed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "How should the \"learn\" section be categorized—for example, should it be grouped by waste types like plastic and paper, or by the environments where waste is found like home and school?",
+        "user": "I don’t really care how it’s categorized as long as kids can quickly find what they need. If you need a pick, grouping by places like home/school feels more intuitive for kids.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific types of media should be used for the \"learn\" section—for example, should it primarily consist of short videos, narrated slideshows, or interactive infographics?",
+        "user": "I don’t really care what media format it uses. As long as it’s kid-friendly, quick to load, and works well on tablets.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have more content requirements right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "What specific color should be used for the page background?",
+        "user": "Let’s use a light, kid-friendly background like a very pale warm gray/off-white, and keep the crimson as the main accent color on buttons, headers, and highlights so it pops without being overwhelming.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific color should be used for the cards or panels that hold the game content?",
+        "user": "I don’t really care about the exact card/panel color. Just keep it high-contrast and clean—maybe white or a slightly warmer off-white so it stands out from the background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 16,
+        "interviewer": "What specific color should be used to indicate a successful action, such as when a child sorts an item into the correct bin?",
+        "user": "I don’t really care about the exact success color. Just pick something universally positive like a bright green, and make sure it has good contrast and is color-blind friendly.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 17,
+        "interviewer": "What specific color should be used for the badges that children earn after completing a mission?",
+        "user": "I don’t really care about the exact badge color. Just make them bright and fun, and keep them high-contrast and readable on the light background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 18,
+        "interviewer": "Are there any specific accessibility standards, such as a minimum contrast ratio or specific color-blindness modes, that the interface must strictly follow?",
+        "user": "I don’t really care about specific standards like exact contrast ratios. Just make it generally accessible—good contrast, readable text, and don’t rely on color alone for feedback.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 19,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more style thing: I’d like an overall cartoon-style look—friendly illustrations/characters and simple, playful icons that feel kid-oriented. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 20,
+        "interviewer": "What specific character or mascot should be featured throughout the website to reinforce the recycling theme?",
+        "user": "I don’t really care about a specific mascot. As long as the characters feel friendly and kid-appropriate and match the recycling theme, I’m fine with whatever you choose.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.75
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_4",
+    "task_name": "Baseball Simulation and Team Management System",
+    "initial_requirements": "I need a website that lets me view, manage baseball teams, and simulate games.",
+    "user_stories": [
+      "As a user, I want to view detailed player statistics, so that I can analyze individual player performance.",
+      "As a user, I want to manage team rosters, so that I can control which players are on my team.",
+      "As a user, I want to manage team finances, so that I can oversee the financial aspects of my team.",
+      "As a user, I want to simulate games and view the results, so that I can see the outcomes of the simulated games.",
+      "As a user, I want to adjust team strategies, so that I can influence how my team plays based on my management decisions.",
+      "As a user, I want to adjust team lineups, so that I can set which players participate and in what order based on my management decisions.",
+      "As a user, I want the website layout background to use floral white, so that the appearance matches the specified color scheme.",
+      "As a user, I want interactive elements to use dark goldenrod, so that the interactive parts of the website follow the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What are the core pages you envision for the site's main navigation menu?",
+        "user": "I don’t really care about the exact main nav structure yet. As long as I can get to Teams, Players/Rosters, a Game Simulator, and maybe Standings/Schedule easily, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the specific steps or fields you would like to see when adding a new player to a team roster?",
+        "user": "I don’t really care about the exact fields or step-by-step flow for adding a player right now. As long as it’s quick and I can put someone on a team roster with basic info, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific interaction details right now. Just make it feel reasonably fast and not clunky when switching between teams/rosters and the game simulator.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "What specific data fields should be included for a player's profile beyond their name and team?",
+        "user": "I don’t really care about the exact player profile fields right now. Beyond name and team, just whatever basics you think make sense, and we can refine it later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "How would you like the different sections, such as Teams and the Game Simulator, to be grouped or organized within the site's hierarchy?",
+        "user": "I don’t really care about the exact hierarchy right now. As long as Teams/Rosters and the Game Simulator are easy to find from anywhere, I’m fine.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One content requirement: for each team I want basic financial info—like budget/payroll, player salaries/contracts, and maybe revenue/expenses—so I can manage teams beyond just rosters. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 7,
+        "interviewer": "How long should the history of game simulation results and team financial changes be retained in the system?",
+        "user": "I’d like simulation results and financial changes to be kept indefinitely if possible, so I can look back over multiple seasons. If that’s too heavy, at least keep full history for the current season and a summarized archive for prior seasons.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "Beyond game simulations and financial changes, are there any other specific types of events or transactions that the system should record and track over time?",
+        "user": "I don’t really care about tracking other event types right now. If it’s easy, maybe log roster moves (trades, signings, injuries) later, but it’s not a priority.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific performance metrics or statistics from the game simulations should be recorded in the historical logs for comparison across seasons?",
+        "user": "I don’t really care about the exact simulation stats to log right now. Just record whatever core box score and team totals you think make sense so I can compare seasons, and we can refine later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 10,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any more content requirements right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific color would you like to use for the website's page background?",
+        "user": "Let’s use a floral white background for the overall page layout.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific color should be used for the primary action buttons?",
+        "user": "Let’s make the primary action buttons dark goldenrod so they stand out against the floral white background.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific color should be used for hyperlinks throughout the site?",
+        "user": "I don’t really care about the exact hyperlink color. Just pick something readable and consistent with the floral white background and dark goldenrod buttons.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 14,
+        "interviewer": "What specific color should be used to indicate a successful action, such as when a game simulation completes or a player is saved?",
+        "user": "I don’t really care about the exact success color. Just use a standard green that’s readable on the floral white background and fits with the dark goldenrod accents.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 15,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG AA or AAA compliance, that the contrast between your text and the floral white background must meet?",
+        "user": "I don’t really care about targeting a specific WCAG level right now. Just make sure the text and buttons are clearly readable on the floral white background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 16,
+        "interviewer": "Should any specific secondary colors or decorative elements be added to the interface to better reflect a baseball-themed aesthetic?",
+        "user": "I don’t really care about specific secondary colors or decorative baseball-themed elements right now. If you add anything, keep it subtle and don’t let it get in the way of using Teams/Rosters and the Simulator.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 17,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "No other style requirements from me right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 18,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to view and manage baseball teams, rosters, and player profiles containing basic information (TBD).\nFeature2: As a user, I want to simulate baseball games and view the resulting box scores and team totals.\nFeature3: As a user, I want to view league standings and game schedules.\nFeature4: As a user, I want to manage team finances, including budgets, payrolls, player contracts, and revenue/expenses.\nFeature5: As a user, I want to navigate quickly between Teams, Rosters, and the Game Simulator from any page.\nFeature6: As a user, I want to add players to a roster through a simplified, fast-entry process.\nFeature7: As a user, I want to store game simulation results and financial history indefinitely, or at minimum, keep full current season data with summarized archives for prior seasons.\nFeature8: As a user, I want the interface to feel fast and responsive when switching between different sections of the site.\nFeature9: As a user, I want the website to have a floral white background with dark goldenrod primary action buttons.\nFeature10: As a user, I want the interface to use a standard green for success indicators and a readable, consistent color for hyperlinks.\nFeature11: As a user, I want all text and controls to have sufficient contrast against the floral white background to ensure clear readability.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      }
+    ],
+    "total_turns": 18
+  },
+  {
+    "task_id": "task_5",
+    "task_name": "Data Science Learning Platform",
+    "initial_requirements": "I want an online learning platform where I can choose data science courses, study the materials, and track my learning progress.",
+    "user_stories": [
+      "As a user, I want to browse Python data science courses, so that I can see what courses are available on the online learning platform.",
+      "As a user, I want to select Python data science courses of interest, so that I can choose which courses to learn.",
+      "As a user, I want to learn course content for the Python data science courses I select, so that I can study data science online.",
+      "As a user, I want to submit assignments for the Python data science courses I am taking, so that my work can be evaluated.",
+      "As a user, I want to query my own learning grades, so that I can see my performance in the Python data science courses.",
+      "As a user, I want the platform’s background layer to use a honeydew color, so that the interface follows the specified background styling.",
+      "As a user, I want the platform’s component layer to use a dark olive green color, so that the interface follows the specified component styling."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific pages or sections should be included in the main navigation menu to help users move between their courses and the discovery area?",
+        "user": "Main nav should have: Browse Courses (with filters), My Courses, Progress/Tracker, and a Profile/Settings area. Maybe also a Dashboard/Home that shows current courses and recommended Python data science courses.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.1111111111111111
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific categories or filters should be available to help users browse and discover the data science courses?",
+        "user": "I’d want filters like topic (Python, ML, stats, SQL, deep learning), skill level (beginner/intermediate/advanced), course length/time estimate, and format (video vs reading, projects). Also allow sorting by rating, newest, and popularity, plus a search bar and maybe prerequisites and instructor filters.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2222222222222222
+      },
+      {
+        "turn": 3,
+        "interviewer": "When a user selects a specific course from the Browse or My Courses lists, what specific information or sub-sections should be displayed on that course's individual detail page?",
+        "user": "On the course detail page I’d want an overview (description, level, time estimate, prerequisites), instructor info, ratings/reviews, and a syllabus with modules/lessons. It should show my progress (percent complete, next lesson) and have a clear Start/Resume button, plus a resources/projects section and maybe discussion/Q&A.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 4,
+        "interviewer": "What specific navigation component, such as a sidebar or a top tab bar, should users use to switch between the major sections like Browse Courses, My Courses, and the Dashboard?",
+        "user": "I don’t really care whether it’s a sidebar or a top tab bar—either is fine. As long as it’s consistent and easy to reach on desktop and mobile.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 5,
+        "interviewer": "What specific pages or sections should be included in the administrative interface for managing courses and users?",
+        "user": "I don’t really care much about the admin interface details. As long as there’s a way to add/update courses and manage users (enrollments, roles, basic moderation), that’s enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—I'd like assignments to be submit-able directly in the course (upload or paste code/notebooks), with instant confirmation and a clear status like submitted/graded plus any feedback.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4444444444444444
+      },
+      {
+        "turn": 7,
+        "interviewer": "What specific features should be included for the discussion or Q&A section to allow students to interact with each other or with instructors?",
+        "user": "I don’t really care about the discussion/Q&A features too much. Basic threaded comments with upvoting and the ability for instructors to mark an answer as accepted is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4444444444444444
+      },
+      {
+        "turn": 8,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—make grades easy to self-check: a dedicated Grades page that updates quickly after submissions, shows score + rubric/feedback, and lets me filter by course/assignment with clear status (pending/graded).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific fields or steps should be included in the form for adding or updating a new course in the system?",
+        "user": "I don’t really care about the exact form fields. As long as admins can add/update the basics like title, description, syllabus/lessons, level, prerequisites, and upload the materials, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific file formats should the platform support for assignment uploads, such as PDF, ZIP, or Jupyter Notebook files?",
+        "user": "I don’t really care about the exact list of file formats. Just support the common ones for data science assignments (like notebooks and maybe ZIP/PDF) and I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific methods should users be able to use to create an account or log in, such as email/password or social media single sign-on?",
+        "user": "I don’t really care which login methods you use. Email/password is fine, and adding Google/GitHub sign-in would be a nice-to-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific steps or confirmation process should a user go through to enroll in a course after they have selected it?",
+        "user": "I don’t really care about a detailed enrollment flow. Just a clear Enroll button with a quick confirmation (and pricing info if it’s paid), then it should drop me into the course and show up in My Courses.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific events should trigger an automated email notification to the user, such as a new grade being posted or a reply to their discussion comment?",
+        "user": "I don’t really care about email notifications much. If you do them, the only ones I’d want are assignment submission confirmation and when a grade/feedback is posted.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 14,
+        "interviewer": "When a user types into the search bar, should the results update instantly as they type, or should they only appear after pressing enter?",
+        "user": "I don’t really care either way. If you pick one, instant-as-you-type is slightly nicer as long as it stays fast and doesn’t feel jumpy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific settings or preferences should users be able to customize in their personal profile to adjust how the platform looks or behaves for them?",
+        "user": "I don’t really care about profile customization settings. If you include anything, basic stuff like changing password, notification toggles, and maybe a light/dark mode is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 16,
+        "interviewer": "How should the navigation menu adapt or change when a user switches from a desktop browser to a mobile device?",
+        "user": "I don’t really care about the exact mobile nav pattern. Just make sure it’s easy to reach on a phone (like a hamburger or bottom bar) and stays consistent with the main sections.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 17,
+        "interviewer": "What specific tools or preview features should be available to students when they are editing or reviewing their code notebooks before submitting them for an assignment?",
+        "user": "I don’t really care about fancy notebook preview tools. A simple way to view the notebook before submitting and a basic “run/check” option (if possible) is plenty.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 18,
+        "interviewer": "Could you specify if users should be able to switch between different accounts or roles, such as switching from a student view to an instructor view, without having to log out and back in?",
+        "user": "I don’t really care about role/account switching. If you have instructor roles later, it’s fine either way—logging out/in is acceptable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 19,
+        "interviewer": "Should users have the ability to manually reorder or group their enrolled courses into custom folders or categories within the My Courses section?",
+        "user": "I don’t really care about manually reordering or grouping courses into folders. A simple My Courses list (maybe with search or sort) is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      },
+      {
+        "turn": 20,
+        "interviewer": "What specific information or metrics should be displayed on the admin dashboard to help administrators monitor overall platform activity and course performance?",
+        "user": "I don’t really care about the admin dashboard metrics. If you include one, just a basic overview like total users, active enrollments, and recent assignment/grade activity is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5555555555555556
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_6",
+    "task_name": "Student Training Match Portal",
+    "initial_requirements": "I want a student portal that connects students with suitable training opportunities and helps training providers find appropriate candidates.",
+    "user_stories": [
+      "As a user, I want to register on the student portal website, so that I can create an account for managing my student information.",
+      "As a user, I want to manage my profile on the student portal, so that I can keep my personal details up to date.",
+      "As a user, I want to input and manage my qualifications, so that my educational background is accurately represented on the portal.",
+      "As a user, I want to input and manage my career preferences, so that my career interests are reflected in my profile.",
+      "As a user, I want the system to use an advanced matching algorithm, so that I can be matched with training providers based on criteria such as qualifications, location, field of study, and career interests.",
+      "As a user, I want an intuitive interface for the application process, so that I can easily apply for programs.",
+      "As a user, I want training providers to access student information based on predefined criteria, so that they can identify relevant students for their skills development programs.",
+      "As a user, I want training providers to directly communicate with students whose information they can access, so that they can attract them to their skills development programs.",
+      "As a user, I want the website to use azure as the main background color, so that the visual design aligns with the specified color scheme.",
+      "As a user, I want the website controls to use midnight blue, so that the controls follow the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific roles or user types, such as students or training providers, should have different levels of access within the portal?",
+        "user": "We need at least three roles: students, training providers, and an admin. Students should manage their own profiles and apply/express interest; providers should be able to search/filter and view student profiles based on predefined criteria and post opportunities; admins manage approvals, moderation, and access rules.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific documentation or approval steps are required for a training provider to complete their registration?",
+        "user": "I don’t really care about the exact documentation list right now. At most, a simple admin approval step after they submit basic company details is fine, and we can define the required documents later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 3,
+        "interviewer": "What specific authentication methods, such as email and password or social media login, should users use to sign in to the portal?",
+        "user": "Email and password is enough to start, with email verification and a “forgot password” flow. If it’s easy, add Google sign-in later, but it’s not required for the first version.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes: I want a matching-first dashboard—students fill in qualifications and career interests, and the home screen immediately shows the best-fit opportunities with a clear match score and a few key reasons (e.g., required skills met/missing), plus simple filters to refine.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 5,
+        "interviewer": "What specific filtering criteria, such as location, industry, or duration, should be available for students to refine their list of matched training opportunities?",
+        "user": "For students, filters should include location (city/remote + distance), industry/field, training type (internship/apprenticeship/course), start date, duration, schedule (full/part-time), required qualifications/skills, paid vs unpaid (or stipend range), and accessibility needs. Also a simple “only show high match score” toggle.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 6,
+        "interviewer": "Beyond the match score and key reasons already mentioned, should the list of opportunities be presented as a grid of cards with quick previews or a detailed table with sortable columns?",
+        "user": "I don’t really care whether it’s a grid or a table. As long as it’s easy to scan and filter on mobile and desktop, pick whatever is simplest for v1.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "What specific fields, such as match score or start date, should users be able to sort their results by?",
+        "user": "I don’t really care much about sorting for v1. If you include it, just do match score, start date, distance/location, and stipend/pay—those are the only ones I’d likely use.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I think we already covered the main interaction piece with the matching-first dashboard. I don’t have another specific interaction requirement right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific data fields should be included in a student's profile to enable the matching logic with training opportunities?",
+        "user": "Student profile should include: basic info (name, email, phone), location (city + willing to relocate/remote + travel distance), education level/qualifications (school, program, graduation year), skills with proficiency, certifications, work experience/projects, career interests (industries/roles), availability (start date, duration, schedule), language(s), accessibility needs, and pay preference (paid/unpaid, stipend range). Also uploadable CV/portfolio link and a way to mark required documents if needed later.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific data fields should be included in a training opportunity posting to ensure it can be accurately matched against the student profiles?",
+        "user": "I’m not too concerned about the exact field list right now. Just capture the basics needed for matching: title/description, location/remote, industry/role, required skills/qualifications, start date, duration/schedule, pay/stipend, and any accessibility requirements.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific logic or weighted rules should be used to calculate the match score between a student's profile and a training opportunity?",
+        "user": "I don’t really care about the exact weighted scoring rules right now. For v1, a simple approach is fine—give strong weight to required skills/qualifications, then location/availability, and treat the rest as nice-to-haves.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 12,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific color should be used for the page background?",
+        "user": "Let’s use an azure background as the main page background color (a light, soft azure so it stays readable).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 14,
+        "interviewer": "What specific color should be used for the primary action buttons?",
+        "user": "For primary action buttons, use a midnight blue as the main fill color, with white text for contrast. Hover state can be a slightly lighter blue.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific color should be used for accent elements like badges or match score highlights?",
+        "user": "I don’t really care about the exact accent color right now. Just pick something that works with the soft azure background and midnight blue buttons, and keeps the match score easy to notice and readable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 16,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG 2.1 level AA, that the color contrast between text and backgrounds must meet?",
+        "user": "I don’t really care about calling out a specific standard like WCAG in the requirements right now. Just make sure contrast is clearly readable for most users and we can formalize standards later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 17,
+        "interviewer": "What specific color should be used to indicate an error state, such as a failed form submission or an invalid field?",
+        "user": "I don’t really care about a specific error color right now. Just use a standard, clearly readable error red that contrasts well with the azure background and is obvious on both mobile and desktop.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 18,
+        "interviewer": "Which specific UI components, such as headers or input fields, should have a standardized style to ensure a consistent look across the student and provider dashboards?",
+        "user": "I don’t really care about getting super specific on component standardization right now. Just keep the basics consistent across both dashboards—header/nav, buttons, form inputs, cards/lists, and tables if you use them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 19,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "No other style requirements from me right now—let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      },
+      {
+        "turn": 20,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to sign in using my email and password, with access to email verification and a \"forgot password\" flow.\nFeature2: As a student, I want to manage a profile including my location, education, skills, certifications, work experience, career interests, availability, and accessibility needs.\nFeature3: As a student, I want to upload a CV or portfolio link to my profile.\nFeature4: As a student, I want a \"matching-first\" dashboard that displays opportunities with a match score and reasons for the match (e.g., skills met/missing).\nFeature5: As a student, I want to filter opportunities by location, industry, training type, start date, duration, schedule, pay, and accessibility requirements.\nFeature6: As a student, I want a toggle to only show opportunities with a high match score.\nFeature7: As a student, I want to sort opportunities by match score, start date, distance, or stipend.\nFeature8: As a training provider, I want to register by providing basic company details and wait for admin approval before accessing the portal.\nFeature9: As a training provider, I want to post training opportunities including details on skills required, location, schedule, and pay.\nFeature10: As a training provider, I want to search, filter, and view student profiles based on predefined criteria to find suitable candidates.\nFeature11: As an admin, I want to manage user approvals, moderate content, and define access rules for the portal.\nFeature12: As a user, I want the interface to be responsive and easy to scan on both mobile and desktop devices.\nFeature13: As a user, I want the portal to feature a light azure background with midnight blue primary buttons and high-contrast text for readability.\nFeature14: As a user, I want the system to calculate match scores based on a weighted logic prioritizing skills/qualifications, followed by location and availability.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.875
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_7",
+    "task_name": "Promotion Sharing and Management System",
+    "initial_requirements": "I need a community website that provides access to promotions and discounts, while also supporting administrative management.",
+    "user_stories": [
+      "As a user, I want to browse promotions, so that I can see the available promotions and discounts.",
+      "As a user, I want to share promotions, so that I can contribute promotions and discounts to the community.",
+      "As a user, I want to search for promotions, so that I can find promotions of interest.",
+      "As an administrator, I want a management backend for managing users, so that I can administer user-related aspects of the website.",
+      "As an administrator, I want a management backend for managing promotions, so that I can administer promotion-related content on the website.",
+      "As an administrator, I want a management backend for managing website settings, so that I can configure the website.",
+      "As a user, I want the website’s outer layout to use an ivory color, so that the overall layout follows the specified appearance.",
+      "As a user, I want the UI blocks to use a forest green color, so that the interface elements follow the specified appearance."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific roles or permission levels should exist for the administrative management side of the website?",
+        "user": "At minimum I’d want three roles: super admin (full access), admin/editor (manage promotions and user accounts), and moderator/support (handle user issues and basic content). Regular members shouldn’t see the admin backend at all.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific information must a regular member provide during registration, and does their account require manual approval by an admin before they can access promotions?",
+        "user": "I don’t really care about the exact registration fields or whether approval is manual—keep it simple with the usual basics and whatever’s standard.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 3,
+        "interviewer": "Which specific login methods should be available for users, such as email/password or social media sign-in?",
+        "user": "I don’t really care which login methods you choose—just use whatever’s standard and easy. Email/password is fine, and social sign-in is optional if it’s simple to add.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about a specific interaction requirement right now—just make it feel modern and responsive and keep navigation straightforward.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 5,
+        "interviewer": "How should the promotions and discounts be categorized or grouped to help users find them easily?",
+        "user": "I don’t really care about a specific categorization scheme—whatever’s standard is fine. Maybe just basic categories like food, retail, services, and online deals, plus a simple search/filter.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific information or data fields should be included for each promotion, such as a discount code, expiration date, or terms and conditions?",
+        "user": "For each promotion I’d want: title, short description, category, discount amount/offer, promo code if needed, link or where to redeem, start/end (expiration) dates, terms/conditions, and any location/eligibility details. An image/logo and a “posted/updated” date would be nice too.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 7,
+        "interviewer": "Beyond the users and the promotions themselves, are there any other core entities that need to be tracked in the system, such as specific merchant or brand profiles?",
+        "user": "I don’t really care about tracking extra entities like merchant/brand profiles right now. If it comes for free, a simple “merchant name” field on the promotion is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific data fields should be included for a user profile, such as a profile picture, contact number, or location?",
+        "user": "I don’t really care about detailed user profile fields. Just keep the basics (name/display name and email) and maybe an optional profile picture; everything else can be optional or skipped.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements right now. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific color should be used for the website's page background?",
+        "user": "I’d like the page background to be an ivory/off-white tone—something like #FFFFF0 or a very light warm ivory.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific color should be used for the primary action buttons?",
+        "user": "For primary action buttons, use a forest green—something like #228B22. If you need a hover/active state, just go a shade darker.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific color should be used for accents and highlights, such as links or notification badges?",
+        "user": "I don’t really care about a specific accent/highlight color—just pick something that works well with the ivory background and forest green buttons, and keep it consistent across links and badges.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 13,
+        "interviewer": "What specific color should be used to indicate an error state, such as for invalid form fields or system alerts?",
+        "user": "I don’t really care about a specific error color—just use a standard accessible red that contrasts well on the ivory background, and keep it consistent for alerts and invalid fields.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 14,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG 2.1 levels, that the color contrast between your text and the ivory background must meet?",
+        "user": "I don’t really care about a specific WCAG level. Just make sure the contrast is good and it’s generally accessible for normal users.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 15,
+        "interviewer": "Which specific UI components, such as cards or input fields, should have a standardized border style or corner roundness to ensure a consistent look across the site?",
+        "user": "I don’t really care about specific border styles or corner roundness. Just keep it consistent across cards, buttons, and form fields with a modern look.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 16,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "No other style requirements from me—let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 17,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a member, I want to register using my name and email so that I can access the community promotions.\nFeature2: As a member, I want to log in via email/password or optional social sign-in to access my account.\nFeature3: As a member, I want to browse and search for promotions by categories (food, retail, services, online) to find relevant deals.\nFeature4: As a member, I want to view promotion details including the offer, promo code, expiration date, terms, and redemption link.\nFeature5: As a member, I want to view a modern, responsive interface with an ivory background (#FFFFF0) and forest green buttons (#228B22).\nFeature6: As a super admin, I want full access to the system to manage all settings and permissions.\nFeature7: As an admin/editor, I want to manage promotion listings and user accounts to keep the content current.\nFeature8: As a moderator, I want to handle user issues and basic content moderation to maintain community standards.\nFeature9: As an administrator, I want to ensure regular members cannot access the administrative backend.\nFeature10: As a user, I want to see clear error states in a standard accessible red when form fields are invalid.\nFeature11: As a user, I want to manage a basic profile including my display name, email, and an optional profile picture.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      }
+    ],
+    "total_turns": 17
+  },
+  {
+    "task_id": "task_8",
+    "task_name": "Solar Data Monitoring Dashboard",
+    "initial_requirements": "I need a solar dashboard that lets me view real-time solar system data and explore historical data trends.",
+    "user_stories": [
+      "As a user, I want a solar dashboard that displays both real-time and historical solar data, so that I can monitor my solar system comprehensively.",
+      "As a user, I want the dashboard to provide a real-time data display, so that I can see up-to-date information about my solar system.",
+      "As a user, I want the dashboard to provide a historical data query function, so that I can look up past solar data.",
+      "As a user, I want to view real-time solar power generation data on the dashboard, so that I can know how much power is being produced.",
+      "As a user, I want to view real-time power consumption data on the dashboard, so that I can understand how much power is being used.",
+      "As a user, I want to view real-time battery percentage on the dashboard, so that I can see the current battery level.",
+      "As a user, I want to view trends through charts, so that I can understand how solar power generation, consumption, and battery status change over time.",
+      "As a user, I want the dashboard background color to be honeydew, so that the interface has the specified appearance.",
+      "As a user, I want the dashboard components to use dark olive green, so that the components have the specified appearance."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific pages or tabs should be included in the main navigation menu of the dashboard?",
+        "user": "I don’t really care about the exact tabs as long as I can quickly get to real-time status and historical trends. If you need a suggestion: Overview/Live, History/Trends, Alerts, and Settings would be fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific filters or search parameters would you like to use when exploring your historical solar data trends?",
+        "user": "For history, I mainly want a date/time range filter (last 24h, 7d, 30d, custom) plus the ability to choose what metric to chart (solar production, consumption, battery SOC, grid import/export). It’d also be useful to filter by inverter/array/battery if there are multiple, and maybe aggregate by hour/day/week.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 3,
+        "interviewer": "In what format should the historical data results be displayed, such as a table with sortable columns or a specific type of chart?",
+        "user": "I don’t really care about the exact format, as long as I can clearly see trends over time. A simple line chart for the selected metric is fine, and maybe an optional table view if it’s easy to include.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 4,
+        "interviewer": "Should the data update automatically as soon as you change a filter, or would you prefer an Apply button to trigger the update?",
+        "user": "I don’t really care either way. If I had to pick, auto-update is fine as long as it’s quick, and maybe use an Apply button only when the custom date range is large so it doesn’t lag.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about extra interaction details beyond it feeling snappy—real-time status should load fast and the charts should update without noticeable lag.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 6,
+        "interviewer": "What specific fields should users be able to sort by when viewing the historical data in the table view?",
+        "user": "I don’t really care about sorting in the table view. If you include it, sorting by timestamp and by the selected metric value would be enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 7,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about adding more interaction requirements beyond it being snappy—fast load for live status and smooth chart updates is the main thing.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific statistical summaries or key performance indicators, such as total energy yield or peak power, should be highlighted alongside the charts?",
+        "user": "I don’t really care about specific KPIs as long as the charts make trends clear. If you include a few, total energy (kWh) over the selected range and peak power are probably enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 9,
+        "interviewer": "What specific data fields or attributes should be included for each inverter or battery in the system?",
+        "user": "I don’t really care about detailed per-device attributes. At most, show a name/ID and basic status plus current power for inverters, and state of charge plus charge/discharge power for batteries.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 10,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else major on content—just make sure the live view clearly shows current solar generation, current consumption, and battery % (SOC) front and center. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "How long should the historical solar data be retained and accessible within the dashboard?",
+        "user": "I don’t really care about a specific retention period in the dashboard. If it’s easy, having at least 12 months available would be plenty.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really care about adding anything else on content. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "What color should be used for the page background?",
+        "user": "I’d like a honeydew background color for the page—something light and clean so the charts and live numbers stand out.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 14,
+        "interviewer": "Should the honeydew background color be applied globally to the entire dashboard or only to specific sections?",
+        "user": "I don’t really care either way. If you need a default, apply it globally but keep cards/panels white or slightly tinted so the charts and numbers have good contrast.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific color should be used for the buttons?",
+        "user": "For buttons, I’d like a dark olive green as the main color. White text on it would be great for contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "What specific color should be used for highlights, such as active navigation links or focus outlines?",
+        "user": "I don’t really care about the exact highlight color. If you need a default, use a slightly brighter olive/green accent that matches the buttons, with a clear focus outline for accessibility.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "What specific color should be used to indicate an error state, such as a system alert or a failed data connection?",
+        "user": "I don’t really care about the exact error color. Just make it very obvious and accessible—like a standard red with good contrast against the honeydew background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 18,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG 2.1 levels, that the color contrast between the text and the honeydew background must meet?",
+        "user": "I don’t really care about a specific WCAG level. Just make sure the contrast is clearly readable and the focus states are obvious, especially on the honeydew background.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 19,
+        "interviewer": "Which specific typography or font style should be standardized across the dashboard to ensure a consistent appearance?",
+        "user": "I don’t really care about the specific typography. Just use a clean, modern sans-serif and keep it consistent across the dashboard.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 20,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really care about any other style details beyond the honeydew background and the olive buttons. We can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_9",
+    "task_name": "Multi-Company Finance Dashboard",
+    "initial_requirements": "I need a dashboard that allows me to input and view financial data across multiple companies, and supports financial comparison and reporting.",
+    "user_stories": [
+      "As a user, I want to use a multi-company dashboard to manage and view financial data from multiple companies in one place.",
+      "As a user, I want the dashboard to allow me to input financial data for each company, so that I can manage financial information across multiple companies.",
+      "As a user, I want to view financial data for a specific company by specifying its name or identifier, so that I can review company-specific details.",
+      "As a user, I want the dashboard to present revenue data for each company, so that I can understand each company’s income level.",
+      "As a user, I want the dashboard to present expense data for each company, so that I can understand each company’s cost structure.",
+      "As a user, I want the dashboard to present profit data for each company, so that I can understand each company’s profitability.",
+      "As a user, I want the dashboard to provide consolidated reports and cross-company comparisons, so that I can analyze overall financial performance.",
+      "As a user, I want the dashboard to use mint cream as the background, so that the interface follows the specified color scheme.",
+      "As a user, I want all dashboard components to be styled with teal, so that the interface elements follow the specified component styling"
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "gemini-3-flash-preview-nothinking",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you specify what types of input fields or forms you need for entering the financial data for each company?",
+        "user": "I don’t really care about the exact input field types right now—just something straightforward to enter the key financial statements (P&L, balance sheet, cash flow) per company, ideally via spreadsheet-style tables or CSV upload.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Beyond the initial data entry, what specific bulk operations—such as bulk editing or mass deletion—should be available for managing these financial records?",
+        "user": "I don’t really care about bulk operations like mass deletion right now. Basic ability to import/replace a period’s data via CSV and maybe undo a mistaken upload would be enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Should the financial comparison reports be generated automatically as soon as a CSV is uploaded, or would you prefer to trigger those calculations manually?",
+        "user": "I don’t really care either way right now. As long as the reports end up accurate and it’s clear when they’re up to date, I’m fine with automatic or manual triggers.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yeah—make navigation/search centered on company: a prominent search box where I can type a company name or ID and quickly jump to that company’s dashboard, with autocomplete and recent companies.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 5,
+        "interviewer": "What specific filters or advanced search criteria, such as date ranges or financial metrics, should be available to narrow down the results within the company search?",
+        "user": "I don’t really care about advanced filters in the company search right now—company name/ID autocomplete and a recent list is enough. We can add things like date ranges or metric-based filtering later if it turns out we need it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about adding more interaction requirements right now. The company-centric search/navigation we discussed is the main one for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 7,
+        "interviewer": "What specific line items or data fields should be included in the balance sheet and cash flow statements for each company?",
+        "user": "I don’t really care about the exact line-item schema right now. If we can start with a standard template (with the ability to add/customize rows later) and just capture totals plus common categories, that’s fine for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 8,
+        "interviewer": "What specific standard financial templates or industry-specific reporting formats should be available as the default options for new companies?",
+        "user": "I don’t really care about industry-specific formats as default options right now. A generic GAAP-style set of templates for P&L, balance sheet, and cash flow is fine to start, and we can add industry-specific ones later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else on content right now. As long as I can store the three statements per company by period, see totals, and generate basic comparison/reporting, we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific color would you like to use for the page background?",
+        "user": "Let’s use a mint cream background for the page—something very light so the tables and charts stand out.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific color should be used for the primary action buttons?",
+        "user": "Use a teal color for the primary action buttons—something like #008080 works. White text on it would be good for contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific color should be used for highlights, such as active navigation states or focus outlines?",
+        "user": "I don’t really care much about highlight colors right now. If you pick something that matches the teal theme and is accessible (clear focus outlines), that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "Should the mint cream background be applied globally across the entire application, or are there specific sections where you would prefer a different background color?",
+        "user": "I don’t really care about that level of detail right now. Applying the mint cream background globally is fine as long as readability and contrast stay good for tables/charts.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "What specific color should be used to indicate a successful data upload or a positive financial trend?",
+        "user": "I don’t really care about the exact success/positive-trend color right now. Just use a standard accessible green that works with the mint/teal palette and has good contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 15,
+        "interviewer": "Are there any specific accessibility standards, such as WCAG 2.1 level AA, that the color contrast between your teal buttons and the mint background must meet?",
+        "user": "I don’t really care about a specific standard like WCAG 2.1 AA right now. Just make sure the contrast is clearly readable and accessible in practice.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 16,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else on style that I care about right now. Let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 17,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to input and view P&L, balance sheet, and cash flow statements for multiple companies using spreadsheet-style tables or CSV uploads.\nFeature2: As a user, I want to import or replace a specific period's financial data via CSV and have the ability to undo the upload.\nFeature3: As a user, I want to generate financial comparison reports across companies that clearly indicate when data is up to date.\nFeature4: As a user, I want a prominent search box with autocomplete and a \"recent companies\" list to quickly navigate to a specific company’s dashboard by name or ID.\nFeature5: As a user, I want to use a standard GAAP-style template for financial statements that captures totals and common categories with the ability to customize rows later.\nFeature6: As a user, I want the application to have a mint cream background globally to ensure tables and charts stand out.\nFeature7: As a user, I want primary action buttons to be teal (#008080) with white text for high contrast.\nFeature8: As a user, I want the interface to use accessible green for success indicators and a theme-consistent color for focus outlines and active states.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      }
+    ],
+    "total_turns": 17
+  }
+]

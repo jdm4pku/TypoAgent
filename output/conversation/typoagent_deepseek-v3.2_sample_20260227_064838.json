@@ -1,0 +1,1588 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "World of Imagination Creative Community",
+    "initial_requirements": "I want a website called “World of Imagination” where I can explore creative ideas, share my own creations, and connect with others who enjoy creativity.",
+    "user_stories": [
+      "As a user, I want the website called \"World of Imagination\" to showcase and inspire users' imagination, so that I can engage with imaginative content.",
+      "As a user, I want to be able to browse others' creative works, so that I can explore different imaginative ideas.",
+      "As a user, I want to be able to share ideas on the website, so that others can see and be inspired by my contributions.",
+      "As a user, I want to be able to participate in discussions, so that I can discuss creative topics with others.",
+      "As a user, I want to be able to interact with other users, so that I can engage socially around imaginative content.",
+      "As a user, I want the website background to use the color azure mist, so that the visual appearance matches the specified style.",
+      "As a user, I want all components on the website to use the color dark slate blue, so that the interface elements follow a consistent color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you describe how you envision users sharing their own creations on the platform?",
+        "user": "I don’t really care about the exact sharing mechanics right now—just that it’s easy to post creations and others can view and comment on them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the main pages you envision on the site and how users would navigate between them?",
+        "user": "I don’t really care about the exact page structure or navigation details right now. As long as there’s an easy way to browse ideas, post a creation, and view/comment on others’ work.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I’d like the commenting/discussion experience to feel quick and smooth—no lag when posting a comment or loading a thread, and new replies should appear right away without a full page refresh.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 4,
+        "interviewer": "Could you specify your preferences for messaging or chat capabilities between users on the platform?",
+        "user": "I don’t really care about messaging/chat right now. If it exists later, basic direct messages would be fine, but it’s not a priority for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any other specific interaction requirements right now. As long as the site feels generally fast and easy to use, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 6,
+        "interviewer": "What types of files or media (e.g., images, videos, documents) can users upload when sharing their creations?",
+        "user": "I don’t really care about specific file types right now. As long as users can easily share their creations somehow, that’s enough for me at this stage.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you describe the main categories or tags you'd like to use to organize the creative ideas and creations on the site?",
+        "user": "I don’t really care about the exact categories or tag system right now. Just make it easy to add a few tags and browse/filter by them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 8,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements right now. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 9,
+        "interviewer": "What color scheme or palette do you envision for the main interactive components, such as buttons and links?",
+        "user": "I’m not too picky—something clean and modern. Maybe a light background with a primary accent like blue or purple for buttons/links, and clear hover states so it’s obvious what’s clickable.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 10,
+        "interviewer": "Could you specify the exact accent color you'd prefer for links and active states, such as a particular shade of blue or purple?",
+        "user": "I don’t really care about the exact shade right now. Any tasteful medium blue or purple is fine as long as contrast and readability are good.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 11,
+        "interviewer": "What color should be used as the primary fill for buttons?",
+        "user": "I don’t really care about the exact button fill color right now. Just keep it a tasteful medium blue or purple with good contrast and clear hover/focus states.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify your preferences for colors used in component states, such as hover, active, or disabled?",
+        "user": "I don’t really care about the exact hover/active/disabled colors. Just make the states clearly distinguishable, accessible, and consistent across the site.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 13,
+        "interviewer": "What color should be used for the overall page background?",
+        "user": "I’d like the overall page background to be an azure mist—basically a very light, airy blue tone that keeps the site feeling bright and calm.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 14,
+        "interviewer": "Could you specify any specific contrast or accessibility requirements for the color scheme, such as minimum contrast ratios for text?",
+        "user": "I don’t really care about specific contrast ratios right now. Just make it generally accessible and easy to read, and follow standard best practices.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 15,
+        "interviewer": "Do you have any specific brand or thematic elements that should be reflected in the color scheme beyond the basic background and accent colors?",
+        "user": "I don’t really care about specific brand/thematic elements for the color scheme right now. Just keep it clean, modern, and a bit dreamy to match “World of Imagination.”",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify which visual elements, such as typography or spacing, should be standardized to maintain a consistent look across all pages?",
+        "user": "I don’t really care about the exact typography or spacing standards right now. Just keep the fonts and spacing consistent across pages so it feels clean and easy to read.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 17,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to explore creative ideas and creations from others on the platform.\nFeature2: As a user, I want to easily post and share my own creations.\nFeature3: As a user, I want to view and post comments on others' creations.\nFeature4: As a user, I want the commenting experience to be quick and smooth, with no lag and new replies appearing without a full page refresh.\nFeature5: As a user, I want to browse and filter creations by tags.\nFeature6: As a user, I want the site to have a clean, modern, and generally fast user interface.\nFeature7: As a user, I want the site to have a light, airy blue (azure mist) page background.\nFeature8: As a user, I want interactive elements (like buttons and links) to use a tasteful medium blue or purple accent color with clear, distinguishable, and accessible hover, active, and focus states.\nFeature9: As a user, I want consistent typography and spacing across all pages for a clean, readable experience.\nFeature10: As a user, I want a basic direct messaging feature (TBD - low priority).",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      }
+    ],
+    "total_turns": 17
+  },
+  {
+    "task_id": "task_1",
+    "task_name": "Cryptocurrency Escrow Transaction Management System",
+    "initial_requirements": "I need a cryptocurrency escrow system that lets me safely buy and sell cryptocurrencies.",
+    "user_stories": [
+      "As a user, I want to use a cryptocurrency escrow system for secure cryptocurrency transactions, so that my cryptocurrency trades are protected.",
+      "As a buyer, I want to browse sellers’ cryptocurrency products, so that I can see what is available for purchase.",
+      "As a buyer, I want to conduct transactions for selected cryptocurrency products, so that I can purchase them through the system.",
+      "As a buyer, I want to deposit cryptocurrencies into an escrow account, so that the funds are held securely during the transaction.",
+      "As a seller, I want to view my cryptocurrency products, so that I can see what I am offering for sale.",
+      "As a seller, I want to manage my cryptocurrency products, so that I can maintain and update my offerings.",
+      "As a seller, I want to view my transaction records, so that I can track my past and current transactions.",
+      "As a seller, I want to manage my transaction records, so that I can organize and handle my transaction history.",
+      "As a user, I want the system to provide transaction confirmation functionality, so that I can know the status of my transactions.",
+      "As a user, I want the system to provide cryptocurrency release functionality, so that cryptocurrencies can be released from escrow when appropriate.",
+      "As a user, I want the system to provide dispute resolution functionality, so that any issues with transactions can be addressed.",
+      "As a user, I want the system’s background color to be initialized with light gray, so that the interface follows the specified color scheme.",
+      "As a user, I want the system’s component color to be initialized with dark red, so that the interface components follow the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you describe how you envision the process of placing and managing an escrow order from start to finish?",
+        "user": "I’d like the buyer to create an order with amount, coin, price, and payment method, then the system generates an escrow deposit address and the buyer funds it. Once the deposit is confirmed on-chain, the seller is notified to deliver the crypto/fiat off-chain as agreed, then the buyer marks it received and escrow releases funds (or a dispute can be opened with chat and evidence). I also want a clear order status timeline and the ability to cancel if no deposit is made within a time limit.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you specify the exact statuses and transitions you want for an escrow order from creation to final resolution?",
+        "user": "Statuses: Draft/Created → Awaiting Deposit (timer running) → Deposit Pending Confirmations → Funded/In Escrow → Seller Notified/Delivering → Buyer Confirming → Released/Completed. Alternative paths: Awaiting Deposit → Expired/Cancelled (no deposit); Funded/In Escrow → Cancel Requested → Cancelled+Refunded (if both agree, before release); any state after Funded → Dispute Opened → Under Review → Resolved (Released to seller or Refunded to buyer) → Closed.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 3,
+        "interviewer": "Could you specify which actions users should be able to perform on an order after it has been created, such as modifying, canceling, or reordering?",
+        "user": "I don’t really care about reordering. After creation, the buyer should only be able to edit details while it’s still in Draft/Created, and cancel only if it hasn’t been funded yet (or if both parties agree before release). Once funded, it should be locked except for opening a dispute, marking received, or agreeing to a mutual cancel/refund.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 4,
+        "interviewer": "What specific rules should apply to the timing or prerequisites for placing an escrow order, such as required verifications, deposit time limits, or eligibility conditions?",
+        "user": "I don’t really care about extra eligibility or verification rules right now. The only timing rule I want is a deposit time limit (like 30–60 minutes) after order creation, and the order auto-expires if it’s not funded by then.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you specify the exact payment methods you want to support for an escrow order, such as bank transfer, PayPal, or specific cryptocurrencies?",
+        "user": "I don’t really care about specific payment methods right now—just make it flexible so we can add common ones later. For launch, supporting basic bank transfer and a couple popular options is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 6,
+        "interviewer": "Could you specify whether users should place orders using a cart, a direct purchase flow, or another specific method?",
+        "user": "I don’t need a cart—I'd prefer a direct order flow. Users should browse/select a coin and an offer (amount/price/payment method), then create the escrow order from that selection.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what data entry forms or fields you want to be editable by users after an order is created, such as order details or payment information?",
+        "user": "I don’t really care about letting people edit much after creation. After it’s created, only allow edits while it’s still Draft—amount/price/payment method/notes—and once it’s awaiting deposit or funded, lock everything except dispute info and confirmation actions.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 8,
+        "interviewer": "Could you specify which processes in the system, besides the main escrow order flow, should follow a defined multi-step workflow with explicit statuses or phases?",
+        "user": "Besides the main order lifecycle, I want the dispute process to be a defined workflow: Dispute Opened → Evidence Collection (chat/files) → Under Review (moderator) → Decision Made → Payout Executed (release/refund/split) → Closed. Also have a separate lightweight workflow for KYC/verification if you add it later, but it doesn’t need to be in v1.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "After the escrow deposit is confirmed and the order status becomes Funded/In Escrow, how should the system trigger the seller's notification and delivery process—automatically, manually, or with specific activation steps?",
+        "user": "I don’t really care about the exact trigger mechanics right now. As long as the seller gets notified immediately once the deposit is confirmed and can proceed to deliver, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 10,
+        "interviewer": "Could you specify the exact data fields and their required/optional status for the initial order creation form?",
+        "user": "I don’t really care about nailing down exact required vs optional fields right now. At minimum we need coin, amount, price, and payment method; notes can be optional, and we can refine the rest later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific UI interaction details right now. Just keep it simple and responsive enough that status updates and notifications feel immediate.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify the core entities or data tables you want the system to manage, such as users, orders, transactions, or disputes?",
+        "user": "I don’t really care about defining the exact entities/tables right now. Just make sure you cover the basics like users, orders, escrow deposits/transactions, and disputes with chat/evidence, and we can refine the data model later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "Could you specify what kind of audit trail or change history you want to keep for escrow orders, such as tracking status changes, deposit confirmations, or dispute actions?",
+        "user": "I don’t really care about a super detailed audit trail for v1. Just log key events like status changes, deposit confirmations (tx hash + confirmations), release/refund actions, and dispute actions with timestamps and who did it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "Could you specify what details about changes, such as who made the change, what was changed, and when, should be captured and reviewable in the audit trail?",
+        "user": "I don’t really care about making the audit trail super reviewable in v1. Just capture who did the action (buyer/seller/mod/system), what happened (status change, deposit confirmed, release/refund, dispute step), and the timestamp; the rest can wait.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 15,
+        "interviewer": "Could you specify what level of detail you want for the information fields stored with each order record, such as basic timestamps and amounts versus extensive metadata?",
+        "user": "I don’t really care about extensive metadata for v1. Just store the basics: buyer/seller IDs, coin, amount, price, payment method, escrow address, timestamps, current status, and the key tx hashes/confirmations.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify which types of business records, besides orders and disputes, the system should store and track over time, such as user verification history or payment method changes?",
+        "user": "I don’t really care about tracking extra business records like verification history or payment method change logs for v1. Let’s just focus on orders, escrow transactions, and disputes for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 17,
+        "interviewer": "Could you specify who should be able to view the historical records of escrow orders and disputes, such as only the involved users, moderators, or administrators?",
+        "user": "I don’t really care about fine-grained permissions for v1. Just make sure only the buyer/seller involved and admins/moderators can view an order or dispute history—no public access.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 18,
+        "interviewer": "How should the main navigation menu be structured to group and access different sections of the system, such as orders, disputes, and user settings?",
+        "user": "I don’t really care about the exact navigation structure for v1. Just make it straightforward—like Orders, Disputes, and Settings/Profile—and keep it easy to find active vs past orders.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 19,
+        "interviewer": "Could you specify what types of files or media you want users to be able to upload as evidence in a dispute, such as images, PDFs, or screenshots?",
+        "user": "I don’t really care about the exact file types for v1. Just support common stuff like screenshots/images and PDFs, and we can tighten it up later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 20,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more content requirement: seller listings/offers should be pretty detailed—coin/network, available amount/limits, price formula or fixed price, payment methods, seller stats (completed trades, rating, verification badges), and clear terms/instructions. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.625
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_2",
+    "task_name": "Fishing Contest Management and Display System",
+    "initial_requirements": "I need a fishing contest website to manage and display fishing contest information.",
+    "user_stories": [
+      "As a user, I want to view fishing contest announcements, so that I can see upcoming fishing contests.",
+      "As a user, I want to view fishing contest results, so that I can see the outcomes of past contests.",
+      "As a user, I want to view fishing contest photos, so that I can see images related to the contests.",
+      "As a user, I want to browse fishing contest information, so that I can learn details about different contests.",
+      "As a user, I want to register for fishing contests, so that I can participate in them.",
+      "As a user, I want to view contest results, so that I can check how I or others performed.",
+      "As a user, I want the website’s primary background to be mint cream, so that the visual appearance matches the specified style.",
+      "As a user, I want the website’s elements to be teal, so that the visual appearance of interface elements matches the specified style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you describe how participants should be able to register or book their spot in the fishing contest?",
+        "user": "I’d like participants to register directly on the website via a simple form (name, contact info, category/division, and agree to rules). After submitting, they should get a confirmation email and see their registration status, and if there’s a fee, be able to pay online to secure their spot.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you specify whether the registration and payment process should use a direct purchase flow, a shopping cart for multiple items, or another specific booking method?",
+        "user": "I don’t really care about a shopping-cart style flow—this is usually just one contest entry at a time. A simple direct checkout during registration is fine.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "Could you specify which payment methods you would like to accept for contest registration fees?",
+        "user": "I don’t really care which payment methods specifically, as long as it supports the common ones like credit/debit cards. If it’s easy to add Apple Pay/Google Pay later, that’s a nice bonus.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I want a clear, mobile-friendly Results section where people can quickly filter by contest date/category and search by participant name, and it should load fast without a bunch of extra clicks.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you specify how you would like the search by participant name to work—for example, should it be a real-time search as they type, or a button-triggered search after entering the name?",
+        "user": "I don’t really care too much—either is fine. If it’s not hard, real-time search as you type is nice, but a simple Search button works too.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t have any other interaction requirements beyond what we discussed. As long as it’s mobile-friendly and the Results section is quick to use, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what core data entities or categories you want to manage for the fishing contest, such as participants, contests, catches, or results?",
+        "user": "I don’t really care about the exact data modeling details. As long as you can manage contests, participants/registrations, payments, and results (by category/date) with catch details if needed, that’s enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "Could you specify whether you need an audit trail or change history for contest data, such as tracking modifications to registrations or results?",
+        "user": "I don’t really care about a full audit trail. Basic admin logs for who changed results/registrations and when would be nice, but it’s not a must-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "That covers most of it. Just make sure we can post contest info/announcements (rules, schedule, location), photos, and sponsor info, plus keep past contests/results archived and easy to browse.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 10,
+        "interviewer": "Could you specify how you would like the contest information, announcements, photos, and sponsor info to be grouped or organized on the site—for example, in separate sections, combined pages, or a specific hierarchy?",
+        "user": "I don’t really care too much about the exact hierarchy. Separate sections is fine—like Contests (with a page per contest for info/announcements/photos/results) and a Sponsors page, plus an Archive for past contests.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any other content requirements. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify a primary accent color for interactive elements like buttons and links?",
+        "user": "Let’s use a teal as the primary accent color for buttons and links—something like #008080 or a similar teal shade is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 13,
+        "interviewer": "Could you specify a secondary accent or highlight color for elements like badges, focus outlines, or active states?",
+        "user": "I don’t really care about a specific secondary accent color. Just pick something that works well with teal and keeps contrast/accessibility solid.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8
+      },
+      {
+        "turn": 14,
+        "interviewer": "Could you specify a color for the primary background or fill of key UI components such as cards or panels?",
+        "user": "Yes—use a mint cream as the primary background/fill for things like cards and panels (e.g., #F5FFFA). A clean off-white minty tone is what I’m after.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "Could you specify which visual elements, such as typography or spacing, should be standardized to maintain a consistent look across all pages?",
+        "user": "I don’t really care about specific typography or spacing standards—just keep it clean, readable, and consistent across the site, especially on mobile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify any specific contrast or accessibility requirements for the color scheme, such as meeting a particular WCAG level?",
+        "user": "I don’t really care about a specific WCAG level. Just make sure text and buttons are clearly readable with good contrast, especially on mobile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 17,
+        "interviewer": "Could you specify whether you need a defined set of colors for component states, such as hover, active, disabled, success, or error?",
+        "user": "I don’t really care about a strict defined palette for every state. Just use sensible defaults (hover/active/disabled, success/error) that look good with the teal/mint scheme and are clearly distinguishable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 18,
+        "interviewer": "What color should be used for the overall page background?",
+        "user": "I don’t really care about the overall page background color—just keep it light/clean so the mint-cream cards (#F5FFFA) and teal accents stand out.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 19,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "No other style requirements from my side—let’s move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 20,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a participant, I want to register for a contest via a simple form (name, contact info, category/division, agreement to rules) so I can secure my spot.\nFeature2: As a participant, I want to pay the registration fee online via a direct checkout flow (supporting common credit/debit cards) during registration to complete my booking.\nFeature3: As a participant, I want to receive a confirmation email and see my registration status on the website after submitting my registration.\nFeature4: As a user, I want to view a clear, mobile-friendly Results section where I can quickly filter results by contest date and category.\nFeature5: As a user, I want to search for results by participant name (via real-time search or a search button) in the Results section to find specific information fast.\nFeature6: As a user, I want to browse contest information, announcements (rules, schedule, location), photos, and sponsor info organized in separate, easy-to-find sections.\nFeature7: As a user, I want to access an archive of past contests and their results for easy browsing and reference.\nFeature8: As an administrator, I want to manage core data entities (contests, participants/registrations, payments, and results with catch details) through a backend system.\nFeature9: As an administrator, I want basic admin logs to track who changed results or registrations and when (TBD: optional).\nFeature10: As a user, I want the website to have a consistent, clean, and mobile-friendly visual design with a teal (#008080) accent color for interactive elements and a mint cream (#F5FFFA) background for cards/panels.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_3",
+    "task_name": "Customer Support Chatbot System",
+    "initial_requirements": "I need a customer support chatbot on the website that can provide customer support and handle customer interactions.",
+    "user_stories": [
+      "As a user, I want to access a customer support chatbot on the website, so that I can receive customer support and handle my interactions directly online.",
+      "As a user, I want the chatbot to answer frequently asked questions, so that I can quickly find answers without needing human assistance.",
+      "As a user, I want the chatbot to provide product information, so that I can learn more about products I am interested in.",
+      "As a user, I want the chatbot to assist me in completing orders, so that I can successfully place my orders with its help.",
+      "As a user, I want the website’s background styling to use a snow color, so that the visual appearance matches that specified style.",
+      "As a user, I want the website’s components to use a dim gray styling, so that the components visually match that specified style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you specify what notification channels you want the chatbot to use, such as email or in-app messages?",
+        "user": "I don’t really care about notification channels for now. I just need the chatbot to handle support conversations on the website.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the main pages or sections you want the chatbot to be accessible from on the website?",
+        "user": "I don’t really care which specific pages right now—just have it available site-wide so customers can get help anywhere.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—make it feel fast and responsive: the chat widget should open instantly and messages should send/receive without noticeable lag.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "Could you specify what kind of user-generated content or community features you want the chatbot to support, such as allowing customers to share feedback or interact with each other?",
+        "user": "I don’t really care about community features right now. Just focus on the one-on-one support chat between the customer and the bot.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I think we’ve already covered the main interaction thing I care about—keeping it fast and responsive. I don’t have any other interaction requirements right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "Could you specify what core data entities or categories the chatbot should be able to recognize and process during support conversations?",
+        "user": "It should recognize things like customer account info (name/email, order number), orders/shipments (status, tracking), products/SKUs, billing/returns/refunds, and common support issues like login problems or broken items. It should also be able to tag the conversation by topic and pull answers from our FAQ/knowledge base.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify which relationships between these entities (like customer to order, order to product) should be modeled in the chatbot’s data?",
+        "user": "I don’t really care about explicitly modeling entity relationships right now. As long as the bot can look up an order from an order number or email and connect it to the right customer and items when needed, that’s enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 8,
+        "interviewer": "Could you specify how you want the chatbot to categorize or tag conversations, such as by issue type, priority, or product line?",
+        "user": "I don’t really care about a detailed tagging scheme right now. Basic topic tags like orders/shipping, returns/refunds, billing, login issues, and product questions are enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more content thing: I want the bot to be able to provide detailed product info (features/specs, pricing, availability, compatibility, and comparisons) to help customers decide what to buy. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 10,
+        "interviewer": "Could you specify what key attributes or fields must be stored for each core entity type, such as identifiers, descriptive fields, or status values?",
+        "user": "I don’t really care about defining a full data schema right now. Just store whatever’s needed to look up customers/orders and answer FAQ/product questions accurately during the chat.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 11,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more content requirement: the bot should be able to guide customers through completing an order—like checking stock, helping pick variants, explaining shipping costs/times, and troubleshooting checkout/payment issues in the chat. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify which fields from a customer order should be displayed in the chat when the bot provides order details?",
+        "user": "I don’t really care about a specific list of order fields right now. Just show the basics a customer expects: order number, status, items, total, shipping address/method, tracking link, and key dates (order placed/estimated delivery).",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 13,
+        "interviewer": "Could you specify which data sources the chatbot should be able to access, such as your customer database, order management system, or knowledge base?",
+        "user": "I don’t really care about specifying exact data sources right now. Just make sure it can pull from our FAQ/knowledge base and look up customer orders when someone provides an order number or email.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 14,
+        "interviewer": "Could you specify what kind of developer or internal documentation you want the chatbot to provide or reference, such as API guides or integration instructions?",
+        "user": "I don’t really care about developer/internal documentation right now. Just focus on getting the chatbot working on the site and connected to FAQs and order lookup.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 15,
+        "interviewer": "Could you specify how you want the chatbot's knowledge base or FAQ content to be organized and categorized for easy retrieval?",
+        "user": "I don’t really care about a specific organization scheme for the knowledge base right now. As long as the bot can reliably find the right FAQ/product answers during chat, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify any required system fields or data type constraints for the data schemas used by the chatbot?",
+        "user": "I don’t really care about system fields or data type constraints right now. Just keep it flexible so it can reliably pull order info and answer FAQ/product questions during the chat.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 17,
+        "interviewer": "Could you specify any specialized metadata fields or domain-specific parameters the chatbot should handle, such as product risk factors or customer priority scores?",
+        "user": "I don’t really care about specialized metadata like risk factors or priority scores right now. Just focus on solid FAQ/product answers and order lookup in the chat.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 18,
+        "interviewer": "Could you specify what kind of analytics or visualizations you want the chatbot to provide, such as conversation summaries or performance metrics?",
+        "user": "I don’t really care about analytics or visualizations right now. Just focus on making the chatbot work well on the site with FAQ/product answers and order lookup.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 19,
+        "interviewer": "Could you specify what kind of audit trails or change history you want the chatbot to maintain for support conversations?",
+        "user": "I don’t really care about audit trails or change history right now. Just focus on the live support chat experience and pulling correct FAQ/product info and order status.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 20,
+        "interviewer": "Could you specify what types of files or media the chatbot should be able to send or receive in conversations, such as images, PDFs, or videos?",
+        "user": "I don’t really care about file or media sharing right now. Let’s just keep it to plain text support chat for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_4",
+    "task_name": "Basketball Betting Analytics Platform",
+    "initial_requirements": "I need a sports analytics website that lets me browse and visualize basketball data, and provides match predictions and betting recommendations.",
+    "user_stories": [
+      "As a user, I want the website to provide basketball betting data and analysis, so that I can use it as a sports analytics resource.",
+      "As a user, I want the website to offer data visualization functionalities, so that I can see basketball data in visual formats.",
+      "As a user, I want the website to offer match prediction functionalities, so that I can view predicted outcomes of basketball matches.",
+      "As a user, I want the website to offer betting recommendation functionalities, so that I can receive guidance for my betting decisions.",
+      "As a user, I want to be able to browse data for basketball, so that I can explore relevant information about the sport.",
+      "As a user, I want to view match history, so that I can see past basketball game results and details.",
+      "As a user, I want to view team rankings, so that I can understand how different basketball teams are positioned competitively.",
+      "As a user, I want to view player performance, so that I can assess how individual basketball players are performing.",
+      "As a user, I want the website background to be ghost white, so that the overall page background has that color.",
+      "As a user, I want the website components to be slate gray, so that the interface elements use that color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific search or filtering options do you want for browsing basketball data?",
+        "user": "I don’t really care about specific search or filtering options—basic stuff like filtering by team, player, season, and date range is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the main pages you envision and how users would navigate between them?",
+        "user": "I don’t really care about the exact page structure or navigation, as long as it’s straightforward. A simple setup like Home/Dashboard, Browse Data, Visualizations, Predictions/Betting, and Team/Player pages is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific button behaviors or UI feel details. Just keep it fast and responsive so charts and pages load quickly.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "What specific basketball data elements or categories do you want to include, such as player statistics, team performance metrics, or game outcomes?",
+        "user": "I want the basics: game outcomes (scores, home/away, date), team metrics (wins/losses, net rating, offensive/defensive rating, pace), and player stats (minutes, points, rebounds, assists, steals, blocks, turnovers, FG/3P/FT splits). Also include advanced stats like PER/TS%, plus injuries and starting lineups if possible since they affect predictions.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "Which core entities, such as games, teams, players, or others, and their relationships should be explicitly modeled in the system's data structure?",
+        "user": "I don’t really care about the exact data modeling details. As long as you can represent games, teams, players, seasons, and injuries/lineups well enough to power browsing, charts, and predictions, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "Could you specify the key attributes or fields that must be stored for each core entity type, such as identifiers, descriptive fields, or status details?",
+        "user": "I don’t really care about the exact field-level schema. Just make sure each game/team/player has a stable unique ID and the basic descriptive info needed to display and link things (names, season/date, home/away), plus injury/lineup status where applicable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 7,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other content requirements beyond what we covered. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 8,
+        "interviewer": "What color scheme do you envision for the main components like buttons and charts?",
+        "user": "I’d like a clean, light theme with a ghost white background. Use a simple dark text color and one primary accent color for buttons and chart highlights (e.g., blue), with muted grays for secondary elements.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 9,
+        "interviewer": "What color should be used for the overall page background?",
+        "user": "I don’t really care too much, but a ghost white or very light gray background would be ideal.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific color should be used for the primary accent on buttons and chart highlights?",
+        "user": "I don’t really care about the exact accent color—blue is fine, but any tasteful primary color works as long as it’s consistent and has good contrast.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 11,
+        "interviewer": "What specific color should be used for the background of key UI components like cards or panels?",
+        "user": "For cards or panels, I’d like a slate gray background. Not too dark—just enough contrast against the ghost white page background.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 12,
+        "interviewer": "Do you need a defined set of colors for component states like hover, active, or disabled?",
+        "user": "I don’t really care about defining exact hover/active/disabled colors. Just make them subtle, accessible, and consistent with the primary accent and grays.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 13,
+        "interviewer": "Do you have any specific contrast or accessibility requirements for the color scheme, such as meeting WCAG guidelines?",
+        "user": "I don’t really care about specific WCAG targets. Just make sure text is easy to read and the colors have good contrast, especially on charts and buttons.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 14,
+        "interviewer": "Do you have any specific visual elements you want standardized across all pages and device types, such as typography, spacing, or component styles?",
+        "user": "I don’t really care about standardizing typography or spacing details. Just keep the UI consistent and clean across pages and devices, with readable text and sensible spacing.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 15,
+        "interviewer": "Do you want to introduce any additional colors or decorative elements to better align the interface with a sports or basketball theme?",
+        "user": "I don’t really care about extra themed colors or decorative elements. I’d rather keep it clean and minimal—maybe just a subtle basketball icon or accent if you think it helps, but not necessary.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 16,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to browse basketball data with basic filters for team, player, season, and date range.\nFeature2: As a user, I want to visualize basketball data through charts and graphs that load quickly.\nFeature3: As a user, I want to view match predictions and betting recommendations based on the data.\nFeature4: As a user, I want to access a straightforward website with main sections for Home/Dashboard, Browse Data, Visualizations, Predictions/Betting, and Team/Player pages.\nFeature5: As a user, I want the website to be fast and responsive, ensuring quick loading of charts and pages.\nFeature6: As a user, I want the site to include core basketball data: game outcomes (scores, home/away, date), team metrics (wins/losses, net rating, offensive/defensive rating, pace), and player stats (minutes, points, rebounds, assists, steals, blocks, turnovers, FG/3P/FT splits, PER/TS%).\nFeature7: As a user, I want the data to include injuries and starting lineups to inform predictions.\nFeature8: As a user, I want each core entity (game, team, player) to have a stable unique ID and basic descriptive info (names, season/date, home/away) for clear display and linking.\nFeature9: As a user, I want the interface to have a clean, light theme with a ghost white page background, dark text, a primary accent color (e.g., blue) for buttons/chart highlights, and slate gray for cards/panels.\nFeature10: As a user, I want the color scheme to ensure good contrast and readability, especially for text, charts, and buttons.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      }
+    ],
+    "total_turns": 16
+  },
+  {
+    "task_id": "task_5",
+    "task_name": "customer service call logging system",
+    "initial_requirements": "I want a customer service system where I can manage customer information, log customer service calls, look back at call histories, and control what different users are allowed to do.",
+    "user_stories": [
+      "As a user, I want to use a customer service call logging system to record and manage customer service calls, so that I can track interactions with customers.",
+      "As a user, I want to identify clients within the system, so that I can associate each call with the correct client.",
+      "As a user, I want to select the call type, so that I can categorize each customer service call appropriately.",
+      "As a user, I want to record information about the call, so that the details of the interaction are stored.",
+      "As a user, I want to record action steps taken during or after the call, so that the activities performed are documented.",
+      "As a user, I want to record follow-up steps, so that planned future actions related to the call are tracked.",
+      "As a user, I want to record additional information about the call, so that any extra relevant details are captured.",
+      "As a user, I want to create new call logs, so that I can register new customer service calls in the system.",
+      "As a user, I want to view open calls, so that I can see calls that are not yet closed.",
+      "As a user, I want to generate call log reports, so that I can review and analyze call data.",
+      "As a user, I want to modify client information, so that client records can be kept up to date.",
+      "As a user, I want the page background to be set to light pink, so that the system appears with that specific background color.",
+      "As a user, I want all components to be colored medium violet red, so that the system’s components appear with that specific color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you specify what different user roles you need and what actions each role should be allowed to perform?",
+        "user": "I don’t really care about specific named roles right now—just need basic permissions like admin can manage users/permissions, agents can log and view calls, and managers can view reports and histories. We can refine the exact roles later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe what you envision for the admin dashboard and navigation structure?",
+        "user": "I don’t really care about the exact dashboard layout or navigation structure right now. As long as it’s straightforward to get to customers, call logs/history, reports, and user/permission management.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific button behaviors or interface feel right now. Just make it reasonably fast and make search easy for customers and call histories.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "What specific data fields do you need to store for a customer record?",
+        "user": "I don’t really care about the exact list of customer fields right now. At minimum we’ll need name, contact info (phone/email), and maybe an account/customer ID, but we can flesh out the rest later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you specify your requirements for audit trails and change history, such as what actions should be logged and who should be able to view them?",
+        "user": "I don’t really care about detailed audit trail requirements right now. Basic logging of key changes (customer edits, call log edits, permission/user changes) would be nice, and admins/managers should be able to view it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Nothing else specific on content right now. As long as we can store basic customer info, call notes/outcomes, and view call history and a few simple reports, we can refine the details later—let’s move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 7,
+        "interviewer": "What color scheme or specific colors do you envision for the main interface components, such as buttons and headers?",
+        "user": "I don’t really care about specific colors right now. A clean, professional look with good contrast is fine—light or dark theme is okay as long as it’s readable and accessible.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 8,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As an admin, I want to manage user accounts and their permissions.\nFeature2: As an agent, I want to log customer service calls with notes and outcomes.\nFeature3: As an agent or manager, I want to view a history of customer service calls.\nFeature4: As a user, I want to search for customers and call histories easily.\nFeature5: As a manager, I want to view reports on customer service activity.\nFeature6: As a user, I want to manage customer information, including at minimum name, contact info, and a customer ID.\nFeature7: As an admin or manager, I want to view a basic audit log of key changes (e.g., customer edits, call log edits, user/permission changes).\nFeature8: As a user, I want a straightforward interface to navigate to customers, call logs, reports, and user management.\nFeature9: As a user, I want the system to be reasonably fast and responsive.\nFeature10: As a user, I want the interface to have a clean, professional, and accessible design with good contrast.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      }
+    ],
+    "total_turns": 8
+  },
+  {
+    "task_id": "task_6",
+    "task_name": "Technical Information and Solutions Portal",
+    "initial_requirements": "I need a website where I can search, browse, and view technical articles, as well as communicate with other users.",
+    "user_stories": [
+      "As a user, I want to browse technical articles, so that I can view available technical information on the website.",
+      "As a user, I want to search technical information, so that I can quickly find specific technical content on the website.",
+      "As a user, I want to view solutions, so that I can see how technical problems are addressed.",
+      "As a user, I want to communicate with other users, so that I can interact and exchange technical information and solutions with them."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What specific search filters would you like to be available when browsing technical articles?",
+        "user": "I don’t really care about very specific filters. Basic ones like topic/category, tags, date range, and difficulty level would be enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you describe the main pages you expect to navigate between on the site?",
+        "user": "I don’t really care about a super detailed site map. At minimum I’d expect a home page, an articles browse/search page, an article detail page, and some kind of user messaging or community page, plus login/profile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific button behaviors or UI “feel” details. As long as pages load reasonably fast and the search results update without being clunky, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "Could you specify the main categories or tags you'd like to use to organize the technical articles?",
+        "user": "I don’t really care about defining a fixed set of categories or tags up front. As long as it supports flexible tags and a few broad categories that can evolve over time, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you describe how you would like the articles to be grouped or categorized on the browse page?",
+        "user": "I don’t really care about a very specific grouping scheme. Just some broad categories plus tags, and maybe options to sort by newest/most popular, would be fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One content thing I do want: articles should include clear solution/write-up sections that explain how the problem was addressed, ideally with steps and code snippets. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what types of files or media (e.g., images, PDFs, video embeds) you expect to be included in the technical articles?",
+        "user": "I don’t really care about supporting lots of media types. Images and code snippets are enough for me, and maybe the occasional link or embed if it’s easy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really care about any more content requirements right now. We can move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "What color would you like for the main buttons or interactive elements?",
+        "user": "I don’t really care about specific button colors. Just pick something clean and accessible with good contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 10,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to search and browse technical articles.\nFeature2: As a user, I want to filter articles by basic criteria like topic/category, tags, date range, and difficulty level.\nFeature3: As a user, I want to view a detailed article page that includes clear solution/write-up sections with steps and code snippets.\nFeature4: As a user, I want to communicate with other users via a messaging or community page.\nFeature5: As a user, I want to log in and manage a user profile.\nFeature6: As a user, I want the website to have a home page, an articles browse/search page, an article detail page, and user/community pages.\nFeature7: As a user, I want articles to support images and code snippets, with the occasional link or embed.\nFeature8: As a user, I want to sort articles by criteria like newest or most popular on the browse page.\nFeature9: As a user, I want the interface to load pages reasonably fast and have search results update without being clunky.\nFeature10: As a user, I want the visual design to be clean, accessible, and have good contrast.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      }
+    ],
+    "total_turns": 10
+  },
+  {
+    "task_id": "task_7",
+    "task_name": "Multi-Company Finance Dashboard",
+    "initial_requirements": "I need a dashboard that allows me to input and view financial data across multiple companies, and supports financial comparison and reporting.",
+    "user_stories": [
+      "As a user, I want to use a multi-company dashboard to manage and view financial data from multiple companies in one place.",
+      "As a user, I want the dashboard to allow me to input financial data for each company, so that I can manage financial information across multiple companies.",
+      "As a user, I want to view financial data for a specific company by specifying its name or identifier, so that I can review company-specific details.",
+      "As a user, I want the dashboard to present revenue data for each company, so that I can understand each company’s income level.",
+      "As a user, I want the dashboard to present expense data for each company, so that I can understand each company’s cost structure.",
+      "As a user, I want the dashboard to present profit data for each company, so that I can understand each company’s profitability.",
+      "As a user, I want the dashboard to provide consolidated reports and cross-company comparisons, so that I can analyze overall financial performance.",
+      "As a user, I want the dashboard to use mint cream as the background, so that the interface follows the specified color scheme.",
+      "As a user, I want all dashboard components to be styled with teal, so that the interface elements follow the specified component styling"
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you specify what types of advanced filters or search criteria you need for querying the financial data?",
+        "user": "I’d like to filter by company name/ID, date range (month/quarter/year), and metric type (revenue, expenses, profit, cash flow). It’d also be useful to filter by currency and region/business unit, plus basic text search on account/category names.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you specify any additional filtering conditions beyond company, date, metric, currency, region, and text search that you would need?",
+        "user": "I don’t really care about additional filter conditions beyond those—those cover what I need. If anything, maybe a simple “actual vs budget/forecast” toggle, but it’s not critical.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 3,
+        "interviewer": "Could you specify what basic fields should be searchable in the text search on account or category names?",
+        "user": "I don’t really care about getting super granular there. Basic search on account name, category name, and maybe account code/GL number is enough.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific interaction behaviors beyond it feeling reasonably fast and not laggy when switching companies or date ranges.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you specify what core entities or data categories you need to model for the financial data, such as companies, accounts, or transactions?",
+        "user": "I don’t really care about modeling super detailed entities like individual transactions. For me the core is companies plus a chart of accounts/categories, and then time-based aggregated metrics (actuals and optionally budget/forecast) by currency and region/business unit.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 6,
+        "interviewer": "Could you specify what relationships between companies, accounts/categories, and aggregated metrics you need to model?",
+        "user": "I don’t really care about modeling complex relationships. As long as each metric ties back to a company, a time period, and an account/category (optionally with currency and region/business unit), that’s enough for me.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what key attributes or fields must be stored for each company entity, such as identifiers, descriptive fields, or configuration parameters?",
+        "user": "I don’t really care about a big set of company fields. Just a unique company ID, company name, maybe a short code, and default currency/region if needed for reporting.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 8,
+        "interviewer": "Could you specify what types of data analysis capabilities you need, such as trend analysis, variance analysis, or comparative analytics?",
+        "user": "I don’t really care about a bunch of advanced analysis features. Basic trends over time and simple actual vs budget/forecast variance, plus comparing companies side-by-side, is plenty for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "Could you specify which fields from each company or account/category you want displayed in detailed views, such as company name, ID, or account code?",
+        "user": "I don’t really care about super detailed views. For companies, just name and ID (maybe short code); for accounts/categories, name and account code/GL number is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 10,
+        "interviewer": "Could you specify which data sources or datasets should be accessible for browsing and extraction in the system?",
+        "user": "I don’t really care about exposing a bunch of different data sources for browsing/extraction. As long as the dashboard can load the aggregated financial metrics per company (actuals, and optionally budget/forecast) from whatever backend you have, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 11,
+        "interviewer": "Could you specify how you want the chart of accounts or categories to be organized—for example, using hierarchical folders, tags, or a flat list?",
+        "user": "I don’t really care much about how it’s organized. A simple hierarchy (like category → subcategory → account) is fine, but a flat list with a good search works too.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 12,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any other content requirements beyond what we covered. Happy to move on to other topics.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 13,
+        "interviewer": "What color scheme or specific colors do you want for the main interactive components, such as buttons and charts?",
+        "user": "I don’t really care about specific colors. Just use a clean, modern light theme with good contrast, and make sure charts use distinct, colorblind-friendly colors.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 14,
+        "interviewer": "Could you specify any particular contrast or accessibility standards you want the color scheme to meet, such as WCAG guidelines?",
+        "user": "I don’t really care about a specific standard like WCAG as long as it’s clearly readable and colorblind-friendly. If you can follow common best practices for contrast, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 15,
+        "interviewer": "What color should be used for the overall page background?",
+        "user": "A mint cream background would be ideal for the overall page—something very light and clean (e.g., #F5FFFA).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 16,
+        "interviewer": "What color should be used as the primary background for buttons?",
+        "user": "For buttons, I’d like the primary background to be a teal—something like #008080. As long as the text contrast stays strong.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 17,
+        "interviewer": "What color should be used for accents and highlights, such as links or active states?",
+        "user": "I don’t really care that much—just pick an accent that works well with the teal and stays readable on the mint background. Maybe a slightly brighter teal or a muted blue for links/active states.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 18,
+        "interviewer": "Could you specify which visual elements, such as colors or typography, should be standardized to ensure a consistent appearance across different pages?",
+        "user": "I don’t really care about standardizing a lot of visual elements. Just keep the same light mint background, teal primary buttons, and consistent chart colors; typography can be a simple modern sans-serif used everywhere.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 19,
+        "interviewer": "Could you specify if you need a defined set of colors for component states, such as hover, active, disabled, success, or error?",
+        "user": "I don’t really care about defining a full state color system. Just make hover/active clearly noticeable, disabled look muted, and use standard green for success and red for errors with good contrast.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 20,
+        "interviewer": "Do you have any specific brand colors or thematic elements that should be incorporated into the interface beyond the basic color scheme?",
+        "user": "I don’t really care about specific brand colors or thematic elements beyond the mint background and teal buttons. Just keep it clean and professional.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_8",
+    "task_name": "Fitness Activity Tracking System",
+    "initial_requirements": "I want a mini-program that helps me track my fitness activities and understand my progress over time.",
+    "user_stories": [
+      "As a user, I want to record my fitness activities, so that I can manage my fitness activities in the mini-program.",
+      "As a user, I want to use a fitness leaderboard, so that I can see rankings related to fitness activities.",
+      "As a user, I want to record my exercises, so that my exercise data is saved in the mini-program.",
+      "As a user, I want to browse my own exercises, so that I can review the exercises I have performed.",
+      "As a user, I want to view the leaderboard, so that I can see how I compare with others.",
+      "As a user, I want to have a fitness statistics homepage, so that I can see an overview of my fitness data.",
+      "As a user, I want to track my own fitness data, so that I can monitor my fitness progress.",
+      "As a user, I want the mini-program’s canvas background to be white, so that the background color is consistent as specified.",
+      "As a user, I want all visible components in the mini-program to be navy, so that the component color is consistent as specified."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How would you like to add or edit your fitness activities—for example, through a quick form, a detailed entry screen, or bulk upload?",
+        "user": "A quick form for most logs would be great (date, activity, duration, distance), with an optional “more details” screen for things like sets/reps/notes. I don’t really need bulk upload.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you specify which data fields should be included in the quick form for logging a fitness activity, and which of those are required versus optional?",
+        "user": "I don’t really care about getting super specific on required vs optional fields. As long as I can quickly enter date, activity type, and either duration or distance, I’m happy.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 3,
+        "interviewer": "When should the system automatically log or process your fitness activity data—for example, immediately after you submit the form, or only when you manually trigger it?",
+        "user": "I don’t really care much about that—just log it immediately when I hit submit. No need for any manual processing step.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I’d like an in-app history that’s easy to browse—default to a simple chronological list, with quick filters like activity type and date range so I can find past workouts fast.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "Could you specify how you would like the quick filters for activity type and date range to be presented and interacted with?",
+        "user": "I don’t really care about the exact UI details for the filters. Anything standard is fine—maybe a dropdown for activity type and a simple start/end date picker.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about adding more interaction requirements right now—just keep it simple and quick to use.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what core data entities or categories you want the system to model, such as activities, progress metrics, or user profiles?",
+        "user": "Core entities for me would be: Activity/Workout logs (date, type, duration/distance, optional details like sets/reps/notes), and some Progress metrics derived from those (weekly totals, trends over time). A basic User Profile is fine if needed just to store my settings and units, but it doesn’t need to be complex.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 8,
+        "interviewer": "Could you specify which relationships between Activity/Workout logs and Progress metrics should be modeled—for example, should each progress metric directly reference the activities it aggregates?",
+        "user": "I don’t really care about modeling those relationships in detail. As long as the app can show me weekly totals and simple trends based on my logs, whatever implementation is easiest is fine.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 9,
+        "interviewer": "Could you specify the key attributes or fields that must be stored for each Activity/Workout log entry?",
+        "user": "I don’t really care about nailing down a strict “must store” list. Practically, I just need date, activity type, and either duration or distance; anything else (notes, sets/reps, etc.) can be optional.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 10,
+        "interviewer": "What specific metrics or visualizations would you like to see in your progress trends over time—for example, weekly totals, monthly averages, or charts of activity duration?",
+        "user": "I’d like weekly totals by activity type (time and/or distance), plus a simple line chart over time for total weekly volume. Monthly averages would be nice too, and maybe a personal-best highlight for longest run/ride or longest workout duration.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "Could you specify which breakdown dimensions you'd like to filter or segment your analytics by, such as activity type, time period, or intensity level?",
+        "user": "I don’t really care about a bunch of segmentation. Activity type and a time period (week/month/custom date range) are enough for me—I’m not tracking intensity levels.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you specify which key performance indicators or statistical measures you want the analytics to track and display, such as personal bests, averages, or totals?",
+        "user": "I don’t really care about getting deep into KPIs or stats. Totals (weekly/monthly), simple averages, and a few personal bests like longest distance or longest duration are plenty for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I think we’re good on content. As long as I can log the basics and see weekly/monthly totals, a simple trend chart, and a couple personal bests, that covers it—let’s move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "What color would you like for the main accent or highlight elements, such as buttons or key interactive components?",
+        "user": "I’d like the main accent/highlight color to be navy, so everything feels consistent—buttons, key controls, and highlights.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 15,
+        "interviewer": "What specific shade or hex code of navy would you prefer for the accent color?",
+        "user": "I don’t really care about the exact hex code—any standard navy is fine. If you need one, pick something like #0A2342.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify which visual elements, such as typography or spacing, should be standardized to maintain a consistent look across all pages?",
+        "user": "I don’t really care about getting specific on typography or spacing standards. Just keep it clean and consistent across screens.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 17,
+        "interviewer": "Do you have any specific contrast or accessibility requirements for the color scheme, such as meeting WCAG guidelines for text readability?",
+        "user": "I don’t really care about specific WCAG targets. Just make sure text is easy to read and there’s enough contrast in general, especially on buttons and charts.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 18,
+        "interviewer": "What color should be used as the primary background for cards or panels?",
+        "user": "For cards/panels, I’d like a white background for a clean look. If you need a slight separation from the page, an off-white like #FFFFFF or #F7F9FC is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 19,
+        "interviewer": "What color should be used for the overall page background?",
+        "user": "I don’t really care about the exact page background color. A light neutral like white or a very light gray/off-white is fine as long as it keeps things readable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.75
+      },
+      {
+        "turn": 20,
+        "interviewer": "Do you need a defined set of colors for component states, such as hover, active, disabled, success, or error?",
+        "user": "I don’t really care about defining a full state color set. Just use standard, clear success/error colors and make disabled/active states obvious and readable.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.75
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_9",
+    "task_name": "Integrated E-Government Management System",
+    "initial_requirements": "I want an e-government system that helps manage daily administrative operations, support internal processes, and handle approvals and related activities in one place.",
+    "user_stories": [
+      "As a user, I want the system to provide office management functionalities, so that I can manage office-related activities within the e-government system.",
+      "As a user, I want the system to provide infrastructure management functionalities, so that I can manage infrastructure-related activities within the e-government system.",
+      "As a user, I want the system to provide procurement management functionalities, so that I can manage procurement-related activities within the e-government system.",
+      "As a user, I want the system to provide personnel management functionalities, so that I can manage personnel-related activities within the e-government system.",
+      "As a user, I want the system to provide financial management functionalities, so that I can manage financial-related activities within the e-government system.",
+      "As a user, I want the system to provide decision-making management functionalities, so that I can manage decision-making-related activities within the e-government system.",
+      "As a user, I want to browse related information in the system, so that I can view the information relevant to my e-government tasks.",
+      "As a user, I want to submit applications in the system, so that I can initiate required e-government processes.",
+      "As a user, I want to approve items in the system, so that I can complete approval steps in e-government workflows.",
+      "As a user, I want to query the status of items in the system, so that I can know the progress of my applications and related processes.",
+      "As a user, I want to perform related operations in the system, so that I can complete all necessary actions associated with my e-government tasks.",
+      "As a user, I want the system to include leave management functions, so that I can handle leave-related processes.",
+      "As a user, I want the system to include management functions for middle-level cadres leaving Shenzhen, so that I can handle processes related to middle-level cadres leaving Shenzhen.",
+      "As a user, I want the system to include attendance management functions, so that I can handle attendance-related processes.",
+      "As a user, I want the system to include “five powers” management functions, so that I can handle “five powers”-related processes.",
+      "As a user, I want the system to allow designing corresponding forms and processes for leave, middle-level cadres leaving Shenzhen, attendance, and “five powers” management, so that these functions can use appropriate forms and workflows.",
+      "As a user, I want the system to allow circulating the corresponding forms and processes for leave, middle-level cadres leaving Shenzhen, attendance, and “five powers” management, so that these workflows can be routed and processed.",
+      "As a user, I want the page background of the system to be light pink, so that the interface uses the specified background color.",
+      "As a user, I want the elements of the system to be medium violet red, so that the interface uses the specified element color."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "deepseek-v3.2",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "Could you describe the specific data entry and form workflows you envision for handling approvals?",
+        "user": "We need standardized electronic forms where staff can search templates, fill them out (with validations and attachments), and submit into an approval route based on department/role. Approvers should review, request changes, approve/reject with comments, and the requester can track status and get notifications; once approved it should trigger the next step (e.g., create a record, schedule, or issue an official document).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "Could you specify which approval processes should have distinct multi-step phases, such as submission, review, approval, and completion?",
+        "user": "Yes—things like purchase/procurement requests, HR leave/travel, contract/MOU reviews, and official letter/document issuance should be multi-step: draft/submission → departmental review → finance/legal (if needed) → final approver (director/admin) → completion/archiving. Incident/maintenance tickets can be simpler: submit → triage → assigned work → completion/closure.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 3,
+        "interviewer": "For purchase/procurement requests, what specific data fields must users provide when filling out the form, and which of those are required?",
+        "user": "For procurement, required fields should be: requester name/ID, department/cost center, request date, item/service category, detailed description/specs, quantity, estimated unit/total cost, justification, needed-by date, delivery location, and budget line/project (if applicable). Vendor suggestion(s) and attachment(s) like quotations/technical specs should be required above a certain amount, otherwise optional. Also include optional fields for preferred vendor, contract reference, and whether it’s CAPEX/OPEX.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 4,
+        "interviewer": "For purchase/procurement requests, when should the system automatically trigger the next step in the approval workflow—for example, immediately upon submission, on a scheduled basis, or only after manual review?",
+        "user": "I don’t really care whether it’s scheduled or manual as long as it moves to the next approver immediately after each approval step and keeps the status/notifications accurate.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 5,
+        "interviewer": "After a user submits a form and receives a result or an error, what specific follow-up actions should be available, such as retrying, editing and resubmitting, or downloading the result?",
+        "user": "I don’t really care about the exact follow-up options here. As long as users can fix validation errors and resubmit, and download/print the approved document or receipt when it succeeds.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yes—search/navigation: I want a global search and filtered inbox that lets staff quickly find their pending approvals and any form by ID/keyword, with filters like department, status, and date, and it should load fast even with lots of records.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "Could you specify what advanced query capabilities you need in the global search, such as searching by partial keywords, exact phrases, or specific field values?",
+        "user": "I don’t really care about super advanced query syntax. Basic partial keyword search plus optional field filters (ID, requester, department, status, date range) is enough, and it should be fast.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "One more: mobile-friendly approvals. Approvers should be able to review, comment, and approve/reject from a phone with a clean layout, and it should still be quick even on slower connections.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "For purchase/procurement request records, which specific bulk operations, such as bulk edit or bulk delete, should be available to administrators?",
+        "user": "I don’t really care about bulk operations like bulk edit/delete for procurement records. If anything, just bulk export (CSV/PDF) and maybe bulk status updates for admins, but deletes should be tightly restricted.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 10,
+        "interviewer": "How should changes to system-wide settings, such as approval routing rules or form validations, be applied—immediately upon saving, or through a draft and review process?",
+        "user": "I don’t really care whether it’s immediate or draft/review. Just make sure changes don’t break in-flight requests and there’s an audit log of what changed and who changed it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "Could you describe the main pages or sections you envision in the system's primary navigation menu?",
+        "user": "I don’t really care about the exact navigation menu structure. As long as there’s an inbox for approvals, a place to create/submit forms, search, and basic admin/settings for templates and routing.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 12,
+        "interviewer": "For notifications, which specific channels should be used—such as email, in-app alerts, SMS, or push notifications?",
+        "user": "I don’t really care which channels you use. In-app notifications are a must, and email is fine as a backup; SMS/push are optional.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 13,
+        "interviewer": "Could you specify how user roles and permissions should be structured for accessing different parts of the system?",
+        "user": "I don’t care too much about the exact role model, as long as it’s role-based with department scoping. At minimum we need requester, approver, reviewer (finance/legal), and admin, with permissions tied to who can submit, view, approve, and manage templates/routing, plus an audit trail.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "For which specific events in the approval workflow should the system send notifications to each role, such as when a form is submitted, approved, or requires changes?",
+        "user": "I don’t really care about an exhaustive notification matrix. Just notify the requester on submit, when changes are requested, and on final approval/rejection; notify the next approver/reviewer when it’s their turn, plus reminders if something is pending too long.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 15,
+        "interviewer": "Could you specify which delivery channels should be used for notifications and reminders, such as email, SMS, in‑app alerts, or push notifications?",
+        "user": "I don’t really care which channels you choose. In-app notifications are required, email is a good backup, and SMS/push are optional if they’re easy to add later.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 16,
+        "interviewer": "Could you specify how often reminders should be sent for pending approvals—for example, daily, after a set number of days, or only once?",
+        "user": "I don’t really care about the exact reminder schedule. Just make it configurable—something like a reminder after 2 days pending and then daily until it’s acted on is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 17,
+        "interviewer": "Could you specify which fields or details should be included in the notification content, such as request ID, requester name, or approval link?",
+        "user": "I don’t care too much about the exact notification content. At minimum include the request ID, form type/title, requester name/department, current status/next action needed, and a direct link to open the item.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 18,
+        "interviewer": "Could you specify how the system should handle file attachments—for example, maximum file size, allowed formats, or storage duration?",
+        "user": "I don’t really care about the exact attachment limits or formats. Just support common office files and PDFs, keep them with the request record for audit purposes, and make sure storage is secure.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 19,
+        "interviewer": "Could you specify how granular permissions should be for each role—for example, should permissions be set per individual feature, per department, or per data field?",
+        "user": "I don’t really care about field-level or super granular permissions. Department-scoped, role-based access is enough—just make sure only the right people can view/approve items for their department, and admins can manage templates/routing with a solid audit log.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 20,
+        "interviewer": "Could you describe the specific configuration and system management tasks you envision for administrators, such as managing user accounts or adjusting system-wide settings?",
+        "user": "I don’t really care about the exact admin task list. The basics are enough: manage users/roles by department, maintain form templates and approval routing, and have audit logs and simple reporting/exports.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      }
+    ],
+    "total_turns": 20
+  }
+]

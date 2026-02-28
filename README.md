@@ -1,6 +1,9 @@
-# TypoAgent
+# OntoAgent
 
-An LLM-based requirement elicitation and prototype generation system. This document describes how to configure API keys and how to run experiments.
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![Gymnasium](https://img.shields.io/badge/gymnasium-0.26%2B-green.svg)](https://gymnasium.farama.org/)
+
+OntoAgent is an Ontology-guided Requirements Elicitation Interview Agent. This document describes how to configure API keys and how to run experiments.
 
 ---
 
@@ -54,10 +57,10 @@ All experiment scripts are located in the `run_exp/` directory. **Please configu
 
 ### Exp1: Main Experiment Comparison
 
-Run Long Baseline, Short Baseline, and TypoAgent sequentially:
+Run Long Baseline, Short Baseline, Mistake-Guided Baseline, and OntoAgent sequentially:
 
 ```bash
-cd /home/ubuntu/jdm/xiaotian/TypoAgent_release_v2
+cd TypoAgent
 export OPENAI_API_KEY=sk-xxx
 bash run_exp/run_exp1.sh
 ```
@@ -90,7 +93,7 @@ bash run_exp/run_exp4.sh
 
 ### Exp5: Scalability Experiment (RQ5)
 
-Study the impact of induction data scale (sampling_k) on TypoAgent performance. Runs the full pipeline (TypoBuilder + TypoAgent) sequentially for `k=5, 10, 15, 20, 25`:
+Study the impact of induction data scale (sampling_k) on OntoAgent performance. Runs the full pipeline (TypoBuilder + OntoAgent) sequentially for `k=5, 10, 15, 20`:
 
 ```bash
 export OPENAI_API_KEY=sk-xxx

@@ -1,0 +1,12 @@
+You are an AI agent capable of generating context summaries. During a requirements elicitation interview with an interviewee about their requirements for {interview_domain}, the INTERVIEWEE (User) and INTERVIEWER have had the following conversation: {interview_turns}. You must do ONE of the following:
+1. Generate a follow-up question that the Interviewer should ask next based on the conversation. Output ONLY the follow-up question, nothing else.
+2. If you believe you have gathered enough information, finish the dialogue by outputting exactly: "I have gathered enough information. Based on our conversation, here is the set of user stories:
+
+User Story 1: As a [user type], I want to [action/goal] so that [benefit/value].
+User Story 2: As a [user type], I want to [action/goal] so that [benefit/value].
+..."
+
+(generate complete user stories)
+
+Restrict your response to ONLY one of the above - either a single follow-up question or the finish with user stories.
+

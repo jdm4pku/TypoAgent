@@ -1,0 +1,1709 @@
+[
+  {
+    "task_id": "task_0",
+    "task_name": "Texas Hold'em Online Poker Platform",
+    "initial_requirements": "I need a web-based Texas Hold'em poker game where I can create or join game rooms from a lobby, play at tables with other players, use chat while playing, view my game records, and manage my account information.",
+    "user_stories": [
+      "As a user, I want to access a web-based Texas Hold’em poker game, so that I can play poker through my web browser.",
+      "As a user, I want to have a game lobby, so that I can navigate and see the available game rooms and related information.",
+      "As a user, I want to use chat functionality, so that I can communicate with other players while using the game.",
+      "As a user, I want to create game rooms, so that I can start new Texas Hold’em games for others and myself to join.",
+      "As a user, I want to join existing game rooms, so that I can participate in ongoing or newly created Texas Hold’em games.",
+      "As a user, I want to play Texas Hold’em poker in the game rooms, so that I can participate in poker rounds according to Texas Hold’em rules.",
+      "As a user, I want to view game records, so that I can review past games and outcomes.",
+      "As a user, I want to manage my account information, so that I can maintain and update my personal account details.",
+      "As a user, I want the game lobby to display available game rooms, so that I can choose which room to join or observe.",
+      "As a user, I want the game lobby to display the current game status for each room, so that I can understand what stage each game is in.",
+      "As a user, I want the game lobby to display player information for each room, so that I can see who is participating in the games.",
+      "As a user, I want the table game view to display player hand cards, so that I can see my cards during play.",
+      "As a user, I want the table game view to display the community cards, so that I can see the shared cards on the table.",
+      "As a user, I want the table game view to display betting information, so that I can understand the current bets and pot during the game.",
+      "As a user, I want the table game view to provide action buttons (e.g., for player actions), so that I can perform my moves during the game.",
+      "As a user, I want the page background to use an azure color, so that the overall background appearance matches the specified style.",
+      "As a user, I want the elements in the interface to use a midnight blue color, so that the interface elements match the specified style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How would you like to navigate between the main areas of the application—should there be a persistent navigation bar, a sidebar menu, or perhaps a different approach for moving between the lobby, game tables, chat, game records, and account pages?",
+        "user": "I don’t really care as long as it’s simple and consistent. A basic top nav is fine, and once I’m in a game I just want an easy way to get back to the lobby and open chat.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "What chat features do you need during gameplay—should it support private messages between players, have any moderation controls like muting or reporting, or include notifications when you receive messages?",
+        "user": "I don’t really care about fancy chat features. Just a simple table chat during the game is enough, maybe with basic notifications when a new message comes in.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yeah—during gameplay I want all poker actions done through clear, always-visible buttons (fold/call/raise/check), and they should only be enabled when it’s my turn so I don’t misclick.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "How should user authentication work—should players be able to browse the lobby or watch games without logging in, or do you require users to create an account and log in before accessing any part of the application?",
+        "user": "I don’t really care too much about that. I’m fine either way, but if you need a default, let people browse the lobby without logging in and require login to join/play and save records.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about adding more interaction requirements right now—what we’ve covered is enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 6,
+        "interviewer": "What are the core data elements you need to track and display—for example, should the system store player statistics like win/loss ratios, hand histories with card details, chip balances, or room information such as blinds and player counts?",
+        "user": "At minimum I want my chip balance, basic room info (blinds, buy-in, player count), and my game records with hand histories (actions and final outcome; card details are fine to include). Simple stats like total games played, wins, and net chips won/lost would be nice, but nothing too advanced.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 7,
+        "interviewer": "Based on your game records and room needs, which core entities should the system track relationships between—for example, should it link players to specific tables they've played at, connect hand histories to the rooms where they occurred, or track which players were involved together in each hand?",
+        "user": "I don’t really care about detailed relationship tracking beyond what’s needed to show my own hand histories and which room/table they happened in. You don’t need to track who played with who for my purposes.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 8,
+        "interviewer": "For each core entity—player accounts, game rooms, and hand histories—what specific fields do you need stored, such as usernames, timestamps, bet amounts, or any particular status indicators?",
+        "user": "I don’t care about the exact field list as long as it supports the basics I mentioned—account info, room settings like blinds/buy-in/player count, and my hand histories with actions and outcomes. Whatever fields you need to make those screens work are fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 9,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t think I have any more content/data requirements right now—what we covered is enough. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 10,
+        "interviewer": "What color scheme would you prefer for the poker application—for example, a traditional green felt look, a dark theme with contrasting accents, or a different color palette for the overall interface?",
+        "user": "I’d like the overall page background to be an azure color. Everything else can stay pretty simple and readable—no strong preference beyond that.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 11,
+        "interviewer": "Should the azure background color you mentioned apply globally across all pages—lobby, game tables, records, and account screens—or would you prefer it only for certain sections while other areas use a different background?",
+        "user": "I don’t really care—global is fine as long as it stays readable and doesn’t make the table or cards hard to see.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 12,
+        "interviewer": "What colors would you like for the main UI components such as buttons, cards, panels, and the navigation bar?",
+        "user": "I’m not super picky, but I’d like the main UI elements (nav bar, buttons, panels) in a midnight blue so they stand out against the azure background. Cards can stay standard white with clear contrast, and text/buttons should be readable (white text on the blue is fine).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 13,
+        "interviewer": "Beyond the azure background and midnight blue components you mentioned, are there any other visual elements—like font styles, button shapes, spacing, or icon styles—that you'd like standardized across all pages to keep the look consistent throughout the application?",
+        "user": "I don’t really care about standardizing fonts/icons/button shapes beyond keeping it clean and readable. Just use something modern and consistent across pages.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 14,
+        "interviewer": "What color would you like for accents and highlights on interactive or emphasized elements—such as active buttons, selected menu items, focus outlines, or notification badges?",
+        "user": "I don’t really care about accent colors—just pick something that’s readable against the azure and midnight blue. A lighter blue or teal would be fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 15,
+        "interviewer": "Do you have any specific accessibility requirements for color contrast—for example, ensuring the interface is readable for users with color vision deficiencies, or meeting a particular contrast ratio standard for text against backgrounds?",
+        "user": "I don’t really care about a specific accessibility standard or contrast ratio. Just make sure the text and buttons are clearly readable against the backgrounds.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 16,
+        "interviewer": "Do you need specific colors for different component states—such as hover effects, disabled buttons, success messages, or error alerts—or are you fine with default state colors as long as they're readable?",
+        "user": "I don’t really care about specific state colors—defaults are fine as long as everything stays readable and it’s obvious when a button is disabled vs active.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 17,
+        "interviewer": "We have asked several questions about Style (e.g. colors, layout, theme). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t have any other style requirements. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 18,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to browse the game lobby without logging in so I can see available rooms before committing to an account.\n\nFeature2: As a user, I want to create an account and log in so I can join games, play, and save my records.\n\nFeature3: As a user, I want to create a new game room with configurable settings (blinds, buy-in, player count) so I can host a poker table.\n\nFeature4: As a user, I want to join existing game rooms from the lobby so I can play Texas Hold'em with other players.\n\nFeature5: As a user, I want to see room information in the lobby (blinds, buy-in, current player count) so I can choose which room to join.\n\nFeature6: As a user, I want a simple top navigation bar that remains consistent across all pages so I can easily move between the lobby, game records, and account sections.\n\nFeature7: As a user, I want an easy way to return to the lobby and open chat while in a game so I can navigate without confusion.\n\nFeature8: As a user, I want clear, always-visible poker action buttons (fold, call, raise, check) during gameplay so I can make decisions quickly.\n\nFeature9: As a user, I want poker action buttons to only be enabled when it's my turn so I don't accidentally misclick.\n\nFeature10: As a user, I want a simple table chat during gameplay so I can communicate with other players at my table.\n\nFeature11: As a user, I want basic notifications when a new chat message comes in so I don't miss messages during play.\n\nFeature12: As a user, I want to view my chip balance so I know how many chips I have available.\n\nFeature13: As a user, I want to view my game records with hand histories (actions taken, final outcome, cards dealt) so I can review past games.\n\nFeature14: As a user, I want to see which room/table each hand history occurred in so I have context for my past games.\n\nFeature15: As a user, I want to see basic statistics (total games played, wins, net chips won/lost) so I can track my overall performance.\n\nFeature16: As a user, I want to manage my account information so I can update my profile details.\n\nFeature17: As a user, I want an azure background color applied globally across all pages so the interface has a consistent look.\n\nFeature18: As a user, I want midnight blue UI components (navigation bar, buttons, panels) so they stand out against the azure background.\n\nFeature19: As a user, I want standard white cards with clear contrast so they are easy to read during gameplay.\n\nFeature20: As a user, I want readable text (white on blue) and clear visual distinction between enabled and disabled buttons so I can easily interact with the interface.\n\nFeature21: As a user, I want a light blue or teal accent color for highlights and interactive elements so they are visible against the color scheme.\n\nFeature22: As a user, I want a clean, modern, and consistent visual style across all pages so the application feels cohesive.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      }
+    ],
+    "total_turns": 18
+  },
+  {
+    "task_id": "task_1",
+    "task_name": "European Travel and Camping Booking and Review System",
+    "initial_requirements": "I want a website that helps me explore travel and camping options in Europe, plan my trips, and keep track of places I’ve visited.",
+    "user_stories": [
+      "As a user, I want to access a travel and camping website and web app for Europe, so that I can explore tourist attractions and campsites across the continent.",
+      "As a user, I want to browse tourist attractions in different European countries and cities, so that I can discover places I may want to visit.",
+      "As a user, I want to browse campsites in different European countries and cities, so that I can find camping options in my areas of interest.",
+      "As a user, I want to search for tourist attractions, so that I can quickly find specific attractions that match my interests or criteria.",
+      "As a user, I want to search for campsites, so that I can quickly find specific camping options that match my needs or criteria.",
+      "As a user, I want to book tourist attractions of interest, so that I can secure my visits in advance.",
+      "As a user, I want to book campsites of interest, so that I can secure my camping stays in advance.",
+      "As a user, I want to review the tourist attractions I have visited, so that I can share my experience.",
+      "As a user, I want to review the campsites I have visited, so that I can share my experience and feedback.",
+      "As a user, I want the main background of the website and web app to be light pink, so that the interface follows the specified color scheme.",
+      "As a user, I want the controls (such as buttons and interactive elements) to use medium violet red, so that the controls follow the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How would you like to navigate through the website – for example, would you prefer a map-based exploration where you click on regions, a searchable list of destinations, or a menu with categories like \"Countries,\" \"Trip Plans,\" and \"Visited Places\"?",
+        "user": "I’d like a search-first experience so I can quickly find attractions by name or interests, with filters. A map view would be great as a secondary option, plus simple menu tabs for Countries, Trip Plans, and Visited Places.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific filters would you like available when searching for travel and camping destinations – for example, filtering by activity type, accommodation style, budget range, or trip duration?",
+        "user": "Filters I’d want: activity type (hiking, climbing, beaches, sightseeing), camping style (tent, campervan, hut/glamping), amenities (showers, electric hookup, Wi‑Fi), price per night, and season/availability. Also distance from a city or trailhead, pet-friendly, and family-friendly.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 3,
+        "interviewer": "When you adjust filters during your search, would you prefer them to auto-apply immediately as you make selections, or would you rather make multiple filter choices and then click an \"Apply\" button to see results – and should your filter selections stay in place when you navigate to other sections like Trip Plans and come back?",
+        "user": "I don’t really care either way on auto-apply vs an Apply button as long as it feels fast. But yes, please keep my filter selections when I go to Trip Plans and come back.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 4,
+        "interviewer": "How would you like your search results displayed – for example, as a card grid with photos and brief details, a compact list view, or a map with pins showing matching locations?",
+        "user": "I don’t really care as long as it’s easy to scan. A simple card grid with photos and key info is fine, with an option to switch to a list or map if possible.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "What sorting options would you like for your search results – for example, sorting by price, rating, distance, popularity, or alphabetically – and should you be able to toggle between ascending and descending order?",
+        "user": "I don’t really care about sorting options—whatever defaults make sense are fine. If you include it, price, distance, and rating with ascending/descending toggles would be enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 6,
+        "interviewer": "When creating or editing a trip plan, what information would you like to enter – for example, trip name, dates, destinations, daily itinerary notes, budget estimates, or packing lists – and would you want to be able to add, remove, or reorder destinations within a plan?",
+        "user": "I don’t really care about trip-plan editing details that much. Keep it simple: trip name, dates, a list of destinations, and basic notes, with the ability to add/remove/reorder stops.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 7,
+        "interviewer": "Should users need to create an account and log in to use the site, or should some features be available without logging in – for example, browsing and searching open to everyone while saving trip plans and tracking visited places requires an account?",
+        "user": "I don’t really care either way. If you do accounts, I’d prefer browsing/searching without logging in, and only require login for saving trip plans and visited places.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 8,
+        "interviewer": "The user has already clearly answered this dimension. They stated: \"I'd prefer browsing/searching without logging in, and only require login for saving trip plans and visited places.\"",
+        "user": "Yep, that matches what I want. I don’t have anything else to add on accounts/login.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 9,
+        "interviewer": "Which login methods would you like to support – for example, email and password, social login options like Google or Facebook, or passwordless methods like magic links sent to your email?",
+        "user": "I don’t really care about the specific login methods. If you include it, email + password is fine, and Google login would be a nice bonus.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 10,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really have any extra interaction requirements—just make it feel fast and responsive, especially when searching and filtering.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 11,
+        "interviewer": "What core types of content should the site include beyond destinations and campgrounds – for example, should it have detailed attraction profiles, user-submitted reviews, travel guides or articles, photo galleries, or information about hiking trails and outdoor routes?",
+        "user": "I don’t really care about extra content like articles or user reviews. Detailed attraction/campground pages with the key info and maybe some basic trail/route info would be enough for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 12,
+        "interviewer": "How should the site's content be organized and grouped – for example, should destinations be categorized primarily by country, by activity type, or by camping style, and how should the hierarchy flow from top-level sections down to individual attraction pages?",
+        "user": "I don’t really care about the exact hierarchy as long as search and filters are the main way to find things. If you need a structure, top-level by Countries and Activities is fine, with each place having its own detail page.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 13,
+        "interviewer": "What types of media and files should be supported on the site – for example, should attraction and campground pages include photos, videos, downloadable PDF maps, or GPS route files that users can save or upload?",
+        "user": "I don’t really care about supporting lots of media/file types. Photos are enough for me—maybe a link out to official maps if needed, but I don’t need uploads or GPS files.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 14,
+        "interviewer": "Which content on the site should be visible to everyone without logging in, and which content should only be accessible after logging in – for example, should saved trip plans and visited places lists be private to the logged-in user, or could some of that information be shared publicly?",
+        "user": "I don’t really care about public sharing. By default I’d expect browsing/search to be public, and trip plans + visited places to be private to my account.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 15,
+        "interviewer": "When viewing a destination or campground detail page, how would you like the information arranged – for example, should the photo appear first followed by the name and key details like price and amenities, or would you prefer the name and summary at the top with photos below, and where should notes or trail information appear on the page?",
+        "user": "I don’t really care about the exact layout on the detail page. Just make the key info (price, amenities, season/availability, location) easy to find, and put notes/trail info somewhere obvious like a section near the bottom.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 16,
+        "interviewer": "Would you like the site to keep a history of changes to your trip plans or visited places – for example, being able to see when you added or removed a destination, or undo recent changes?",
+        "user": "I don’t really care about change history or undo. Simple editing is fine for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 17,
+        "interviewer": "How would you like photos displayed on attraction and campground pages – for example, as a single large hero image, a thumbnail gallery you can click through, or both with the ability to tap and zoom?",
+        "user": "I don’t really care about the photo display style. As long as there are a few clear photos and they load quickly, I’m happy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 18,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any other content requirements—what we covered is enough. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 19,
+        "interviewer": "What overall color scheme would you like for the site – for example, a nature-inspired palette with greens and earth tones, a minimal light/white theme, or a dark mode style?",
+        "user": "I’d like a light theme overall, and I specifically want the main background to be a light pink. Accents can be simple neutrals/earthy tones as long as it stays readable.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 20,
+        "interviewer": "Should the light pink background apply to all pages throughout the site, or would you prefer it only on certain sections like the homepage while other areas like Trip Plans or Visited Places use a different background color?",
+        "user": "I don’t really care—either is fine as long as it stays readable. If you need a default, use the light pink across the site for consistency.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_2",
+    "task_name": "Barber Shop Management and Notification System",
+    "initial_requirements": "I want a website that helps me manage a barber shop’s operations and stay in touch with customers.",
+    "user_stories": [
+      "As a user, I want to browse barbers, so that I can see which barbers are available.",
+      "As a user, I want to browse services, so that I can see which services are offered.",
+      "As a user, I want to add new barbers, so that I can manage the list of barbers on the website.",
+      "As a user, I want to add new services, so that I can manage the list of services on the website.",
+      "As a user, I want to send WhatsApp notifications to clients, so that I can notify them through WhatsApp.",
+      "As a user, I want the website layout styled with snow in the background, so that the background appearance matches the specified style.",
+      "As a user, I want the interface styled with dim gray, so that the interface color matches the specified style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How would you like customers to book appointments at your barber shop—should they be able to book online through the website, and if so, what rules should apply, such as how far in advance they can book, whether they can cancel or reschedule, or if any deposits are required?",
+        "user": "I don’t really care about the specific booking rules right now. I just want customers to be able to request/book appointments online and I can confirm them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "Human: \nHuman: \nHuman: \nHuman: \nHuman: \nHuman: \nHuman: \nHuman:",
+        "user": "I’m not sure what you’re asking here—there wasn’t a question. If you meant something specific, can you rephrase it?",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "What stages would you like an appointment booking to go through—for example, should it move from \"requested\" to \"confirmed\" to \"completed,\" and should customers or you be able to cancel at any stage?",
+        "user": "I don’t really care about the exact stages right now. Basic is fine: requested, confirmed, completed, and canceled, and I should be able to cancel anytime; customers can request canceling but I approve it.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "Beyond what you've mentioned about appointment stages and cancellation approval, are there any other actions you'd like to perform on bookings—such as modifying appointment details like time or service, viewing appointment history, or adding notes to bookings?",
+        "user": "I don’t really care about extra booking actions right now. As long as I can view the schedule and confirm or cancel requests, that’s enough for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "How would you like to communicate with your customers—should the website include features like sending appointment reminders, promotional messages, or direct messaging between you and customers?",
+        "user": "I’d like the site to send customers notifications through WhatsApp—mainly appointment confirmations and reminders. I don’t need built-in direct messaging on the website right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 6,
+        "interviewer": "You mentioned WhatsApp for notifications—would you also like to use any other channels, such as email, SMS, or push notifications, or is WhatsApp the only delivery method you need?",
+        "user": "I don’t really care about other channels right now—WhatsApp only is fine. We can add email or SMS later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 7,
+        "interviewer": "What specific events should trigger WhatsApp notifications to customers—for example, should notifications be sent when an appointment is requested, when you confirm it, a reminder before the appointment, or when it's canceled?",
+        "user": "I don’t really care about getting super specific on triggers yet. The basics I want are: send a message when I confirm the appointment, a reminder before the appointment, and a notification if it gets canceled.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 8,
+        "interviewer": "How far in advance should the appointment reminder be sent to customers—for example, 24 hours before, 1 hour before, or a different time?",
+        "user": "I don’t really care about the exact timing right now. Just pick a sensible default like 24 hours before, and maybe also a short one like 1 hour before if that’s easy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 9,
+        "interviewer": "What information should be included in your WhatsApp notifications to customers—for example, should they contain the appointment date and time, barber name, service type, shop address, or any custom message from you?",
+        "user": "I don’t really care about getting detailed on the message content right now. Just include the basics like date/time, service, my shop name/address, and a simple confirmation/reminder note.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 10,
+        "interviewer": "After a customer's appointment is confirmed, how should the booking be handled on your end—should it automatically appear on your schedule and be ready to serve, or do you need additional steps like assigning a specific barber, preparing resources, or manually activating the appointment slot?",
+        "user": "I don’t really care about extra steps like assigning barbers or resources right now. Once I confirm it, it should just show up on my schedule and be ready to serve.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.14285714285714285
+      },
+      {
+        "turn": 11,
+        "interviewer": "What would you like to see and manage in your admin dashboard—for example, should it show an overview of upcoming appointments, allow you to manage your services and pricing, or include any other specific tools or settings you need to run your barber shop?",
+        "user": "I’d like a simple dashboard with today/upcoming appointments and a calendar view. I also want to be able to manage my services and pricing, and add/edit barbers (name, working hours, maybe days off).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 12,
+        "interviewer": "How would you like the admin dashboard organized—should it have separate sections or tabs for different areas like appointments calendar, services management, barber management, and notifications, or would you prefer a different layout?",
+        "user": "I don’t really care too much about the exact layout. Separate tabs for Appointments/Calendar, Services, Barbers, and Notifications is totally fine as long as it’s simple and quick to use.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 13,
+        "interviewer": "Based on your dashboard tabs for Appointments, Services, Barbers, and Notifications, are there any other areas you'd need to manage—such as customer profiles, payment or revenue tracking, inventory for products you sell, or shop settings like business hours?",
+        "user": "I don’t really care about payment/revenue tracking or inventory right now. Basic customer profiles and simple shop settings like business hours would be useful, but keep it minimal.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 14,
+        "interviewer": "For the entities you'll manage—like services, barbers, and customer profiles—what actions should you be able to perform on each? For example, should you be able to create, edit, deactivate, or delete them, or are there other operations you'd need?",
+        "user": "I don’t really care about getting detailed on actions right now. Just the basics: create and edit, and maybe deactivate instead of deleting so I don’t lose history.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2857142857142857
+      },
+      {
+        "turn": 15,
+        "interviewer": "How should customers navigate your website—for example, should there be a main menu with links to pages like Home, Book Appointment, Services, and Contact, and what key pages do you envision customers using?",
+        "user": "Yeah, a simple main menu is fine: Home, Book Appointment, Services, Barbers, and Contact. I want customers to be able to browse services and barbers first, then pick one and request a time slot, plus a basic page to view/confirm their booking status if possible.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 16,
+        "interviewer": "Who should need to log in to use the website—should customers be able to browse and book as guests, or do they need to create an account first, and do you need any identity verification like phone number confirmation before they can request appointments?",
+        "user": "I don’t really care about strict login/verification right now. I’d prefer customers can browse and request bookings as guests, and just provide their name and phone number so we can WhatsApp them.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 17,
+        "interviewer": "Which features on the website should be accessible to everyone versus restricted to you as the admin—for example, should only you be able to view all customer bookings, manage services and barbers, and access the dashboard, while customers can only browse and request appointments?",
+        "user": "I don’t really care about getting super detailed on permissions right now. Just make the dashboard and all management stuff admin-only, and let customers browse services/barbers and request appointments (and maybe check their request status).",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 18,
+        "interviewer": "Since you mentioned you don't care about payment or revenue tracking right now, do you want the booking process to remain completely free with no online payments, or would you like to eventually accept deposits or full payments through the website—and if so, which payment methods like credit cards, mobile wallets, or cash on arrival?",
+        "user": "I don’t really care about online payments right now—keep it free and we’ll handle payment in person (cash on arrival). We can add deposits or card payments later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 19,
+        "interviewer": "How should customers browse and discover your services and barbers—for example, should services be organized into categories like haircuts, beard trims, and styling, or displayed as a simple list, and should barbers be shown in a grid with photos or as a detailed list with their specialties?",
+        "user": "Keep it simple: services can be a straightforward list (optionally grouped into a few categories like Haircut/Beard/Combo). Barbers should show in a grid with photo, name, and a short note on specialties/working hours, and users can tap a barber to see details before booking.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.42857142857142855
+      },
+      {
+        "turn": 20,
+        "interviewer": "Since you've described the customer-facing pages and admin dashboard tabs, could you clarify how you'd like navigation to work overall—should there be a shared header menu across all pages, separate navigation for logged-in admins versus public visitors, or any specific navigation elements like a sidebar or footer links?",
+        "user": "I don’t really care about the navigation details. A simple shared header for public pages is fine, and the admin dashboard can have its own simple sidebar or tabs.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.42857142857142855
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_3",
+    "task_name": "Driver Recruitment and Job Posting System",
+    "initial_requirements": "I want a recruitment website that connects drivers with job opportunities and helps employers find suitable drivers.",
+    "user_stories": [
+      "As a user, I want to register on the website and create a profile, so that I can use the recruitment services for drivers and job listings.",
+      "As a user, I want to be able to apply for jobs, so that I can seek driver positions available on the website.",
+      "As a user, I want to manage my contact information, so that my details are up to date for communication regarding job opportunities.",
+      "As a client, I want to post job listings, so that I can advertise driver positions that need to be filled.",
+      "As a client, I want to view my active job postings, so that I can see which positions are currently advertised.",
+      "As a user, I want to fill out and submit a contact form, so that I can get in touch with the website operators.",
+      "As a user, I want to access a home page, so that I can see the main entry point and overview of the website.",
+      "As a user, I want to access an about us page, so that I can learn more about the organization behind the website.",
+      "As a user, I want to access a clients page, so that I can view information relevant to clients using the recruitment services.",
+      "As a user, I want to access a drivers page, so that I can view information relevant to drivers using the recruitment services.",
+      "As a user, I want to access a jobs page, so that I can view available job listings.",
+      "As a user, I want to access a contact page, so that I can find ways to contact the organization.",
+      "As a user, I want the website design to use white as the background color, so that the interface matches the specified visual style.",
+      "As a user, I want the website design to use navy for content blocks, so that the interface matches the specified visual style."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What authentication approach do you need for the recruitment platform—should drivers and employers be able to browse job listings without logging in, and do you require any identity or license verification for drivers before they can apply or be contacted?",
+        "user": "I’d like drivers and employers to register and create a profile before they can apply, post jobs, or contact each other. It’s fine if job listings are publicly viewable without login, but applying/messaging should require an account. For drivers, basic identity plus driver’s license verification should be required before they can be contacted or apply.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific information should drivers and employers provide during registration—for example, should drivers submit contact details, license documents, and experience history upfront, and should employers provide company information and verification documents?",
+        "user": "I don’t really care about the exact registration fields right now. As long as drivers can provide basic contact info and upload a license for verification, and employers can add basic company details to post jobs, that’s enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 3,
+        "interviewer": "How should drivers and employers communicate with each other on the platform—do you want an in-app messaging system, email notifications when they receive messages, or both?",
+        "user": "I don’t really care about the exact communication setup right now. An in-app messaging system is fine, and email notifications would be nice but not critical.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific UI interaction details right now. Just make it clean and easy to navigate.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 5,
+        "interviewer": "What are the main types of driver jobs or categories you want to support on the platform—for example, should jobs be organized by vehicle type (truck, bus, delivery van), employment type (full-time, part-time, contract), or specific industries (logistics, passenger transport, construction)?",
+        "user": "I don’t really care about specific job categories right now. Just support a flexible tagging/filter system so employers can label roles (vehicle type, full/part-time, industry) and drivers can filter/search by those.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 6,
+        "interviewer": "What are the core data entities you need the system to manage—for example, should it track driver profiles, employer company profiles, job postings, and applications as separate but linked records, or do you envision additional entities like saved searches, driver certifications, or interview schedules?",
+        "user": "I don’t care about extra entities like saved searches or interview schedules right now. Just the basics: driver profiles, employer/company profiles, job postings, and applications/messages linked together.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 7,
+        "interviewer": "For each core entity—driver profiles, employer profiles, job postings, and applications—what key attributes do you need stored, such as status fields (active, pending, hired), descriptive fields (job description, salary range, years of experience), or specific identifiers beyond basic contact info?",
+        "user": "I don’t really care about defining all the exact attributes right now. Just store enough to run the basics: contact/profile info, verification status for drivers, job details (title/description/location/pay), and application status (applied/shortlisted/rejected/hired).",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 8,
+        "interviewer": "Which specific fields should be visible when a driver or employer views a job posting detail page—for example, should it display the job title, description, location, pay range, employer name, and posting date, or are there other fields you want prominently shown?",
+        "user": "I don’t really care about the exact list right now. Just make sure the basics are clearly shown: title, description, location, pay range, employer/company name, and when it was posted.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.09090909090909091
+      },
+      {
+        "turn": 9,
+        "interviewer": "How should the main sections of the website be organized—for example, should there be separate areas for job listings, driver profiles, employer dashboards, and messaging, and how should these be grouped in the navigation?",
+        "user": "I’d like the navigation to be pretty simple and separated: Home, Jobs, Drivers, Employers/Clients, and Contact. Then once someone logs in, they can access their dashboard (profile, postings/applications) and Messages from a menu item or dropdown.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.18181818181818182
+      },
+      {
+        "turn": 10,
+        "interviewer": "Based on our earlier discussion, you mentioned job listings should be publicly viewable without login, but applying and messaging require an account. To clarify further: should driver profile information (like experience or certifications) be publicly visible to employers browsing the site, or should employers need to log in before they can view any driver details?",
+        "user": "I don’t really care too much about that detail right now. If you need a default, make driver profiles only visible to logged-in employers, with public pages showing little or nothing.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.18181818181818182
+      },
+      {
+        "turn": 11,
+        "interviewer": "Should drivers and employers see different versions of the same pages based on their role—for example, a driver viewing the Jobs page sees an \"Apply\" button while an employer sees \"Edit\" or \"View Applicants\"—or would you prefer completely separate page structures for each user type?",
+        "user": "I don’t really care about completely separate page structures. If you need a default, keep the same main pages but show different actions/buttons based on whether they’re a driver or an employer.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.18181818181818182
+      },
+      {
+        "turn": 12,
+        "interviewer": "Given that you've outlined the main navigation sections (Home, Jobs, Drivers, Employers/Clients, Contact) plus logged-in features (Dashboard, Messages), what child pages or sub-sections should exist under each—for example, should Jobs have sub-pages like \"Browse All,\" \"Search Results,\" and \"Job Detail,\" or should the Dashboard break down into \"My Profile,\" \"My Applications,\" and \"Saved Jobs\"?",
+        "user": "Keep it pretty standard. Jobs should have Browse/Search, Job Detail, and (logged in) My Applications; Dashboard should have My Profile, Verification status, and for employers My Job Posts + Applicants, plus Messages. Drivers/Employers sections can just be a simple directory/list and a profile detail page (restricted to logged-in users).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 13,
+        "interviewer": "How should job listings be grouped or categorized for browsing—for example, should drivers be able to browse jobs organized by vehicle type, location/region, employment type, or industry, and which of these groupings should be the primary way jobs are presented on the Browse page?",
+        "user": "I don’t really care about a primary grouping. Just default to a simple list with search + filters (location, vehicle type, employment type, industry) and maybe sort by newest.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 14,
+        "interviewer": "What types of files or media should users be able to upload and share on the platform—for example, should drivers upload license documents, profile photos, and certifications, and should employers upload company logos or job-related documents like contracts or route maps?",
+        "user": "I don’t really care about the exact file types right now. At minimum, drivers should be able to upload a license for verification (and optionally a profile photo), and employers can upload a company logo.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 15,
+        "interviewer": "Beyond the profiles, job postings, and applications you've described, are there any external data sources or third-party systems the platform should connect to—for example, government license verification databases, background check services, or job board aggregators to import listings from?",
+        "user": "I don’t really care about third-party integrations right now. For now, keep it standalone, and we can consider license verification or background checks later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 16,
+        "interviewer": "Are there any specialized metrics or scoring parameters you'd want to track for drivers or job postings—for example, driver ratings, safety scores, years of experience thresholds, or match-quality scores between drivers and jobs?",
+        "user": "I don’t really care about specialized metrics or scoring right now. For now just keep basic fields like years of experience and license/verification status, and we can add ratings or match scores later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 17,
+        "interviewer": "Since you mentioned using a flexible tagging/filter system for jobs, should the same tagging approach apply to driver profiles as well—for example, allowing drivers to tag themselves with vehicle types they can operate, industries they have experience in, or preferred employment types—so employers can filter and find suitable candidates?",
+        "user": "I don’t really care about that detail right now. If you need a default, sure—let drivers add a few tags like vehicle types, industries, and preferred employment type so employers can filter, but keep it simple.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2727272727272727
+      },
+      {
+        "turn": 18,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "Let’s add an About Us page with basic info about the organization and how the platform works. Otherwise I don’t have more content requirements right now—happy to move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.36363636363636365
+      },
+      {
+        "turn": 19,
+        "interviewer": "Do you need any user-facing documentation or help guides on the platform—for example, a FAQ page, a \"How It Works\" guide for drivers and employers, or help articles explaining the application and verification process?",
+        "user": "I don’t really care about user-facing documentation right now. If you want a simple default, a basic FAQ/How It Works page is enough to start.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.36363636363636365
+      },
+      {
+        "turn": 20,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "No more content requirements beyond what we covered. Just make sure the Contact page includes a simple form plus basic contact details (email/phone) so people can reach us—then we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.45454545454545453
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_4",
+    "task_name": "Multi-Company Finance Dashboard",
+    "initial_requirements": "I need a dashboard that allows me to input and view financial data across multiple companies, and supports financial comparison and reporting.",
+    "user_stories": [
+      "As a user, I want to use a multi-company dashboard to manage and view financial data from multiple companies in one place.",
+      "As a user, I want the dashboard to allow me to input financial data for each company, so that I can manage financial information across multiple companies.",
+      "As a user, I want to view financial data for a specific company by specifying its name or identifier, so that I can review company-specific details.",
+      "As a user, I want the dashboard to present revenue data for each company, so that I can understand each company’s income level.",
+      "As a user, I want the dashboard to present expense data for each company, so that I can understand each company’s cost structure.",
+      "As a user, I want the dashboard to present profit data for each company, so that I can understand each company’s profitability.",
+      "As a user, I want the dashboard to provide consolidated reports and cross-company comparisons, so that I can analyze overall financial performance.",
+      "As a user, I want the dashboard to use mint cream as the background, so that the interface follows the specified color scheme.",
+      "As a user, I want all dashboard components to be styled with teal, so that the interface elements follow the specified component styling"
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What types of data entry operations do you need for the financial data—for example, should users be able to add individual transactions one at a time, import data in bulk from spreadsheets, or both?",
+        "user": "I don’t really care about the specific entry method—whatever’s easiest is fine. As long as I can get the data in reliably and then compare and report across companies.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "How do you envision navigating between the different companies and report sections—would you prefer a sidebar menu, tabs at the top, or a different navigation structure for accessing company data and comparison views?",
+        "user": "I don’t really care whether it’s a sidebar or tabs—whatever’s clean and easy to use. I just want switching between companies and comparison reports to be quick and obvious.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 3,
+        "interviewer": "Beyond switching between companies, do you also need to switch between different time periods, fiscal years, or reporting contexts while staying within the same company view?",
+        "user": "I don’t really care about fancy context switching there. As long as I can pick a date range or fiscal year when I run a report and it’s straightforward, that’s enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 4,
+        "interviewer": "What are the main pages or sections you need in the dashboard—for example, should there be separate pages for data entry, individual company overviews, comparison reports, and settings, or do you have a different structure in mind?",
+        "user": "I don’t really care about the exact page structure. I just need it to be easy to find where to enter/import data, view a single company’s numbers, and run cross-company comparison reports; settings can be minimal.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really have any specific interaction requirements. Just keep it fast and responsive so switching companies and running reports doesn’t feel sluggish.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 6,
+        "interviewer": "What are the core financial data elements you need to track and compare across companies—for example, revenue, expenses, profit margins, balance sheet items, or specific financial ratios?",
+        "user": "At a minimum I need revenue tracked per company, and I’d like to be able to compare it across companies over a selected period. If it’s easy to add later, expenses and profit/margin would be nice, but revenue is the must-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 7,
+        "interviewer": "What visualizations or analytics would help you compare revenue across companies—for example, side-by-side bar charts, trend lines over time, percentage growth comparisons, or ranking tables?",
+        "user": "I don’t really care about specific chart types. A simple bar chart and a basic trend line over time would be plenty, as long as it clearly shows revenue per company for the selected period.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 8,
+        "interviewer": "Beyond companies and their revenue data, what other core entities need to be represented in the system—for example, do you need to track business units within companies, specific revenue streams or product lines, or fiscal periods as distinct objects?",
+        "user": "I don’t really care about modeling a bunch of extra entities right now. For my needs, it’s basically just companies and their revenue over a date range; anything like business units or product lines can be out of scope unless it becomes necessary later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "For each company entity, what specific attributes should be stored beyond the name—for example, do you need fields like industry type, company size, fiscal year end date, headquarters location, or any unique identifiers?",
+        "user": "Beyond the company name, I’d like a unique company ID (internal is fine) so I can reliably match/import data. Industry, size, HQ, etc. aren’t important to me right now; fiscal year end is optional but could be useful later.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 10,
+        "interviewer": "When viewing a company's details or summary, which fields should be displayed—just the company name and ID, or would you also want to see things like total revenue, date range of available data, or any other calculated summaries?",
+        "user": "I don’t really care about the company detail fields too much. Showing the company name and ID is enough, and if it’s easy, a quick total revenue summary would be nice but not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 11,
+        "interviewer": "What data sources will the financial data come from—for example, will users manually enter revenue figures, import from spreadsheets like Excel or CSV files, connect to accounting software, or pull from external databases?",
+        "user": "I don’t really care about the data source details right now. Manual entry or a simple CSV/Excel import is fine—no need for accounting software integrations unless it becomes necessary later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 12,
+        "interviewer": "How would you like to organize or group your companies—for example, should there be folders, tags, or categories to classify companies by region, portfolio, or any other grouping, or is a flat list of all companies sufficient?",
+        "user": "I don’t really care about grouping right now— a flat list of companies is fine. If you want to add simple tags later, that could be nice, but it’s not a requirement.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 13,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more content requirement: I’ll need to track and view expenses per company too (at least total expenses over a selected period), ideally alongside revenue in the comparison reports. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 14,
+        "interviewer": "For your financial data, do you need to keep an audit trail or change history—for example, tracking who entered or modified revenue or expense figures and when—or is it sufficient to just store the current values without historical records of changes?",
+        "user": "I don’t really care about an audit trail or change history right now. Just storing the current values is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 15,
+        "interviewer": "We have asked several more questions about Content (e.g. data fields, report content, display items) since you last added something. Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "One more content thing: I’d like profit shown per company too (even just revenue minus expenses) and included in the comparison reports for the selected period. Otherwise we can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 16,
+        "interviewer": "Are there any specialized metadata fields or domain-specific parameters you need for your financial data—for example, currency codes, exchange rates, accounting standards indicators, or confidence scores for imported figures?",
+        "user": "I don’t really care about specialized metadata like accounting standards or confidence scores right now. If you default everything to a single currency (like USD) and keep it simple, that’s fine; we can add multi-currency later if needed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 17,
+        "interviewer": "What constraints should apply to your data tables—for example, are there required fields that must always be filled in, specific data formats for dates or numbers, or any validation rules like revenue values must be non-negative?",
+        "user": "I don’t really care about strict validation rules right now. Just basic stuff like requiring a company ID, a date, and making revenue/expenses numeric is enough; you can allow zeros and prevent obviously invalid dates.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 18,
+        "interviewer": "Would you like the dashboard to include any built-in report templates or starter configurations—for example, pre-built comparison report layouts, sample company data to explore the system, or template reports with placeholders you can customize?",
+        "user": "I don’t really care about built-in templates or sample data. A simple default comparison report is fine, but it’s not a requirement.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 19,
+        "interviewer": "How should the content be organized within the dashboard—for example, would you prefer the comparison reports grouped separately from individual company views, or would you rather have everything accessible from a single unified view?",
+        "user": "I don’t really care about the exact organization. As long as it’s easy to jump to a single company view and to the cross-company comparison reports without hunting around, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 20,
+        "interviewer": "Do you need to attach or store any files or media alongside your financial data—for example, supporting documents like invoices, receipts, spreadsheets, or PDF reports linked to specific companies or revenue entries?",
+        "user": "I don’t really care about storing attachments right now. If it’s easy to add later that’s fine, but for now I just need the numbers and reports.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_5",
+    "task_name": "Blue-Collar Job Matching Platform",
+    "initial_requirements": "I want a website that connects blue-collar workers with employers by helping workers showcase their skills and employers find suitable candidates.",
+    "user_stories": [
+      "As a user, I want to use a blue-collar job site that connects blue-collar workers with employers, so that I can find or fill blue-collar job opportunities.",
+      "As a user, I want to create a profile that includes my name, so that employers can identify me.",
+      "As a user, I want to add my contact information to my profile, so that employers can reach me.",
+      "As a user, I want to list my skills and qualifications in my profile, so that employers can understand my capabilities.",
+      "As a user, I want to provide my email address in my profile, so that communication can occur via email.",
+      "As a user, I want to upload photos to my profile, so that employers can view visual information about me.",
+      "As a user, I want to browse job listings on the site, so that I can see available blue-collar job opportunities.",
+      "As a user, I want to search job listings on the site, so that I can find relevant blue-collar job opportunities efficiently.",
+      "As a user, I want the job listings to include roles such as construction workers, plumbers, electricians, and more, so that I can find specific types of blue-collar positions.",
+      "As a user, I want the website layout background to use an ivory color, so that the visual appearance is consistent with that design.",
+      "As a user, I want interactive elements on the website to use a forest green color, so that the interactive parts are visually distinguished according to that design."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "How should users log in and verify their identity on this platform—for example, should workers and employers create separate account types, and do you need real name or identity verification to ensure legitimacy of profiles?",
+        "user": "Yes—workers and employers should have separate account types. I’d like real-name profiles and at least basic verification (phone + email), and ideally employers verify their business (like a tax ID or company email) to cut down on fake listings.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.125
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific information should workers and employers provide during registration—for example, should workers enter their trade certifications, years of experience, or location, and should employers provide company name, industry, or job site addresses?",
+        "user": "For workers: full name, phone/email, location (city/ZIP + how far you’ll travel), trades/skills, years of experience, certifications/licenses, and a few photos or examples of past work. For employers: company name, contact person, phone/email, industry, company address, and job site location(s) plus basic details like role needed and pay range.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 3,
+        "interviewer": "Beyond the basic worker and employer account types, should there be any additional roles like platform administrators or moderators, and what specific permissions should each role have—for example, can employers view worker contact details directly, or should communication be restricted until a worker accepts a job inquiry?",
+        "user": "I don’t really care about extra roles beyond the basics right now. If you need admins/moderators for safety and support, that’s fine—just keep it simple.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 4,
+        "interviewer": "What search and filtering options should employers have when looking for workers—for example, should they be able to filter by trade or skill type, location radius, years of experience, certification status, or availability?",
+        "user": "I don’t really care about the exact search/filter options right now—just something basic like trade/skill and location radius is enough to start.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.25
+      },
+      {
+        "turn": 5,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "One thing: make uploading photos of past work really easy and fast—drag-and-drop, multiple photos at once, and it should work smoothly on a phone.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 6,
+        "interviewer": "When workers upload their work photos, should those images be stored permanently on the platform, and do you need any specific download or export options—for example, allowing employers to download worker portfolios as a PDF or save selected profiles for offline review?",
+        "user": "I don’t really care about download/export features right now. Just store the photos on the platform so they’re easy to view in the worker’s profile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.375
+      },
+      {
+        "turn": 7,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "Yeah—I'd like workers to be able to browse a feed of nearby/recent jobs, but also have a simple search bar to find specific roles or companies, with quick filters like trade and distance.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "How should workers and employers communicate on the platform—for example, should there be an in-app messaging or chat feature, email notifications when someone contacts you, and should messages be moderated or require matching before users can chat?",
+        "user": "I don’t really care about the exact communication setup right now. If you do something simple like in-app messages with email notifications, that’s fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 9,
+        "interviewer": "What core pages should the platform include and how should users navigate between them—for example, should there be a homepage, separate dashboards for workers and employers, a job listings page, profile pages, and how should the main menu or navigation bar be organized?",
+        "user": "I don’t really care about the exact page list or navigation structure right now. As long as it has the basics—profiles, job listings/feed, and a simple dashboard for each account type—I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 10,
+        "interviewer": "Should workers be able to leave ratings or reviews for employers they've worked with, and vice versa—and if so, should these reviews be publicly visible on profiles or moderated before appearing?",
+        "user": "I don’t really care about ratings/reviews for the first version. If you add it later, I’d prefer they’re moderated before going public to avoid drama or fake reviews.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 11,
+        "interviewer": "Beyond the photo uploads you mentioned, are there specific form fields or data entry requirements you'd like for other areas—for example, should employers be able to quickly post multiple similar jobs at once, or should workers have an easy way to update their availability or add new certifications without re-entering all their profile information?",
+        "user": "Yeah—workers should be able to update availability with a quick toggle (available now / date range) and add a new certification as a simple “add item” without redoing the whole profile. For employers, a “duplicate job post” button would be great so they can repost similar roles fast and just tweak location/pay/dates.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 12,
+        "interviewer": "Beyond the quick availability toggle for workers and the duplicate job post button for employers you mentioned, are there any other bulk or batch operations you'd need—for example, should employers be able to delete or archive multiple old job posts at once, or should workers be able to remove several work photos in one action?",
+        "user": "I don’t really care about bulk/batch operations for the first version. If it’s easy, letting employers archive multiple old posts at once would be a nice-to-have, but not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 13,
+        "interviewer": "For the worker registration and profile, which fields should be required versus optional—for example, must workers provide certifications and work photos to complete their profile, or can those be added later?",
+        "user": "I don’t really care about the exact required vs optional rules right now. Just make the basics required (name, contact, location, primary trade/skills), and let certifications and photos be optional so they can add them later.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 14,
+        "interviewer": "For actions like notifying employers when a matching worker becomes available, or alerting workers about new nearby jobs—should these happen automatically in real-time, on a scheduled basis like a daily digest, or only when users manually choose to check?",
+        "user": "I don’t really care about the exact timing for alerts right now. If you need a default, a daily digest plus optional real-time notifications people can toggle on/off is fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 15,
+        "interviewer": "Beyond the basic email and phone verification for workers and employer tax ID or company email verification you mentioned, are there specific higher-stakes actions that should require additional identity checks—for example, facial recognition or ID upload before a worker's first job acceptance or before an employer can view worker contact details?",
+        "user": "I don’t really care about higher-stakes ID checks like facial recognition or ID uploads for the first version. Basic phone/email for workers and company email or tax ID for employers is enough to start.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 16,
+        "interviewer": "Beyond creating an account with phone and email verification, how should users actually log in each time they return to the platform—for example, should they use a password, social login options like Google or Facebook, or biometric login like fingerprint or face ID on mobile?",
+        "user": "I don’t really care about the exact login method right now. Email + password is fine to start, and you can add Google/Apple login later if it’s easy.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 17,
+        "interviewer": "When workers upload photos of their past work, should they be able to edit or adjust those images on the platform—for example, cropping, rotating, or adding captions to describe the project—or is simply uploading and viewing the photos as-is sufficient?",
+        "user": "I don’t really care about in-app editing for the first version. Just uploading and viewing is fine, but adding a simple caption field would be nice if it’s easy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 18,
+        "interviewer": "Which processes on the platform should follow a defined multi-step workflow with clear status phases—for example, should job applications go through stages like \"applied,\" \"under review,\" \"interview scheduled,\" and \"hired/rejected,\" or should worker profile verification have phases like \"submitted,\" \"pending review,\" and \"verified\"?",
+        "user": "I don’t really care about detailed multi-step workflows for the first version. If you need something, just keep it super simple—like job inquiry sent/accepted/closed and employer verification pending/verified.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 19,
+        "interviewer": "Before creating an account, what should visitors be able to see or do on the platform—for example, should they be able to browse job listings or view worker profiles without logging in, or should all content require registration first?",
+        "user": "I don’t really care too much for the first version. I’m fine with letting visitors browse basic job listings, but require an account to view full profiles or contact details.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      },
+      {
+        "turn": 20,
+        "interviewer": "When a worker expresses interest in a job or an employer reaches out to a worker, what should happen next in terms of the connection process—for example, should there be a formal \"apply\" or \"request to connect\" step that the other party must accept before sharing contact details, or should interested parties be able to message each other directly right away?",
+        "user": "I don’t really care about the exact flow for the first version. If you need a default, do a simple “request to connect” and only share contact details after the other side accepts.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.625
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_6",
+    "task_name": "Technical Information and Solutions Portal",
+    "initial_requirements": "I need a website where I can search, browse, and view technical articles, as well as communicate with other users.",
+    "user_stories": [
+      "As a user, I want to browse technical articles, so that I can view available technical information on the website.",
+      "As a user, I want to search technical information, so that I can quickly find specific technical content on the website.",
+      "As a user, I want to view solutions, so that I can see how technical problems are addressed.",
+      "As a user, I want to communicate with other users, so that I can interact and exchange technical information and solutions with them."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What search capabilities do you need for finding articles—for example, would you like keyword search only, or do you also need filters such as category, date range, author, or tags to narrow down results?",
+        "user": "I don’t really care about fancy filters—basic keyword search is fine. If it’s easy to add later, tags or category filters could be a nice-to-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.0
+      },
+      {
+        "turn": 2,
+        "interviewer": "You mentioned wanting to communicate with other users—could you describe what type of communication you have in mind, such as commenting on articles, direct messaging between users, discussion forums, or something else?",
+        "user": "I mainly want direct messaging between users inside the site—like a simple inbox with message threads. Commenting on articles would also be useful, but DMs are the priority.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 3,
+        "interviewer": "For the direct messaging you described, do you need messages to appear in real-time like a live chat, or is a standard inbox-style system where users check for new messages sufficient?",
+        "user": "I don’t really care about real-time chat—an inbox-style system where users can check messages is fine. If real-time is easy later, cool, but not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 4,
+        "interviewer": "Beyond commenting on articles, what other interaction options would you like users to have—for example, should they be able to like, rate, save, or share articles?",
+        "user": "I don’t really care about likes/ratings/shares. Saving/bookmarking articles for later could be handy, but it’s not a must-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 5,
+        "interviewer": "How would you like to navigate and browse the site—for example, do you envision a main feed or list of articles with categories/sections, a homepage with featured content, or a different structure for discovering and moving through articles?",
+        "user": "I don’t really care about anything fancy there. A simple list of articles with a basic homepage and maybe a few broad sections is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 6,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific UI behavior details right now—just keep it simple and reasonably fast on both desktop and mobile.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "What are the key pieces of information you'd like each technical article to contain—for example, title, author, publication date, body content, or any other specific fields you have in mind?",
+        "user": "Each article should have a clear title, the main body, and a dedicated “solution” section that explains how the problem is addressed (steps/code/config). Author name and publication/last-updated date would be helpful too.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 8,
+        "interviewer": "Based on what you've described, it sounds like the main entities would be users, articles, and messages—could you confirm these are the core objects to model, and clarify how they relate to each other, such as whether a user can author multiple articles, whether messages form threads between two users, or any other relationships I should understand?",
+        "user": "Yeah, users, articles, and messages sound right. A user can author multiple articles, and messages should be threaded conversations between two users (simple inbox style). Comments on articles would also connect users to articles, but that’s secondary.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 9,
+        "interviewer": "You mentioned users, articles, and messages as core entities, and described some article fields—could you specify what key attributes should be stored for a user (such as username, email, profile bio, avatar) and for a message (such as sender, recipient, timestamp, read status)?",
+        "user": "I don’t really care about detailed user profiles. Just the basics: username and email (plus password auth), and for messages: sender, recipient, timestamp, the text, and a read/unread flag.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 10,
+        "interviewer": "For the article detail page, which fields should be prominently displayed to the reader—for example, should the title, author name, publication date, last-updated date, body content, and solution section all be visible, or would you prefer to show only certain fields and perhaps hide or de-emphasize others?",
+        "user": "I don’t really care about fine-grained display rules. Just show the title, body, and solution section clearly, and include author plus published/last-updated dates somewhere on the page.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 11,
+        "interviewer": "How would you like articles to be organized or grouped—should they be placed into categories, tagged with topics, or organized in some other way that helps users browse related content?",
+        "user": "I don’t really care much about organization as long as I can browse a simple list. If it’s easy, having a few broad categories or optional tags could be nice later, but it’s not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 12,
+        "interviewer": "Could you describe how you'd like the pages and sections of the site to be structured—for example, what main pages should exist (such as homepage, article list, article detail, inbox, user profile) and how users would navigate between them?",
+        "user": "I don’t really care about a detailed page structure. As long as there’s a basic homepage, an article list + article detail pages, and an inbox for DMs, I’m good.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 13,
+        "interviewer": "We have asked several questions about Content (e.g. data fields, report content, display items). Do you have any other requirements in this area, or shall we move on to other topics?",
+        "user": "I don’t really have any more content requirements right now. We can move on.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 14,
+        "interviewer": "What color scheme would you like for the site—do you have preferences for the overall look, such as a light or dark theme, or any specific accent colors you'd like used for buttons and links?",
+        "user": "I don’t really care about the color scheme right now. A simple clean light theme is fine by default, and dark mode can be a nice-to-have later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      },
+      {
+        "turn": 15,
+        "interviewer": "I have gathered enough information. The user requirements list is as follows:\n\nFeature1: As a user, I want to search for technical articles using basic keyword search so that I can find relevant content quickly.\n\nFeature2: As a user, I want to browse a simple list of all technical articles so that I can discover content without searching.\n\nFeature3: As a user, I want to view an article detail page showing the title, body content, solution section, author name, and publication/last-updated dates so that I can read and understand the technical content.\n\nFeature4: As a user, I want to register and log in with a username, email, and password so that I can access personalized features.\n\nFeature5: As a user, I want to send direct messages to other users so that I can communicate privately within the site.\n\nFeature6: As a user, I want to view my inbox with threaded message conversations organized by recipient so that I can follow ongoing discussions.\n\nFeature7: As a user, I want to see which messages are read or unread so that I can track new incoming messages.\n\nFeature8: As a user, I want to comment on articles so that I can engage with the content and other readers.\n\nFeature9: As a user, I want to author and publish multiple technical articles with a title, body, and solution section so that I can share my knowledge.\n\nFeature10: As a user, I want to access the site on both desktop and mobile with a simple, responsive, and reasonably fast interface so that I can use it on any device.\n\nFeature11: As a user, I want to navigate between a homepage, article list, article detail pages, and my inbox easily so that I can move through the site intuitively.\n\nFeature12: As a user, I want a clean light theme for the default visual appearance so that the site is easy to read. (Dark mode TBD)\n\nFeature13: As a user, I want to filter articles by categories or tags so that I can narrow down browsing results. (TBD - nice-to-have)\n\nFeature14: As a user, I want to bookmark/save articles for later so that I can return to them easily. (TBD - nice-to-have)",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 1.0
+      }
+    ],
+    "total_turns": 15
+  },
+  {
+    "task_id": "task_7",
+    "task_name": "Anonymous Campus Discussion Platform",
+    "initial_requirements": "I need an anonymous campus discussion platform.",
+    "user_stories": [
+      "As a user, I want to anonymously post in a discussion forum, so that I can communicate and discuss with other students without revealing my identity.",
+      "As a user, I want to anonymously reply to posts in the discussion forum, so that I can participate in ongoing discussions without revealing my identity.",
+      "As a user, I want to browse posts on the platform, so that I can view existing discussions.",
+      "As a user, I want to search posts on the platform, so that I can find discussions relevant to my interests.",
+      "As a user, I want to follow topics of interest, so that I can keep track of discussions that matter to me.",
+      "As a user, I want to receive notifications, so that I can stay updated on new posts or activity related to my interests.",
+      "As a user, I want the platform to ensure my privacy and security, so that my personal information is protected.",
+      "As a user, I want the platform’s theme to use honeydew as the background color, so that the interface has the specified background visual style.",
+      "As a user, I want the platform’s theme to use dark olive green as the component color, so that the interface components match the specified visual configuration."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What content interaction features would you like users to have for posts and comments, such as upvoting, downvoting, reactions, or the ability to reply in nested threads?",
+        "user": "I’d like standard upvotes/downvotes on posts and comments, plus the ability to reply and have nested threads. Simple reactions are optional, but not a must.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 2,
+        "interviewer": "What moderation and history controls would you like for the platform, such as the ability to report inappropriate posts, block other users, or have moderators remove content?",
+        "user": "I don’t really care about advanced moderation controls right now. Basic reporting and the ability for moderators to remove obvious spam/abuse is enough.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 3,
+        "interviewer": "How would you like the discussions to be organized on the platform—for example, should posts be grouped into topic-based boards or channels, tagged with categories, or organized some other way?",
+        "user": "I’d like topic-based boards/channels (e.g., classes, housing, clubs), and users should be able to follow/subscribe to specific boards. Tags on posts within a board would be nice but optional.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 4,
+        "interviewer": "What types of content should users be able to create when starting a new discussion or responding—for example, just plain text, or should they also be able to include images, links, polls, or attachments?",
+        "user": "I don’t really care about fancy content types right now—plain text and links are enough to start. Images or polls could be nice later, but not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 5,
+        "interviewer": "How should users authenticate to use the platform—for example, should they sign up with a campus email to verify they're students, or would you prefer completely open anonymous access without any account verification?",
+        "user": "I want it anonymous on the surface, but I do want to restrict it to real students—so signup/verification via campus email (or SSO) is fine as long as their email/name is never shown. After verification, they should post under random/anonymous handles.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 6,
+        "interviewer": "Beyond verifying a campus email address, are there any additional registration steps or information you'd require—such as selecting their graduation year, choosing a username/handle, or needing manual approval before their account becomes active?",
+        "user": "I don’t really care about extra registration steps right now. Just verify campus email/SSO and let them in; the anonymous handle can be auto-generated, no manual approval.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "Once users are verified and have an account, how should they log in on return visits—using their campus email with a password they create, through campus SSO each time, or another method?",
+        "user": "I don’t really care too much as long as it’s easy. Campus SSO is fine, or email + password—either works for me.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 8,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "One thing I’d want is notifications—let users opt in to get alerts when someone replies to their post/comment or when there’s new activity in boards they follow, ideally with a simple notification bell and email/push options.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "Beyond the notification bell and email/push alerts you mentioned, would you like the platform to include any direct messaging or private chat features—such as users being able to send private messages to each other while staying anonymous?",
+        "user": "I don’t really care about direct messaging/private chat right now. I’d prefer to keep it focused on public discussions and notifications for the first version.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 10,
+        "interviewer": "Beyond the notification bell and email/push options you mentioned, should the platform support any other notification delivery channels—such as SMS text messages or integration with external messaging apps like Slack or Discord?",
+        "user": "I don’t really care about SMS or Slack/Discord integrations right now. In-app notifications plus email/push is enough for the first version.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 11,
+        "interviewer": "Which specific events should trigger notifications for users—for example, should they be notified only when someone directly replies to their post or comment, or also for other events like when their post gets a certain number of upvotes, when a new post appears in a board they follow, or when a moderator takes action on their content?",
+        "user": "I don’t really care about a bunch of extra notification triggers. Just notify on direct replies to my posts/comments and new posts/activity in boards I follow; the rest (upvote milestones, mod actions, etc.) can wait.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 12,
+        "interviewer": "Should notifications be sent immediately when an event occurs, or would you prefer them to be batched together—for example, sending a digest of new activity every few hours or once daily?",
+        "user": "I don’t really care too much—either is fine. If I had to pick, immediate in-app notifications are nice, and email could be a daily digest.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 13,
+        "interviewer": "How would you like users to navigate and discover content on the platform—for example, should there be a home feed showing recent posts across all boards, a sidebar listing all boards to browse, or a search bar for finding specific discussions?",
+        "user": "I don’t really care too much about the exact navigation setup right now. A basic home feed, a list of boards, and a simple search bar would be fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 14,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "One small UI preference: I’d like the app to use a honeydew background color by default—it should feel clean and easy on the eyes.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.8333333333333334
+      },
+      {
+        "turn": 15,
+        "interviewer": "What ownership and management capabilities should board creators have—for example, should they be able to rename or delete their board, control who can post in it, or assign other users as co-moderators?",
+        "user": "I don’t really care about board ownership/management features for the first version. Basic ability for an admin/mod to create or remove boards is enough for now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8333333333333334
+      },
+      {
+        "turn": 16,
+        "interviewer": "# Analysis\n\nLooking at the conversation, the user has already clearly specified their content interaction preferences:\n\n1. \"I'd like standard upvotes/downvotes on posts and comments, plus the ability to reply and have nested threads. Simple reactions are optional, but not a must.\"\n\n2. \"I don't really care about fancy content types right now—plain text and links are enough to start. Images or polls could be nice later, but not required.\"\n\nThe dimension asks about interaction options like likes, comments, ratings, shares, saves, polls - and the user has clearly addressed:\n- Upvotes/downvotes: Yes\n- Comments/replies with nested threads: Yes\n- Reactions: Optional, not a must\n- Polls: Not required for first version\n\nThis dimension has been sufficiently answered.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.8333333333333334
+      }
+    ],
+    "total_turns": 16
+  },
+  {
+    "task_id": "task_8",
+    "task_name": "Short-Term Apartment Rental Platform",
+    "initial_requirements": "I need a website that helps me find and book short-term rental apartments.",
+    "user_stories": [
+      "As a user, I want to browse different types of apartments, so that I can see the available options for short-term rentals.",
+      "As a user, I want to search for apartments, so that I can quickly find apartments that match my needs.",
+      "As a user, I want to filter apartments based on my criteria, so that I can narrow down the list to suitable options.",
+      "As a user, I want to book selected apartments, so that I can reserve an apartment for my short-term stay.",
+      "As a user, I want to view my booking records, so that I can review my current and past apartment bookings.",
+      "As a user, I want the website to use a linen screen background, so that the visual appearance matches the specified style.",
+      "As a user, I want component highlights on the website to be maroon, so that the highlighted elements follow the specified color scheme."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What booking features do you need, such as the ability to reserve apartments instantly, request approval from hosts before booking, cancel or modify reservations, or view your booking history?",
+        "user": "I’d like instant booking when possible, but also a request-to-book option if a host needs to approve. I need to be able to cancel or modify reservations, and definitely view my full booking history (past and upcoming).",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 2,
+        "interviewer": "What stages should a booking go through from start to finish—for example, should there be a pending stage while waiting for host approval, a confirmed stage once accepted, and specific statuses for completed stays or cancelled bookings?",
+        "user": "I don’t really care about the exact internal stages as long as I can clearly see whether it’s pending, confirmed, completed, or cancelled, and get notifications when it changes.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 3,
+        "interviewer": "What rules and constraints should apply to bookings—for example, minimum or maximum stay requirements, how far in advance bookings can be made, cancellation deadlines and any associated penalties, or restrictions on check-in and check-out times?",
+        "user": "I don’t really care about defining those rules globally—hosts can set their own min/max stay, advance booking window, and check-in/out rules. I just need the site to clearly show the specific rules and any cancellation penalties before I book.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.16666666666666666
+      },
+      {
+        "turn": 4,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I want to browse by apartment type first (studio/1BR/2BR, etc.) and then filter from there, rather than starting with a specific listing. The navigation should make it easy to jump between types without losing my filters.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 5,
+        "interviewer": "What search and filtering capabilities do you need—for example, searching by location, date range, price range, amenities, guest capacity, or ratings—and should filters update results instantly as you adjust them?",
+        "user": "I need search by location (map + neighborhood), date range, price range, apartment type, guest capacity/bedrooms, and key amenities like Wi‑Fi, kitchen, parking, pet‑friendly, and washer/dryer. Ratings/reviews filter would be nice too. Filters should update results instantly, but don’t wipe out my other filters when I switch apartment types.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.3333333333333333
+      },
+      {
+        "turn": 6,
+        "interviewer": "Should your filter selections persist when you navigate away from search results—for example, when viewing an apartment detail page and returning back—or would you prefer filters to reset each time you start a new search?",
+        "user": "I’d like filters to persist when I click into a listing and come back to results. If I explicitly start a brand-new search (like changing location/dates), then it can reset or ask me if I want to keep the old filters.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.5
+      },
+      {
+        "turn": 7,
+        "interviewer": "How would you like the apartment search results to be displayed—for example, as a grid of cards with photos, a list view with more details, shown on a map, or some combination—and how should you be able to sort them (by price, rating, distance, etc.)?",
+        "user": "I’d like a grid of photo cards with key details (price/night, total price, rating, beds, neighborhood) plus an optional list view for more info, and a map view toggle that stays in sync with the results. Sorting should include price (low/high), rating, distance to a point/neighborhood, and “best match”.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 8,
+        "interviewer": "Are there any additional filtering options you'd like beyond what you mentioned—for example, filtering by availability status, instant book vs. request-to-book, specific neighborhood boundaries, accessibility features, or property rules like smoking allowed or quiet hours?",
+        "user": "I don’t really care about adding a bunch more filters. If anything, a simple toggle for “instant book only” and maybe “pet-friendly” is enough—otherwise I’m fine with what we covered.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 9,
+        "interviewer": "After you complete a booking, how should access to the apartment be handled—for example, should you automatically receive entry instructions and check-in details, or would you prefer to coordinate access directly with the host?",
+        "user": "I don’t really care how access is handled internally—hosts can do it their way. I just want the app to clearly show the check-in instructions in one place once the booking is confirmed.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 10,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "One thing I’d add is a sticky filter bar on results (especially on mobile) so I can tweak dates/price/type without scrolling back to the top, and it should keep my current filters and map position.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 11,
+        "interviewer": "What payment methods should the site accept—such as credit/debit cards, PayPal, Apple Pay, or bank transfers—and how should the payment flow work (for example, pay in full at booking, split payments, or pay a deposit now and the rest later)?",
+        "user": "I don’t really care too much about the payment methods—just make it easy and secure. Credit/debit cards are the main thing; Apple Pay/PayPal would be nice but not required.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 12,
+        "interviewer": "How would you like to communicate with hosts—should there be an in-app messaging system, email notifications for booking updates and host messages, or both—and are there any notification preferences you'd want to control (like frequency or types of alerts)?",
+        "user": "I don’t really care about the messaging setup as long as I reliably get booking updates. Email notifications are fine, and I’d just want a basic on/off control for non‑urgent messages so it’s not spammy.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 13,
+        "interviewer": "Your earlier answers covered instant booking, request-to-book, cancel/modify, and viewing history. Beyond those, are there any other post-booking actions you'd want—for example, requesting a refund directly through the site, rebooking a past stay with one click, or downloading/printing a booking confirmation?",
+        "user": "I don’t really care about adding more post-booking actions. If anything, a simple way to download/share the booking confirmation would be nice, but it’s not a must-have.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 14,
+        "interviewer": "What main pages and sections should the site have in its navigation—for example, a homepage, search/browse page, saved favorites, your trips/bookings, account settings—and how would you like to move between them (top navigation bar, bottom tabs on mobile, sidebar)?",
+        "user": "I don’t really care about the exact navigation structure. As long as I can easily get to Browse/Search, Favorites, Trips/Bookings, and Account, I’m good—bottom tabs on mobile and a simple top nav on desktop would be fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 15,
+        "interviewer": "Should users be able to browse and search apartments without creating an account, and what level of identity verification would you want—for example, just an email signup, or verified ID and phone number before booking?",
+        "user": "I don’t really care about identity verification details. Let people browse without an account, and only require a basic email (and maybe phone) when they actually book.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 16,
+        "interviewer": "Should users be able to post reviews and ratings for apartments they've stayed in, and would you want any community features like the ability to ask previous guests questions, save or share listings with friends, or flag inappropriate content?",
+        "user": "I don’t really care about community features. Reviews/ratings are useful to read, and letting verified guests leave a review is fine, but I don’t need Q&A or social sharing.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 17,
+        "interviewer": "For downloading or exporting content like booking confirmations or receipts, how should that work—for example, should files download instantly to your device, open in a new browser tab for you to save, or be sent to your email?",
+        "user": "I don’t really care about the exact download flow. As long as there’s a clear button to get a PDF confirmation/receipt and it works reliably, I’m fine.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 18,
+        "interviewer": "When adding filters or booking an apartment, how should forms and data entry work—for example, should date ranges use a calendar picker, should price be a slider or typed input, and should the booking form auto-fill from your profile?",
+        "user": "I don’t really care about the specific form controls. Just make them quick and not annoying on mobile, and don’t make me retype the same info over and over.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 19,
+        "interviewer": "What information should be required when someone creates an account to book—just email and password, or also things like full name, phone number, or payment details upfront?",
+        "user": "I don’t really care about the exact account fields. Keep it minimal—email/password to start, and only ask for name/phone/payment when I’m actually booking.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      },
+      {
+        "turn": 20,
+        "interviewer": "Beyond leaving reviews after a stay, should users be able to create or submit any other content—for example, uploading photos from their visit, writing tips about the neighborhood, or creating wish lists that others can view?",
+        "user": "I don’t really care about users submitting extra content like photos or neighborhood tips. Private wish lists/favorites for myself are enough; I don’t need them to be public.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6666666666666666
+      }
+    ],
+    "total_turns": 20
+  },
+  {
+    "task_id": "task_9",
+    "task_name": "Discussion Forum and User Center System",
+    "initial_requirements": "I need a forum webpage where I can manage posts and user information.",
+    "user_stories": [
+      "As a user, I want to create new posts on the forum webpage, so that I can share content and start discussions.",
+      "As a user, I want to reply to others’ posts on the forum webpage, so that I can participate in existing discussions.",
+      "As a user, I want to search for posts on the forum webpage, so that I can quickly find content that interests me.",
+      "As a user, I want to browse posts by category on the forum webpage, so that I can view posts organized by specific topics.",
+      "As a user, I want to access a user center, so that I can manage and view my personal forum-related information.",
+      "As a user, I want to view my own posts in the user center, so that I can review what I have posted.",
+      "As a user, I want to view my reply records in the user center, so that I can keep track of my participation in discussions.",
+      "As a user, I want to view my personal information in the user center, so that I can see my profile details.",
+      "As a user, I want the forum webpage to use ghost white as the global background color, so that the overall background appearance is consistent as specified.",
+      "As a user, I want all components on the forum webpage to use slate gray as their color, so that the component appearance is consistent as specified."
+    ],
+    "user_answer_quality": "high",
+    "interviewer_model": "claude-opus-4-5-20251101",
+    "conversation": [
+      {
+        "turn": 1,
+        "interviewer": "What content interaction features do you need for your forum, such as the ability for users to reply to posts, like or upvote content, or report inappropriate posts?",
+        "user": "Users should be able to create posts and reply to posts/threads. I also want basic search and the ability to browse posts by category; likes/upvotes and reporting are nice-to-haves but not required at launch.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 2,
+        "interviewer": "What specific information should be included when users create a post or reply, such as title, body text, category selection, or the ability to attach images or files?",
+        "user": "I don’t really care about attachments or extra fields right now. For launch, just a title and body for posts, and body text for replies; category selection can be a simple dropdown.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 3,
+        "interviewer": "How do you want your forum discussions to be organized—should posts be grouped within categories or topics, arranged as flat lists, or structured as threaded conversations where replies can nest under each other?",
+        "user": "I don’t really care too much about the exact structure right now. A simple category-based list of posts with a flat reply thread (no nested replies) is fine for launch.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 4,
+        "interviewer": "What authentication and user role requirements do you have in mind—should users be able to browse the forum anonymously, or must they log in to view content, and do you need different permission levels like regular users versus moderators or admins?",
+        "user": "I don’t really care too much about roles or auth details right now. For launch, anonymous browsing is fine, but users should log in to create posts or replies; we can figure out moderators/admins later.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 5,
+        "interviewer": "You mentioned likes/upvotes as a nice-to-have—should we include any of these engagement options for launch, or would you prefer to keep it strictly to posting and replying for now?",
+        "user": "I don’t really care about likes/upvotes for launch—let’s keep it to posting and replying for now, and we can add engagement features later if needed.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 6,
+        "interviewer": "What moderation controls do you need for managing posts and replies—should there be options to delete or remove content, hide inappropriate posts, or any way for users to flag content for review?",
+        "user": "I don’t really care about moderation controls for the initial launch. Basic delete/remove by whoever manages the site is enough; we can add flagging and hiding later if it becomes an issue.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.2
+      },
+      {
+        "turn": 7,
+        "interviewer": "What core pages should the forum include—for example, a homepage listing all categories, individual category pages showing posts, a post detail page with replies, and perhaps a user profile page—and how should users navigate between them?",
+        "user": "For launch I’d want: a home page with categories + recent posts, a category page listing posts, a post detail page with the flat replies, and a login/register page. I also want a dedicated user center where users can view/edit their info and see their posts/replies. Navigation can be simple header links (Home, Categories, Search, User Center) plus breadcrumbs from category → post.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.4
+      },
+      {
+        "turn": 8,
+        "interviewer": "What data entry and management capabilities do you need in the user center—for example, should users be able to edit their profile information like username or email, change their password, or delete their own posts and replies from that page?",
+        "user": "In the user center, users should be able to edit basic profile info (display name and email) and change their password. They should also be able to see a list of their posts and replies and delete their own posts/replies from there; I don’t need anything more advanced for launch.",
+        "action_type": "probe",
+        "is_relevant_to_url": true,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 9,
+        "interviewer": "Beyond the user center capabilities you mentioned, what create, read, update, and delete operations should be available elsewhere in the forum—for example, should users be able to edit their posts or replies after publishing, and should site managers have bulk operations like deleting multiple posts at once or managing categories?",
+        "user": "I don’t really care about advanced CRUD or bulk admin tools for the initial launch. It’s fine if users can’t edit posts/replies after publishing yet, and site managers can just delete items one by one for now; category management can be minimal and handled manually.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 10,
+        "interviewer": "What should users be able to search for in the basic search feature—just post titles, or also post body text and replies—and do you need any filtering options like searching within a specific category or by date range?",
+        "user": "I don’t really care too much about search specifics for launch. If it’s easy, search post titles and body, and maybe let me filter by category; date range isn’t important right now.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 11,
+        "interviewer": "Is there one specific interaction requirement you'd like to add—for example, how the interface should feel (e.g. speed, responsiveness), how search or navigation should work, or how buttons/controls should behave? Please describe just one, or say if you have none.",
+        "user": "I don’t really care about specific UI interaction details right now—just keep it straightforward and reasonably fast for normal browsing and posting.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 12,
+        "interviewer": "What specific data fields should be stored for each core entity in the forum—for example, should posts include timestamps, view counts, or author information, and should user profiles store creation dates, avatars, or any other metadata beyond display name and email?",
+        "user": "I don’t really care about extra metadata fields for launch. Just store the basics: post/reply author, created timestamp, and category; for users, display name, email, password hash, and account creation date is fine. Avatars, view counts, and other stats can wait.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 13,
+        "interviewer": "Based on our discussion, I see we'll have users, posts, replies, and categories—could you clarify how these entities relate to each other, such as whether a post belongs to exactly one category, whether replies are tied directly to posts, and any other key relationships between these objects?",
+        "user": "I don’t really care too much about the exact data relationships as long as the forum works. For launch, assume each post belongs to one category, and replies belong to a single post (flat, no nesting).",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 14,
+        "interviewer": "Based on what you've described, I have a good understanding of the basic fields for posts, replies, and users. Could you clarify what specific attributes should be stored for categories—for example, just a name, or also a description, display order, or an icon/image?",
+        "user": "I don’t really care about category attributes for launch. Just a category name is enough; we can add description, ordering, or icons later if needed.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 15,
+        "interviewer": "Based on what you've shared about categories, posts, and replies, could you clarify who can see what content—for example, should all posts and categories be publicly visible to everyone, or are there any sections that should be restricted to logged-in users only?",
+        "user": "I don’t really care about restricted sections for launch. Let’s make categories and posts publicly visible, and require login only to create posts or replies.",
+        "action_type": "clarify",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 16,
+        "interviewer": "How should information be arranged within the post detail page—for example, should the post title and author appear at the top followed by the body text and then replies below, or do you have a different preferred layout for how these elements should be ordered?",
+        "user": "I don’t really care about the exact layout for launch. The typical setup is fine—title/author/time at the top, then the body, then replies underneath.",
+        "action_type": "probe",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      },
+      {
+        "turn": 17,
+        "interviewer": "The user has already described the page hierarchy in a previous answer: home page with categories + recent posts → category page listing posts → post detail page with replies, plus login/register page and a user center. They also mentioned navigation via header links and breadcrumbs from category → post.\n\nThis dimension has been clearly answered.",
+        "user": "",
+        "action_type": "finish",
+        "is_relevant_to_url": false,
+        "elicitation_ratio": 0.6
+      }
+    ],
+    "total_turns": 17
+  }
+]

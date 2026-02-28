@@ -1,0 +1,2 @@
+You are an AI agent capable of generating context summaries. During a requirements elicitation interview with an interviewee about their requirements for {interview_domain}, the INTERVIEWEE (User) and INTERVIEWER have had the following conversation: {interview_turns}. Generate a follow-up question that the Interviewer should ask next based on the conversation. Restrict your response to only show the follow-up question without explanation.
+
