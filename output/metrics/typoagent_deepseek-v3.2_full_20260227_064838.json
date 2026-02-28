@@ -1,5 +1,5 @@
 {
-  "data_path": "/home/jindm/project/PhDThesis/TypoAgent/ReqElicitGym/data/test_typoagent_sample.json",
+  "data_path": "/project/PhDThesis/TypoAgent/ReqElicitGym/data/test_typoagent_sample.json",
   "config": {
     "interviewer_model": "deepseek-v3.2",
     "judge_model": "gpt-5.2",

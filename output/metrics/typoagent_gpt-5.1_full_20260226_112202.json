@@ -1,5 +1,5 @@
 {
-  "data_path": "/home/jindm/project/PhDThesis/TypoAgent/ReqElicitGym/data/test.json",
+  "data_path": "/project/PhDThesis/TypoAgent/ReqElicitGym/data/test.json",
   "config": {
     "interviewer_model": "gpt-5.1",
     "judge_model": "gpt-5.2",

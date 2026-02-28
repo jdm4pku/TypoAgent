@@ -113,7 +113,7 @@ def main():
         "sample_n": 20,
         "model": "gpt-5.1",
         "temperature": 0.0,
-        "api_key": os.environ.get("OPENAI_API_KEY", "sk-uY7L7ckALmAKlnJmJ31pPAPBQpAOt5Y6rGtaNPeoVqC1jlyd"),
+        "api_key": os.environ.get("OPENAI_API_KEY"),
         "base_url": os.environ.get("OPENAI_BASE_URL") or "https://api.chatanywhere.tech/v1",
         "judge_model": "gpt-5.1",
         "user_model": "gpt-5.1",
